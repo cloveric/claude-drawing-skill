@@ -1,89 +1,122 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。当前内置并验证过的画风是中国水墨：宣纸纹理、层层远山与雾气、飞白笔触、皴擦、苔点、松、芦苇、孤舟、烘云托月、朱红日、题字与印章。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」「代码水墨」，或 "draw it yourself", "paint with code", "procedural painting", "ink wash painting without an image model" 时使用；也用于需要可逐步画出（draw-on）动画的插画。几秒出一张 1920×1080。
+description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置三种画风：中国水墨（宣纸、层层远山与雾、飞白、皴擦、苔点、松、孤舟、烘云托月、题字印章）、水彩（湿画渐变、透明罩染、水痕边、颜料颗粒、水渍花、提白）、剪纸拼贴（撕纸白边、纸片阴影、彩纸/牛皮纸/报纸/笔记本纸、蜡笔、腮红圆脸的可爱小人）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」「代码水墨/水彩/剪纸」，或 "draw it yourself", "paint with code", "procedural painting", "ink wash / watercolor / paper collage without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
 ---
 
 # Claude 绘图
 
-用 Python（只依赖 numpy + Pillow，系统自带的 `python3` 就能跑）按笔画和墨色的物理规律「画」图，不调用任何生图模型。
-- **画面**：每一笔都是算出来的，可以精确控制构图、留白、朱红点缀的位置。
-- **结果可复现**：固定随机种子后，同一段代码每次画出同一幅画。
-- **适合做动画**：可以按「先远山、再主峰、再小路……」的顺序出分阶段快照，做成逐步画出的动画；生图模型只能给一整张画。
+用 Python（只依赖 numpy + Pillow，系统自带的 `python3` 就能跑）按笔、墨、颜料、纸的物理规律「画」图，不调用任何生图模型。
+- **构图可控**：每一笔都是算出来的，构图、留白、点睛色的位置都精确可控。
+- **结果可复现**：固定随机种子，每次画出同一幅画。
+- **适合做动画**：可以输出分阶段快照，做成「一幅画被逐步画出来」的动画；生图模型只能给一整张画。
 
-`examples/bawansiqian.jpg`（八万四千法门）和 `examples/moon_river.jpg`（月印万川）是水墨风的质量基准。
+## 画风与范例（质量基准）
+
+| 画风 | 库 | 范例 | 耗时 |
+|---|---|---|---|
+| 水墨 | `lib/inkpaint.py` · `Painting` | `examples/bawansiqian.py` 八万四千法门、`examples/moon_river.py` 月印万川 | 2–4 秒 |
+| 水彩 | `lib/watercolor.py` · `Watercolor` | `examples/watercolor_lotus.py` 一花一世界（清晨荷塘） | 约 17 秒 |
+| 剪纸拼贴 | `lib/papercut.py` · `Collage` | `examples/papercut_moon.py` 小沙弥看月亮 | 约 20 秒 |
+
+三种画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找。
+
+**用户没有指定画风时怎么选**：禅意、古典、山水题材用水墨；清新、花卉、风景、带颜色的题材用水彩；童趣、温暖、故事感、角色类题材用剪纸拼贴。
 
 ## 一、流程（每幅画都照做）
 
 1. **定构图**，动笔前先想清楚这几项：
-   - 层次：远景 → 中景 → 主体 → 前景；
+   - 层次：远 → 中 → 主体 → 前景；
    - 视觉焦点在哪里；
-   - 留白至少四成；
-   - 朱红只点一处或两处（日、印章、一条关键的路）；
-   - 题字位置（竖排，放在留白处）。
-   - 画面必须图解内容本身。比如「八万四千法门」就画很多条路汇向同一个山顶，而不是随便一幅山水。
-2. **写场景脚本**：复制 `examples/bawansiqian.py` 改写，用 `lib/inkpaint.py` 的接口组合。
-3. **渲染并自己看图**：`python3 scene.py out.png`，大约 3–5 秒。
-   - 用 Read 打开 PNG，**对照第三节的毛病清单逐条自查**；
-   - 通常要改 2–4 轮，每轮只改最显眼的问题，把前一版存成 `_v1/_v2` 以便对比。
-4. **交付**：转成 JPG（quality 92，约 400KB），用当前对话渠道支持的方式发图。
-   - 需要动画时加 `--stages DIR`，按 `p.stage('名字')` 输出每个阶段的快照。
+   - 留白够不够：水墨至少四成，水彩和剪纸也要有呼吸感；
+   - 点睛色只用一两处：水墨用朱红，剪纸用一个亮色主角；
+   - 题字或纸条放在哪里。
+   - **画面要图解内容本身**，而不是随便一幅风景。
+2. **写场景脚本**：复制最接近的范例改写。
+3. **渲染并自己看图**：`python3 scene.py out.png`。
+   - 用 Read 打开 PNG，对照第三节该画风的毛病清单逐条自查；
+   - 一般改 2–4 轮，每轮只改最显眼的问题，旧版存成 `_v1/_v2` 以便对比。
+4. **交付**：转成 JPG（quality 92），用当前对话渠道支持的方式发图。
+   - 要做动画时加 `--stages DIR`，按 `stage('名字')` 输出各阶段快照。
 
-## 二、接口速查（`lib/inkpaint.py`）
+## 二、接口速查
 
 ```python
 import sys; sys.path.insert(0, "<本skill>/lib")
-from inkpaint import Painting, spline, curve, fbm1d, blur
-p = Painting(1920, 1080, seed=7)       # 固定种子 = 可复现
-p.paper()                                # 宣纸：底色斑驳 + 颗粒 + 纤维
-ridge = p.ridge(base_y, peaks=[(x, 高, 宽), ...], rough=26)          # 山脊线 y(x)
-main = p.peak(SX, SY, height=560, left_w=360, right_w=470, shoulders=[(x, h, w)])  # 主峰（不对称，带山肩）
-p.wash(ridge, dens, decay, tex, edge, mist_y, mist_h)   # 墨染山体：上浓下淡、有水痕边、会遮挡后面的层
-p.cun(main, x0, x1, n=150, shadow_x=SX)   # 皴擦：阴面多而深
-p.moss(main, x0, x1, n=70)                # 苔点
-p.ridge_line(main, x0, x1)                # 淡而断续的山脊线
-paths = p.trails(main, (SX, SY), n=16, red_index=7)   # 蜿蜒小路汇向山顶，其中一条朱红
-p.mist(y, h, strength)                    # 雾带：盖住它之前画的东西
-p.rock(ridge); p.pine(root, top, bend, branches=[(起点, 终点, 弯度)], extra_tufts=[...])
-p.sun(x, y, r); p.birds([(x, y, s)]); p.pagoda(x, y); p.traveller(x, y); p.dot(x, y, r)
-p.stroke(points, width, ink, dry=0.35, taper=(0.25, 0.35), red=False)  # 通用毛笔：飞白、按压粗细、抖动
-p.title_vertical('八万四千', x, y, 92); p.seal('法门', x, y, 40)       # 楷体题字 + 朱印（最后叠加）
-p.stage('远山')                           # 动画用阶段快照
-p.save('out.png', stages_dir=None)
+from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 ```
 
-**顺序很重要**：先远后近（`wash` 会遮挡前面已画的层），雾要画在它该吞没的东西之后，题字和印章最后叠加。
+**水墨 `Painting`**：
+- `paper()`、`ridge(base, peaks=[(x,h,w)])`、`peak(SX, SY, shoulders=...)`
+- `wash(ridge, dens, decay, tex, edge, mist_y)`：墨染山体，上浓下淡、带水痕边，会遮挡后面的层
+- `cun()` 皴擦、`moss()` 苔点、`ridge_line()` 淡山脊线、`trails(ridge, summit, red_index)` 汇顶小路、`mist(y, h)` 雾带
+- 毛笔 `stroke(pts, width, ink, dry, taper, red)`
+- 物件：`pine()`、`rock()`、`sun()`、`birds()`、`pagoda()`、`traveller()`、`dot()`
+- 题字印章：`title_vertical()`、`seal()`
 
-## 三、毛病清单（都真实出现过，自查时逐条过）
+**水彩 `Watercolor`**：
+- `paper()`：冷压水彩纸纹理
+- 遮罩：`shape(pts, soft, ragged)`，soft 取 1–4 是清晰的水痕边，15–40 是湿画晕开；`band(pts, width)` 是粗笔带状遮罩
+- `glaze(mask, 颜色, strength, edge, gran, bloom, variation)`：透明罩染，叠加会像真颜料一样变深、混色
+- `gradient_wash(y0, y1, top, bottom)`：湿画渐变天空
+- 笔触：`stroke()` 彩色干笔、`line()` 细线勾勒、`lift(mask)` 提白、`splatter()` 甩点
+- `Watercolor.petal_pts(x, y, 角度, 长, 宽)`：花瓣或叶片轮廓；`hexc('#rrggbb')` 转颜色
 
-| 看到的问题 | 原因 | 改法 |
-|---|---|---|
-| 后面的远山线条透过前面的主峰 | 层与层直接叠加，没有遮挡 | `wash(occlude=True)`（默认），并且先远后近 |
-| 笔画像梯子或一串珠子 | 笔毛太细、落笔点间距太大 | 库里已经按笔毛大小自动算间距；自己写笔刷时也要这样 |
-| 小路像头发丝、像根须 | 线太多、太弯、跑出山体 | 16 条左右，用样条平滑，起点在山脚雾里，只画在山体上 |
-| 路是折线，像裂缝或图表 | 用直线段连接转折点 | 一律用 `spline()` 连接控制点 |
-| 皴擦像撒了一片逗号 | 短笔太多、太匀、方向乱 | 减到约 150 笔，加长，顺着坡向，集中在阴面 |
-| 山像卡通描边 | 山脊线太重太连续 | 山脊线用淡墨（0.3）加飞白，主要靠墨染的水痕边和苔点 |
-| 松针像海胆 | 放射状的针太黑太满 | 扇形松针（上半圈）加底下一团淡墨晕 |
-| 主峰像规整的锥子 | 左右对称、没有起伏 | 左右坡宽度不同，加山肩，加分形起伏 |
-| 画面发闷 | 留白不够、朱红太多 | 留白至少四成，朱红最多一两处 |
+**剪纸 `Collage`**：
+- `background(颜色, texture)`
+- `piece(pts 或 mask, 颜色, texture, torn, rim, shadow)`：贴一张纸。torn 是撕边程度，rim 是撕口白边，shadow 是纸片阴影；texture 可选 paper / kraft / crayon / newsprint / notebook
+- 形状遮罩：`circle_mask()`、`cloud_mask()`、`Collage.star_pts()`
+- 蜡笔和光：`crayon(pts, width, 颜色)` 蜡笔线、`dot()`、`glow()`
+- `face(cx, cy, r, mood='smile'|'sleep'|'dots')`：笑眼、嘴、腮红
+- `text(s, x, y, size, 颜色, vertical)`
+
+**顺序**：都是先远后近、先大后小，文字最后叠加。水墨的雾要画在它该吞没的东西之后；水彩的叶梗要先画，并且只画在叶子外面。
+
+## 三、毛病清单（都真实出现过）
+
+**水墨**
+
+| 问题 | 改法 |
+|---|---|
+| 后面的远山透过主峰 | 先远后近，`wash` 默认会遮挡身后 |
+| 笔画像梯子或串珠 | 落笔间距跟笔毛挂钩（`bristle_stroke` 已处理） |
+| 小路像头发丝，或是折线像裂缝 | 16 条左右，用 `spline` 平滑，只画在山体上，从雾里伸出来 |
+| 皴擦像撒逗号 | 约 150 笔，长而顺坡，集中在阴面 |
+| 山脊像卡通描边 | 山脊线用淡墨（0.3）加飞白，边缘靠水痕 |
+| 松针像海胆 | 扇形松针，下面垫一团淡墨晕 |
+| 主峰像锥子 | 左右坡宽度不同，加山肩和起伏 |
+| 远山被挖出方块、断边生硬 | 用「从水线以下升起的山包」来留出水面，不要直接挖空一段 |
+
+**水彩**
+
+| 问题 | 改法 |
+|---|---|
+| 纸纹像砂纸或拉毛墙 | 纸纹受光强度约 0.3，纸纹要细 |
+| 叶子中间一圈深色像靶心 | 第二层深色用湿画（soft 约 16）偏向一侧积色，不要同心 |
+| 叶梗画到了叶面上 | 先画梗，用 `*(1 - 叶遮罩)` 限制只在叶外 |
+| 颜色发脏 | 同一处罩染不超过三层；亮部留白或用 `lift` 提白 |
+
+**剪纸拼贴**
+
+| 问题 | 改法 |
+|---|---|
+| 大面积蜡笔纹像满屏刮痕 | 大色块用 paper / kraft，蜡笔只用在点缀或小物件上 |
+| 撕纸白边看不见 | 白边要宽出 5–8 像素（大半径模糊加低阈值），并且只出现在部分边缘上 |
+| 画面顶边或左边多出一条阴影 | 阴影偏移不能用会首尾相接的循环平移，要用补零平移（已修） |
+| 月亮画了光芒，像太阳 | 月亮用蜡笔光圈加几颗闪光，不要放射线 |
+| 脸的五官太粗太凶 | 线宽约 r×0.035，腮红用 `glow` |
 
 ## 四、做成动画
 
-- **简单做法**：用 `p.stage()` 分阶段快照（远山 → 主峰 → 小路 → 松石 → 日与题字），在视频里依次淡入叠化，看起来就是一幅画被逐步画出来。
-- **更细的做法**：把某一组笔画单独画到透明层上导出，在 Motion Canvas 里用遮罩按笔画顺序显现。这需要给笔画分组，还没做成现成接口，用到时再加。
+- 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的四张动图就是这样做的。
+- 更细的逐笔动画：把一组笔画单独画到透明层上导出，再用 Motion Canvas 遮罩按顺序显现。这个还没做成现成接口。
 
-## 五、扩展到别的画风
-
-笔刷、纸纹、墨染这套底层可以改造成水彩（彩色墨染 + 水痕边 + 颗粒）或剪纸拼贴（撕纸毛边 = 噪声扰动多边形边缘 + 纸纹）。
-
-**目前只有水墨风做过并经用户认可**，别的画风第一次做时先出一张给用户看。
-
-## 六、文件
+## 五、文件
 
 ```
-lib/inkpaint.py                     绘图库（Painting 类 + 辅助函数，只依赖 numpy + Pillow）
-examples/bawansiqian.py             范例「八万四千法门」：层层远山、主峰、小路汇顶、松石、朱日（约 3.6 秒）
-examples/moon_river.py              范例「月印万川」：烘云托月、孤舟垂钓、芦苇、水面月影（约 2 秒）
-examples/*.jpg / drawing_*.gif      成品与逐步画出的动图
+lib/core.py            公共底层（噪声、模糊、样条、遮罩、毛笔、字体）
+lib/inkpaint.py        水墨
+lib/watercolor.py      水彩
+lib/papercut.py        剪纸拼贴
+examples/*.py          范例脚本；*.jpg 成品；drawing_*.gif 逐步画出的动图
 中文字体：自动找 Kaiti/Songti（macOS）、Noto CJK（Linux）、KaiTi/SimSun（Windows），或设 INKPAINT_FONT
 ```
