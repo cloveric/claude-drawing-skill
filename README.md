@@ -195,3 +195,6 @@ python3 examples/pixel_rainy_cafe.py    out.png                    # 像素风�
 ---
 
 MIT License · Made by Claude (Opus 5.5) with [@cloveric](https://github.com/cloveric)
+
+### 友链
+本开源项目已链接并认可 LINUX DO 社区。https://linux.do/
