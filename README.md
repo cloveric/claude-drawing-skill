@@ -7,15 +7,15 @@
 
 | Ink wash · 水墨 | Watercolour · 水彩 | Paper collage · 剪纸拼贴 |
 |---|---|---|
-| ![ink](examples/drawing_bawansiqian.gif) | ![watercolour](examples/drawing_watercolor_lotus.gif) | ![collage](examples/drawing_papercut_moon.gif) |
+| ![ink](examples/drawing_bawansiqian.gif) | ![watercolour](examples/drawing_watercolor_autumn.gif) | ![collage](examples/drawing_papercut_balloons.gif) |
 
 | 八万四千法门 · *Many paths, one summit* | 月印万川 · *One moon in ten thousand rivers* |
 |---|---|
 | ![bawansiqian](examples/bawansiqian.jpg) | ![moon_river](examples/moon_river.jpg) |
-| **一花一世界** · *A world in a flower* | **小沙弥看月亮** · *The little monk and the moon* |
-| ![lotus](examples/watercolor_lotus.jpg) | ![papercut](examples/papercut_moon.jpg) |
+| **秋日湖畔** · *Autumn Lake* | **热气球小镇** · *Balloon Day* |
+| ![autumn](examples/watercolor_autumn.jpg) | ![balloons](examples/papercut_balloons.jpg) |
 
-Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, crayon wax and newsprint. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: 2–4 s for an ink painting and about 20 s for watercolour or collage, at 1920×1080.
+Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, crayon wax and newsprint. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: 2–4 s for an ink painting and 15–30 s for watercolour or collage, at 1920×1080.
 
 ---
 
@@ -136,8 +136,8 @@ pip install -r ~/.claude/skills/claude-drawing/requirements.txt   # numpy、Pill
 ```bash
 python3 examples/bawansiqian.py       out.png --stages stages/   # 水墨：八万四千法门
 python3 examples/moon_river.py        out.png                    # 水墨：月印万川
-python3 examples/watercolor_lotus.py  out.png                    # 水彩：一花一世界
-python3 examples/papercut_moon.py     out.png                    # 剪纸：小沙弥看月亮
+python3 examples/watercolor_autumn.py out.png                    # 水彩：秋日湖畔
+python3 examples/papercut_balloons.py out.png                    # 剪纸：热气球小镇
 ```
 
 ### 作画要点（Claude 交图前逐条自查）

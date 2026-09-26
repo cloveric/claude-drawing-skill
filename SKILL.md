@@ -15,8 +15,8 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 | 画风 | 库 | 范例 | 耗时 |
 |---|---|---|---|
 | 水墨 | `lib/inkpaint.py` · `Painting` | `examples/bawansiqian.py` 八万四千法门、`examples/moon_river.py` 月印万川 | 2–4 秒 |
-| 水彩 | `lib/watercolor.py` · `Watercolor` | `examples/watercolor_lotus.py` 一花一世界（清晨荷塘） | 约 17 秒 |
-| 剪纸拼贴 | `lib/papercut.py` · `Collage` | `examples/papercut_moon.py` 小沙弥看月亮 | 约 20 秒 |
+| 水彩 | `lib/watercolor.py` · `Watercolor` | `examples/watercolor_autumn.py` 秋日湖畔（秋树罩染、湖面倒影、红色小舟） | 约 15 秒 |
+| 剪纸拼贴 | `lib/papercut.py` · `Collage` | `examples/papercut_balloons.py` 热气球小镇（条纹热气球、笑脸太阳、纸云、小房子） | 约 30 秒 |
 
 三种画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找。
 
@@ -59,6 +59,7 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 - `glaze(mask, 颜色, strength, edge, gran, bloom, variation)`：透明罩染，叠加会像真颜料一样变深、混色
 - `gradient_wash(y0, y1, top, bottom)`：湿画渐变天空
 - 笔触：`stroke()` 彩色干笔、`line()` 细线勾勒、`lift(mask)` 提白、`splatter()` 甩点
+- `soften(mask)` 任意遮罩水彩化边缘；`blobs([(cx, cy, rx, ry)])` 一组团块合成一片（树冠、灌木、云）；`mirror(mask, 水线y)` 水面倒影（带波纹断续）
 - `Watercolor.petal_pts(x, y, 角度, 长, 宽)`：花瓣或叶片轮廓；`hexc('#rrggbb')` 转颜色
 
 **剪纸 `Collage`**：
@@ -94,6 +95,8 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 叶子中间一圈深色像靶心 | 第二层深色用湿画（soft 约 16）偏向一侧积色，不要同心 |
 | 叶梗画到了叶面上 | 先画梗，用 `*(1 - 叶遮罩)` 限制只在叶外 |
 | 颜色发脏 | 同一处罩染不超过三层；亮部留白或用 `lift` 提白 |
+| 深色团块漂到树冠外，成了孤立的圆点 | 后几层罩染乘以第一层树冠遮罩（稍微扩一点），深色只积在冠内 |
+| 树枝乱成一团 | 只画 3–5 根，从树干向上向外伸进树冠，长度按树冠大小算 |
 
 **剪纸拼贴**
 
@@ -104,6 +107,8 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 画面顶边或左边多出一条阴影 | 阴影偏移不能用会首尾相接的循环平移，要用补零平移（已修） |
 | 月亮画了光芒，像太阳 | 月亮用蜡笔光圈加几颗闪光，不要放射线 |
 | 脸的五官太粗太凶 | 线宽约 r×0.035，腮红用 `glow` |
+| 小鸟画成了一团 | 小鸟用两道细弧线（线宽约 2.6），不要用很短的粗笔 |
+| 纸片被画面边缘切掉 | 云、气球这类主体要完整留在画面内，留出边距 |
 
 ## 四、做成动画
 

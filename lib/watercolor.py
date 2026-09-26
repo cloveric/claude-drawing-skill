@@ -55,12 +55,31 @@ class Watercolor:
     # ------------------------------------------------------------ masks
     def shape(self, pts, soft=2.0, ragged=0.18, seed=None):
         """closed outline -> soft, slightly ragged mask (0..1). soft ~1-4 crisp wet edge; 15-40 wet-in-wet feather"""
-        m = polygon_mask(self.H, self.W, pts, ss=2)
-        if soft > 0:
-            m = blur(m, soft)
-            n = self.noise(max(6, soft * 3), 3, seed)
-            m = smoothstep(0.5 - 0.25, 0.5 + 0.25, m + (n - 0.5) * ragged)
-        return m
+        return self.soften(polygon_mask(self.H, self.W, pts, ss=2), soft, ragged, seed)
+
+    def soften(self, m, soft=2.0, ragged=0.18, seed=None):
+        """give any hard mask a watercolour edge"""
+        if soft <= 0: return m
+        m = blur(m, soft)
+        n = self.noise(max(6, soft * 3), 3, seed)
+        return smoothstep(0.5 - 0.25, 0.5 + 0.25, m + (n - 0.5) * ragged)
+
+    def blobs(self, items, rough=0.22, soft=3.0, ragged=0.3):
+        """union of organic blobs [(cx, cy, rx, ry), ...] -> one soft mask (foliage clusters, clouds, bushes)"""
+        m = np.zeros((self.H, self.W), np.float32)
+        for (cx, cy, rx, ry) in items:
+            m = np.maximum(m, polygon_mask(self.H, self.W, blob_pts(cx, cy, rx, ry, rough=rough, n=70, seed=self._seed())))
+        return self.soften(m, soft, ragged)
+
+    def mirror(self, m, y0, soft=8, squash=1.0, breakup=0.5):
+        """water reflection of mask `m` about the waterline y0 (softened, broken by horizontal ripples)"""
+        ys = np.arange(self.H)
+        src = np.clip((2 * y0 - ys) if squash == 1.0 else (y0 - (ys - y0) / squash), 0, self.H - 1).astype(int)
+        r = m[src, :] * (ys[:, None] > y0)
+        r = blur(r, soft)
+        rip = noise2d(self.H, self.W, 4, 2, self._seed())
+        rip = np.asarray(Image.fromarray(rip, mode='F').resize((self.W // 40, self.H), Image.BILINEAR).resize((self.W, self.H), Image.BILINEAR))
+        return r * (1 - breakup + breakup * smoothstep(0.3, 0.7, rip))
 
     def band(self, pts, width, soft=2.0):
         """a thick soft stroke (stems, reeds, rivers) as a mask"""
