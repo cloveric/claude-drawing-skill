@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置三种画风：中国水墨（宣纸、层层远山与雾、飞白、皴擦、苔点、松、孤舟、烘云托月、题字印章）、水彩（湿画渐变、透明罩染、水痕边、颜料颗粒、水渍花、提白）、剪纸拼贴（撕纸白边、纸片阴影、彩纸/牛皮纸/报纸/笔记本纸、蜡笔、腮红圆脸的可爱小人）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」「代码水墨/水彩/剪纸」，或 "draw it yourself", "paint with code", "procedural painting", "ink wash / watercolor / paper collage without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
+description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置六种画风：中国水墨（宣纸、远山与雾、飞白、皴擦、题字印章）、水彩（透明罩染、水痕边、颗粒、水渍花、倒影）、剪纸拼贴（撕纸白边、纸片阴影、报纸/笔记本纸、蜡笔、可爱小人）、韩国彩铅（细密排线、纸纹颗粒、柔和叠色、白色高光笔）、日本动漫（赛璐璐积雨云、蓝天、光晕光斑、线稿角色）、编辑风手绘（Riso 套色叠印、颗粒与错位、半调网点、手绘墨线、几何人物）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名水墨/水彩/剪纸/彩铅/动漫/编辑插画，或 "draw it yourself", "paint with code", "procedural painting", "watercolor / paper collage / colored pencil / anime / editorial illustration without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
 ---
 
 # Claude 绘图
@@ -17,10 +17,19 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 | 水墨 | `lib/inkpaint.py` · `Painting` | `examples/bawansiqian.py` 八万四千法门、`examples/moon_river.py` 月印万川 | 2–4 秒 |
 | 水彩 | `lib/watercolor.py` · `Watercolor` | `examples/watercolor_autumn.py` 秋日湖畔（秋树罩染、湖面倒影、红色小舟） | 约 15 秒 |
 | 剪纸拼贴 | `lib/papercut.py` · `Collage` | `examples/papercut_balloons.py` 热气球小镇（条纹热气球、笑脸太阳、纸云、小房子） | 约 30 秒 |
+| 韩国彩铅 | `lib/colorpencil.py` · `ColorPencil` | `examples/colorpencil_dessert.py` 午后甜点（草莓蛋糕、红茶、草莓） | 约 17 秒 |
+| 日本动漫 | `lib/anime.py` · `Anime` | `examples/anime_summer.py` 夏空（积雨云、乡间公路、电线杆、草帽女孩背影） | 约 30 秒 |
+| 编辑风手绘 | `lib/editorial.py` · `Editorial` | `examples/editorial_ideas.py` 灵感生长（浇水长出灯泡的概念插画） | 约 11 秒 |
 
-三种画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找。
+各画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找。
 
-**用户没有指定画风时怎么选**：禅意、古典、山水题材用水墨；清新、花卉、风景、带颜色的题材用水彩；童趣、温暖、故事感、角色类题材用剪纸拼贴。
+**用户没有指定画风时怎么选**：
+- 禅意、古典、山水 → 水墨；
+- 清新风景、花卉 → 水彩；
+- 童趣、温暖、讲故事 → 剪纸拼贴；
+- 甜点、小物、日常可爱 → 韩国彩铅；
+- 青春、夏日、天空、背景美术 → 日本动漫；
+- 观点、概念、商业文章配图 → 编辑风手绘。
 
 ## 一、流程（每幅画都照做）
 
@@ -70,6 +79,30 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 - `face(cx, cy, r, mood='smile'|'sleep'|'dots')`：笑眼、嘴、腮红
 - `text(s, x, y, size, 颜色, vertical)`
 
+**韩国彩铅 `ColorPencil`**：
+- `paper()`：细纸纹
+- 遮罩：`mask_poly(pts)`、`mask_blob()`、`mask_ellipse()`
+- `hatch(mask, 颜色, pressure, angle)`：短排线铺色。蜡只挂在纸纹凸起上，pressure 越大越能压进凹处；边缘自动变淡
+- `shade(mask, 颜色, angle=另一个角度)`：交叉排线加阴影
+- `outline(pts, '#8a6a5a')`：浅褐色铅笔勾线；`line(pts)` 用于不闭合的线
+- `sparkle(x, y, r)` 白色高光笔；`dots(mask, 颜色)` 草莓籽、糖粒之类
+- 白色物体不要用白色画（白纸上看不见）：用暖奶白色，配淡紫灰或淡蓝灰阴影
+
+**日本动漫 `Anime`**：
+- `sky(top, mid, horizon_col, horizon)`：天空渐变
+- `cumulus(cx, base_y, w, h, light)`：积雨云。许多不规则团块从后往前叠，每团的暗面是「团块减去朝光源偏移的自身」形成的月牙形硬边
+- `sun_flare(x, y)`：光晕、光束、镜头光斑；`sparkles()`；最后加 `bloom()` 泛光和 `vignette()` 暗角
+- `field(top_y, colours)`：平涂分带的田野；`pole()` 电线杆、`wire(p0, p1, sag)` 下垂电线
+- 平涂和线稿：`fill(mask, 颜色)`、`gradient()`、`screen()`；`lines(pts, width, 颜色)` 画干净线稿；`poly()`、`circle()`
+- 角色：平涂两色（亮色和阴影色）加深色描边
+
+**编辑风手绘 `Editorial`**：
+- 形状：`circle()`、`ellipse()`、`rrect()` 圆角矩形、`blob()`、`poly()`
+- `fill(mask, 专色)`：印一层专色油墨，带颗粒、浓淡不匀、套色错位，并**叠印**（重叠处颜色相乘）
+- `halftone(mask, 专色, cell, angle, amount)`：半调网点做明暗
+- `line(pts, 墨色, width, wobble, breaks)`：歪扭的手绘墨线；`dashes()` 虚线；`stars()` 小十字星
+- 专色控制在 4–5 种，并刻意让它们互相重叠，叠出第三种颜色
+
 **顺序**：都是先远后近、先大后小，文字最后叠加。水墨的雾要画在它该吞没的东西之后；水彩的叶梗要先画，并且只画在叶子外面。
 
 ## 三、毛病清单（都真实出现过）
@@ -110,9 +143,30 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 小鸟画成了一团 | 小鸟用两道细弧线（线宽约 2.6），不要用很短的粗笔 |
 | 纸片被画面边缘切掉 | 云、气球这类主体要完整留在画面内，留出边距 |
 
+**韩国彩铅**
+
+| 问题 | 改法 |
+|---|---|
+| 颜色淡得几乎看不见 | 排线要够密（叠加后趋于饱和）；颗粒阈值不要卡太狠，用 pressure 控制能压进多少纸纹 |
+| 奶油、白瓷等白色物体消失 | 用暖奶白色铺底，配淡紫灰或淡蓝灰阴影，再加一点白色高光 |
+
+**日本动漫**
+
+| 问题 | 改法 |
+|---|---|
+| 云是一个个正圆泡泡，明暗交界是斜直线 | 用不规则团块，数量多、大小不一；暗面用「团块减去偏移的自身」做成月牙形 |
+| 人物腿太长 | 裙摆到膝盖附近，露出的腿约为身高的三分之一 |
+
+**编辑风手绘**
+
+| 问题 | 改法 |
+|---|---|
+| 色块死板，像电脑矢量图 | 每层专色都要有颗粒、浓淡不匀和几像素的套色错位 |
+| 颜色太多太杂 | 4–5 种专色，靠叠印得到其他颜色（比如青叠黄出绿） |
+
 ## 四、做成动画
 
-- 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的四张动图就是这样做的。
+- 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的动图就是这样做的。
 - 更细的逐笔动画：把一组笔画单独画到透明层上导出，再用 Motion Canvas 遮罩按顺序显现。这个还没做成现成接口。
 
 ## 五、文件
@@ -122,6 +176,9 @@ lib/core.py            公共底层（噪声、模糊、样条、遮罩、毛笔
 lib/inkpaint.py        水墨
 lib/watercolor.py      水彩
 lib/papercut.py        剪纸拼贴
+lib/colorpencil.py     韩国彩铅
+lib/anime.py           日本动漫
+lib/editorial.py       编辑风手绘
 examples/*.py          范例脚本；*.jpg 成品；drawing_*.gif 逐步画出的动图
 中文字体：自动找 Kaiti/Songti（macOS）、Noto CJK（Linux）、KaiTi/SimSun（Windows），或设 INKPAINT_FONT
 ```

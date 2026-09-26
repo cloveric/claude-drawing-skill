@@ -1,21 +1,27 @@
 # Claude Drawing · Claude 绘图
 
-**Claude paints with code — no image model.** Ink wash · watercolour · torn-paper collage.
-**不用生图模型，Claude 用代码一笔一笔作画。** 水墨 · 水彩 · 剪纸拼贴。
+**Claude paints with code — no image model.** Ink wash · watercolour · paper collage · coloured pencil · anime · editorial.
+**不用生图模型，Claude 用代码一笔一笔作画。** 水墨 · 水彩 · 剪纸拼贴 · 韩国彩铅 · 日本动漫 · 编辑风手绘。
 
 [English](#english) · [中文](#中文)
 
 | Ink wash · 水墨 | Watercolour · 水彩 | Paper collage · 剪纸拼贴 |
 |---|---|---|
 | ![ink](examples/drawing_bawansiqian.gif) | ![watercolour](examples/drawing_watercolor_autumn.gif) | ![collage](examples/drawing_papercut_balloons.gif) |
+| **Coloured pencil · 韩国彩铅** | **Anime · 日本动漫** | **Editorial · 编辑风手绘** |
+| ![pencil](examples/drawing_colorpencil_dessert.gif) | ![anime](examples/drawing_anime_summer.gif) | ![editorial](examples/drawing_editorial_ideas.gif) |
 
 | 八万四千法门 · *Many paths, one summit* | 月印万川 · *One moon in ten thousand rivers* |
 |---|---|
 | ![bawansiqian](examples/bawansiqian.jpg) | ![moon_river](examples/moon_river.jpg) |
 | **秋日湖畔** · *Autumn Lake* | **热气球小镇** · *Balloon Day* |
 | ![autumn](examples/watercolor_autumn.jpg) | ![balloons](examples/papercut_balloons.jpg) |
+| **午后甜点** · *Afternoon Dessert* | **夏空** · *Summer Sky* |
+| ![dessert](examples/colorpencil_dessert.jpg) | ![anime](examples/anime_summer.jpg) |
+| **灵感生长** · *Growing Ideas* | |
+| ![ideas](examples/editorial_ideas.jpg) | |
 
-Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, crayon wax and newsprint. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: 2–4 s for an ink painting and 15–30 s for watercolour or collage, at 1920×1080.
+Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: 2–4 s for an ink painting and 10–30 s for the other styles, at 1920×1080.
 
 ---
 
@@ -23,13 +29,16 @@ Every mark above is computed: paper fibres, ink washes and mist, dry-brush strok
 
 ### What it is
 
-A [Claude Code](https://claude.com/claude-code) skill and a small painting library with three styles:
+A [Claude Code](https://claude.com/claude-code) skill and a small painting library with six styles:
 
 | Style | Module | What makes it read as the real medium |
 |---|---|---|
 | **Ink wash (水墨)** | `lib/inkpaint.py` · `Painting` | rice paper; occluding washes with wet rims and mist; bristle brush with flying-white; texture strokes (皴); moss dots; pines, boats, reeds; a moon reserved in white; calligraphy and seal |
 | **Watercolour** | `lib/watercolor.py` · `Watercolor` | cold-press paper tooth; *transparent glazes* that mix subtractively; wet-edge darkening; granulation; blooms (back-runs); wet-in-wet feathering; lifting; splatter |
 | **Paper collage** | `lib/papercut.py` · `Collage` | torn edges with a white fibrous core; paper depth shadows; coloured, kraft, crayon, newsprint and ruled-notebook papers; waxy crayon lines; cute faces with blush |
+| **Coloured pencil (Korean style)** | `lib/colorpencil.py` · `ColorPencil` | short directional hatching; wax that only catches on the paper tooth, with pressure pushing into the valleys; soft layered blending; light brown pencil outlines; white gel-pen sparkles |
+| **Anime (Japanese)** | `lib/anime.py` · `Anime` | saturated gradient skies; towering cumulus with *crescent* cel shadows on every puff; sun bloom, god rays and lens flare; flat-shaded fields, perspective roads, sagging power lines; clean line-art characters |
+| **Editorial (risograph)** | `lib/editorial.py` · `Editorial` | 4–5 spot inks on cream stock; per-ink grain, uneven density and mis-registration; translucent overprinting (overlaps make new colours); halftone shading; wobbly hand-drawn line; big simple shapes and stylised figures |
 
 Ask Claude to *"draw it yourself"*, *"paint this with code"*, or *"claude绘图"*. It then works in three steps:
 
@@ -88,6 +97,9 @@ Full scenes: `python3 examples/<name>.py out.png --stages stages/`. `--stages` a
 - **Ink**: paint far to near, and each wash occludes what is behind it. Tie dab spacing to bristle size so strokes never look beaded. Paths should be few, smooth and emerge from mist. Texture strokes should be long, follow the slope and sit on the shadow side. Ridge lines stay light and broken.
 - **Watercolour**: keep the paper tooth subtle. Pool shadows wet-in-wet on one side (no bull's-eyes). Paint stems before leaves and keep them outside the leaf. Use at most three glazes in one place, and save lights or lift them out.
 - **Collage**: big areas use flat or kraft paper, and crayon texture is only for accents. Torn white rims are 5–8 px wide and appear on only part of an edge. Shadows use a zero-padded shift, never a wrap-around one. A moon gets a halo, not sun rays.
+- **Coloured pencil**: hatch densely enough that strokes saturate, and let pressure decide how deep the wax reaches into the tooth. White objects (cream, china) are warm off-white with lavender or blue-grey shading, never white on white.
+- **Anime**: clouds are many lumpy puffs, each with a hard crescent shadow (the puff minus itself shifted toward the sun), not smooth circles with straight terminators. Keep characters' proportions (hem near the knee).
+- **Editorial**: use 4–5 inks and overlap them on purpose so overprints make the extra colours. Every ink layer gets grain, uneven density and a few pixels of mis-registration, otherwise it looks like clip-art.
 
 ### Roadmap
 
@@ -100,13 +112,16 @@ Full scenes: `python3 examples/<name>.py out.png --stages stages/`. `--stages` a
 
 ### 这是什么
 
-一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置三种画风：
+一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置六种画风：
 
 | 画风 | 模块 | 为什么看起来像真的 |
 |---|---|---|
 | **水墨** | `lib/inkpaint.py` · `Painting` | 宣纸纹理；会遮挡身后的墨染山体，带水痕边和雾；分笔毛的毛笔与飞白；皴擦、苔点；松、孤舟、芦苇；烘云托月的留白月亮；题字与印章 |
 | **水彩** | `lib/watercolor.py` · `Watercolor` | 冷压水彩纸纹理；**透明罩染**，叠色像真颜料一样变深、混色；水痕边；颜料颗粒；水渍花；湿画晕开；提白；甩点 |
 | **剪纸拼贴** | `lib/papercut.py` · `Collage` | 撕纸露出的白色纤维边；纸片层叠的阴影；彩纸、牛皮纸、蜡笔、报纸、笔记本横线纸；蜡笔线条；带腮红的可爱圆脸 |
+| **韩国彩铅** | `lib/colorpencil.py` · `ColorPencil` | 细密的短排线；蜡只挂在纸纹凸起上，用力越大越能压进凹处；柔和叠色；浅褐色铅笔勾线；白色高光笔 |
+| **日本动漫** | `lib/anime.py` · `Anime` | 高饱和的天空渐变；每个鼓包都带**月牙形**硬边暗面的积雨云；阳光泛光、光束、镜头光斑；平涂田野、透视公路、下垂的电线；干净线稿的角色 |
+| **编辑风手绘** | `lib/editorial.py` · `Editorial` | 米色纸上 4–5 种专色；每层油墨有颗粒、浓淡不匀和套色错位；透明叠印（重叠处出新颜色）；半调网点；歪扭的手绘墨线；大块简洁造型和几何人物 |
 
 对 Claude 说「claude绘图」「你自己画」「用代码画」，它会：
 1. **先定构图**：层次、焦点、留白、一处点睛色，而且画面要图解内容本身，不是随便一幅风景；
@@ -131,13 +146,16 @@ pip install -r ~/.claude/skills/claude-drawing/requirements.txt   # numpy、Pill
 
 ### 快速上手
 
-三种画风的最小示例见上方英文部分的代码。完整范例：
+水墨、水彩、剪纸的最小示例见上方英文部分的代码。全部范例：
 
 ```bash
 python3 examples/bawansiqian.py       out.png --stages stages/   # 水墨：八万四千法门
 python3 examples/moon_river.py        out.png                    # 水墨：月印万川
 python3 examples/watercolor_autumn.py out.png                    # 水彩：秋日湖畔
 python3 examples/papercut_balloons.py out.png                    # 剪纸：热气球小镇
+python3 examples/colorpencil_dessert.py out.png                  # 韩国彩铅：午后甜点
+python3 examples/anime_summer.py      out.png                    # 日本动漫：夏空
+python3 examples/editorial_ideas.py   out.png                    # 编辑风：灵感生长
 ```
 
 ### 作画要点（Claude 交图前逐条自查）
@@ -145,6 +163,9 @@ python3 examples/papercut_balloons.py out.png                    # 剪纸：热�
 - **水墨**：先远后近，每层墨染遮挡身后；落笔间距跟笔毛挂钩，笔画不会一节一节；小路要少、平滑、从雾里伸出来；皴擦长而顺坡、集中在阴面；山脊线要淡而断续。
 - **水彩**：纸纹要细；阴影用湿画偏一侧积色，不要画成靶心；先画叶梗，并且只画在叶子外面；同一处罩染不超过三层，亮部留白或提白。
 - **剪纸**：大色块用平纸或牛皮纸，蜡笔只做点缀；撕口白边宽 5–8 像素，只出现在部分边缘；阴影偏移要补零，不能首尾相接；月亮用光圈，不画放射线。
+- **彩铅**：排线要够密，颜色才能叠到饱和，用力大小决定能压进多少纸纹；奶油、白瓷这类白色物体用暖奶白色配淡紫灰或淡蓝灰阴影，不要白画在白纸上。
+- **动漫**：云要用许多不规则团块，每团带月牙形的硬边暗面（团块减去朝太阳偏移的自身），不要画成光滑正圆加直线明暗交界；人物比例要对，裙摆在膝盖附近。
+- **编辑风**：专色 4–5 种，并刻意让它们重叠，靠叠印得到更多颜色；每层油墨都要有颗粒、浓淡不匀和几像素的套色错位，否则就像电脑剪贴画。
 
 ### 计划
 
