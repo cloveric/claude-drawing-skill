@@ -13,18 +13,20 @@
 | **Impasto oil · 油画厚涂** | **Ukiyo-e · 浮世绘木版画** | **Pixel art · 像素风** |
 | ![oil](examples/drawing_oil_wheatfield.gif) | ![ukiyoe](examples/drawing_ukiyoe_fuji.gif) | ![pixel](examples/drawing_pixel_rainy_cafe.gif) |
 
-<details>
-<summary><b>Full-size gallery · 大图</b></summary>
+### Gallery · 画廊
 
-| 八万四千法门 · *Many Paths, One Summit* | 秋日湖畔 · *Autumn Lake* | 热气球小镇 · *Balloon Day* |
-|---|---|---|
-| ![](examples/bawansiqian.jpg) | ![](examples/watercolor_autumn.jpg) | ![](examples/papercut_balloons.jpg) |
-| **午后甜点** · *Afternoon Dessert* | **夏空** · *Summer Sky* | **灵感生长** · *Growing Ideas* |
-| ![](examples/colorpencil_dessert.jpg) | ![](examples/anime_summer.jpg) | ![](examples/editorial_ideas.jpg) |
-| **麦田星空** · *Swirling Sky over the Wheat Field* | **富士曙** · *Fuji at Dawn* | **雨夜咖啡店** · *Rainy Night Cafe* |
-| ![](examples/oil_wheatfield.jpg) | ![](examples/ukiyoe_fuji.jpg) | ![](examples/pixel_rainy_cafe.png) |
-
-</details>
+| | |
+|---|---|
+| **八万四千法门** · *Many Paths, One Summit*<br><sub>Ink wash · 水墨</sub> | **秋日湖畔** · *Autumn Lake*<br><sub>Watercolour · 水彩</sub> |
+| <img src="examples/bawansiqian.jpg" width="100%"> | <img src="examples/watercolor_autumn.jpg" width="100%"> |
+| **热气球小镇** · *Balloon Day*<br><sub>Paper collage · 剪纸拼贴</sub> | **午后甜点** · *Afternoon Dessert*<br><sub>Coloured pencil · 韩国彩铅</sub> |
+| <img src="examples/papercut_balloons.jpg" width="100%"> | <img src="examples/colorpencil_dessert.jpg" width="100%"> |
+| **夏空** · *Summer Sky*<br><sub>Anime · 日本动漫</sub> | **灵感生长** · *Growing Ideas*<br><sub>Editorial · 编辑风手绘</sub> |
+| <img src="examples/anime_summer.jpg" width="100%"> | <img src="examples/editorial_ideas.jpg" width="100%"> |
+| **麦田星空** · *Swirling Sky over the Wheat Field*<br><sub>Impasto oil · 油画厚涂</sub> | **富士曙** · *Fuji at Dawn*<br><sub>Ukiyo-e · 浮世绘</sub> |
+| <img src="examples/oil_wheatfield.jpg" width="100%"> | <img src="examples/ukiyoe_fuji.jpg" width="100%"> |
+| **雨夜咖啡店** · *Rainy Night Cafe*<br><sub>Pixel art · 像素风</sub> |  |
+| <img src="examples/pixel_rainy_cafe.png" width="100%"> |  |
 
 Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 30 s per 1920×1080 image.
 
