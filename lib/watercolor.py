@@ -78,7 +78,7 @@ class Watercolor:
         r = m[src, :] * (ys[:, None] > y0)
         r = blur(r, soft)
         rip = noise2d(self.H, self.W, 4, 2, self._seed())
-        rip = np.asarray(Image.fromarray(rip, mode='F').resize((self.W // 40, self.H), Image.BILINEAR).resize((self.W, self.H), Image.BILINEAR))
+        rip = np.asarray(Image.fromarray(rip.astype(np.float32)).resize((self.W // 40, self.H), Image.BILINEAR).resize((self.W, self.H), Image.BILINEAR))
         return r * (1 - breakup + breakup * smoothstep(0.3, 0.7, rip))
 
     def band(self, pts, width, soft=2.0):

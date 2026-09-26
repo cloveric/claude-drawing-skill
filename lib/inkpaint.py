@@ -47,7 +47,7 @@ class Painting:
         out = np.zeros((self.H, self.W), np.float32); amp = 1.0; tot = 0.0
         for o in range(octaves):
             gh, gw = max(2, int(self.H / scale * 2 ** o) + 2), max(2, int(self.W / scale * 2 ** o) + 2)
-            g = Image.fromarray(r.random((gh, gw)).astype(np.float32), mode='F')
+            g = Image.fromarray(r.random((gh, gw)).astype(np.float32))
             out += amp * np.asarray(g.resize((self.W, self.H), Image.BICUBIC), np.float32)
             tot += amp; amp *= 0.5
         out /= tot

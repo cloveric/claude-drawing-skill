@@ -65,7 +65,7 @@ def noise2d(h, w, scale, octaves=4, seed=0):
     out = np.zeros((h, w), np.float32); amp = 1.0; tot = 0.0
     for o in range(octaves):
         gh, gw = max(2, int(h / scale * 2 ** o) + 2), max(2, int(w / scale * 2 ** o) + 2)
-        g = Image.fromarray(r.random((gh, gw)).astype(np.float32), mode='F')
+        g = Image.fromarray(r.random((gh, gw)).astype(np.float32))
         out += amp * np.asarray(g.resize((w, h), Image.BICUBIC), np.float32)
         tot += amp; amp *= 0.5
     out /= tot

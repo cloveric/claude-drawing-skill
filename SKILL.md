@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置六种画风：中国水墨（宣纸、远山与雾、飞白、皴擦、题字印章）、水彩（透明罩染、水痕边、颗粒、水渍花、倒影）、剪纸拼贴（撕纸白边、纸片阴影、报纸/笔记本纸、蜡笔、可爱小人）、韩国彩铅（细密排线、纸纹颗粒、柔和叠色、白色高光笔）、日本动漫（赛璐璐积雨云、蓝天、光晕光斑、线稿角色）、编辑风手绘（Riso 套色叠印、颗粒与错位、半调网点、手绘墨线、几何人物）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名水墨/水彩/剪纸/彩铅/动漫/编辑插画，或 "draw it yourself", "paint with code", "procedural painting", "watercolor / paper collage / colored pencil / anime / editorial illustration without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
+description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置九种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风，或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
 ---
 
 # Claude 绘图
@@ -14,12 +14,15 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 
 | 画风 | 库 | 范例 | 耗时 |
 |---|---|---|---|
-| 水墨 | `lib/inkpaint.py` · `Painting` | `examples/bawansiqian.py` 八万四千法门、`examples/moon_river.py` 月印万川 | 2–4 秒 |
+| 水墨 | `lib/inkpaint.py` · `Painting` | `examples/bawansiqian.py` 八万四千法门 | 约 4 秒 |
 | 水彩 | `lib/watercolor.py` · `Watercolor` | `examples/watercolor_autumn.py` 秋日湖畔（秋树罩染、湖面倒影、红色小舟） | 约 15 秒 |
 | 剪纸拼贴 | `lib/papercut.py` · `Collage` | `examples/papercut_balloons.py` 热气球小镇（条纹热气球、笑脸太阳、纸云、小房子） | 约 30 秒 |
 | 韩国彩铅 | `lib/colorpencil.py` · `ColorPencil` | `examples/colorpencil_dessert.py` 午后甜点（草莓蛋糕、红茶、草莓） | 约 17 秒 |
 | 日本动漫 | `lib/anime.py` · `Anime` | `examples/anime_summer.py` 夏空（积雨云、乡间公路、电线杆、草帽女孩背影） | 约 30 秒 |
 | 编辑风手绘 | `lib/editorial.py` · `Editorial` | `examples/editorial_ideas.py` 灵感生长（浇水长出灯泡的概念插画） | 约 11 秒 |
+| 油画厚涂 | `lib/oilpaint.py` · `OilPainting` | `examples/oil_wheatfield.py` 麦田星空（旋转的星空、麦田、柏树、乌鸦） | 约 2 秒 |
+| 浮世绘木版画 | `lib/ukiyoe.py` · `Ukiyoe` | `examples/ukiyoe_fuji.py` 富士曙（晕色天空、富士、云带、青海波、帆船、崖松） | 约 7 秒 |
+| 像素风 | `lib/pixelart.py` · `PixelArt` | `examples/pixel_rainy_cafe.py` 雨夜咖啡店（霓虹、路灯、雨、倒影、猫） | 约 0.1 秒 |
 
 各画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找。
 
@@ -29,7 +32,12 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 - 童趣、温暖、讲故事 → 剪纸拼贴；
 - 甜点、小物、日常可爱 → 韩国彩铅；
 - 青春、夏日、天空、背景美术 → 日本动漫；
-- 观点、概念、商业文章配图 → 编辑风手绘。
+- 观点、概念、商业文章配图 → 编辑风手绘；
+- 浓烈、有笔触质感、名画感 → 油画厚涂；
+- 日式古典、海浪、富士、东方装饰感 → 浮世绘；
+- 复古游戏、夜景霓虹、小尺寸动画 → 像素风。
+
+每种画风只保留一幅范例，作为质量基准。
 
 ## 一、流程（每幅画都照做）
 
@@ -103,6 +111,27 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 - `line(pts, 墨色, width, wobble, breaks)`：歪扭的手绘墨线；`dashes()` 虚线；`stars()` 小十字星
 - 专色控制在 4–5 种，并刻意让它们互相重叠，叠出第三种颜色
 
+**油画厚涂 `OilPainting`**：
+- 先准备两张图：参考色 `ref`（H×W×3，画面要画成什么颜色）和流向图 `ang`（H×W，每个像素上笔触的角度，比如天空打旋、麦田横扫、树木向上）
+- `layer(ref, ang, length, width, density, mask)`：铺一层笔触。先大笔铺底，再中笔，最后只在要紧处（`mask`）加细节笔
+- `stroke_at(x, y, angle, length, width, 颜色)`：在指定位置画一笔（乌鸦、签名、点睛）
+- `render()` 自动打光：颜料平顶鼓边、有笔毛沟，落笔处更厚
+
+**浮世绘 `Ukiyoe`**：
+- `block(mask, 颜色)`：印一块平涂色版，带木纹和套印偏移
+- `bokashi(mask, 颜色, y_strong, y_fade)`：晕色，从某一边浓到另一边消失，用于天空和海面
+- `key(pts, width)`：墨色主版勾线
+- 物件：`cloud_band(x0, x1, y, h, glow)` 不透明云带、`seigaiha(mask, 颜色, r)` 青海波纹
+- 标题签和朱印：`cartouche(x, y, w, h, '标题')`、`seal()`
+- 形状：`poly()`、`rect()`、`circle()`
+
+**像素风 `PixelArt`**：
+- 在低分辨率上画（默认 320×180，放大 6 倍）。坐标都是整数像素
+- 画形状：`rect()`、`poly()`、`circle()`、`line()`（Bresenham 直线）、`outline(mask)`、`put(x, y)`
+- 抖动：`gradient(x0, y0, x1, y1, c0, c1, steps)` 分带渐变，带与带之间用抖动过渡；`dither(mask, 颜色, alpha)` 按 Bayer 矩阵抖动上色；`glow(cx, cy, r, 颜色)` 抖动光晕
+- 其他：`text('CAFE', x, y, 颜色, size)` 3×5 像素字、`rain()` 雨丝
+- 交付用 PNG（无损），像素才清晰
+
 **顺序**：都是先远后近、先大后小，文字最后叠加。水墨的雾要画在它该吞没的东西之后；水彩的叶梗要先画，并且只画在叶子外面。
 
 ## 三、毛病清单（都真实出现过）
@@ -164,6 +193,27 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 色块死板，像电脑矢量图 | 每层专色都要有颗粒、浓淡不匀和几像素的套色错位 |
 | 颜色太多太杂 | 4–5 种专色，靠叠印得到其他颜色（比如青叠黄出绿） |
 
+**油画厚涂**
+
+| 问题 | 改法 |
+|---|---|
+| 笔触像一根根塑料管、橡皮泥 | 凸起要克制：平顶鼓边的截面，高光约 0.1，打光范围约 0.8–1.18 |
+| 笔触之间大量露底 | 铺底笔加密（density 约 2），宽笔铺满后再上细笔 |
+
+**浮世绘**
+
+| 问题 | 改法 |
+|---|---|
+| 云带半透明，透出后面的轮廓线 | 云带用不透明的色版（strength 超过 1，确保完全盖住） |
+| 标题签和云带、主体撞在一起 | 标题签放在天空的空白处，其他元素给它让位 |
+
+**像素风**
+
+| 问题 | 改法 |
+|---|---|
+| 背景底部露出一条黑带 | 天空渐变和楼群都要铺到地面线，不留缝 |
+| 光晕变成一大块方形点阵 | 光晕半径要小（约 20 像素）、强度约 0.4–0.5；霓虹光晕压扁一些 |
+
 ## 四、做成动画
 
 - 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的动图就是这样做的。
@@ -179,6 +229,9 @@ lib/papercut.py        剪纸拼贴
 lib/colorpencil.py     韩国彩铅
 lib/anime.py           日本动漫
 lib/editorial.py       编辑风手绘
+lib/oilpaint.py        油画厚涂
+lib/ukiyoe.py          浮世绘木版画
+lib/pixelart.py        像素风
 examples/*.py          范例脚本；*.jpg 成品；drawing_*.gif 逐步画出的动图
 中文字体：自动找 Kaiti/Songti（macOS）、Noto CJK（Linux）、KaiTi/SimSun（Windows），或设 INKPAINT_FONT
 ```
