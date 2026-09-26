@@ -14,7 +14,7 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 
 | 画风 | 库 | 范例 | 耗时 |
 |---|---|---|---|
-| 水墨 | `lib/inkpaint.py` · `Painting` | `examples/bawansiqian.py` 八万四千法门 | 约 4 秒 |
+| 水墨 | `lib/inkpaint.py` · `Painting` | `examples/bawansiqian.py` 八万四千法门；`examples/moon_river.py` 月印万川（烘云托月、孤舟、芦苇） | 约 4 秒 |
 | 水彩 | `lib/watercolor.py` · `Watercolor` | `examples/watercolor_autumn.py` 秋日湖畔（秋树罩染、湖面倒影、红色小舟） | 约 15 秒 |
 | 剪纸拼贴 | `lib/papercut.py` · `Collage` | `examples/papercut_balloons.py` 热气球小镇（条纹热气球、笑脸太阳、纸云、小房子） | 约 30 秒 |
 | 韩国彩铅 | `lib/colorpencil.py` · `ColorPencil` | `examples/colorpencil_dessert.py` 午后甜点（草莓蛋糕、红茶、草莓） | 约 17 秒 |
@@ -37,7 +37,7 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 - 日式古典、海浪、富士、东方装饰感 → 浮世绘；
 - 复古游戏、夜景霓虹、小尺寸动画 → 像素风。
 
-每种画风只保留一幅范例，作为质量基准。
+每种画风一幅范例作为质量基准；水墨另加一幅「月印万川」（留白托月、水面倒影）。
 
 ## 一、流程（每幅画都照做）
 
