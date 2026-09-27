@@ -1,17 +1,19 @@
 # Claude Drawing · Claude 绘图
 
-**Claude paints with code — no image model.** Nine styles, from ink wash to pixel art.
-**不用生图模型，Claude 用代码一笔一笔作画。** 九种画风，从水墨到像素。
+**Claude paints with code — no image model.** Thirteen styles, from ink wash and impasto oil to clay, cyanotype and cross-stitch.
+**不用生图模型，Claude 用代码一笔一笔作画。** 十三种画风，从水墨、油画到黏土、蓝晒和十字绣。
 
 [English](#english) · [中文](#中文)
 
-| Ink wash · 水墨 | Watercolour · 水彩 | Paper collage · 剪纸拼贴 |
-|---|---|---|
-| ![ink](examples/drawing_bawansiqian.gif) | ![watercolour](examples/drawing_watercolor_autumn.gif) | ![collage](examples/drawing_papercut_balloons.gif) |
-| **Coloured pencil · 韩国彩铅** | **Anime · 日本动漫** | **Editorial · 编辑风手绘** |
-| ![pencil](examples/drawing_colorpencil_dessert.gif) | ![anime](examples/drawing_anime_summer.gif) | ![editorial](examples/drawing_editorial_ideas.gif) |
-| **Impasto oil · 油画厚涂** | **Ukiyo-e · 浮世绘木版画** | **Pixel art · 像素风** |
-| ![oil](examples/drawing_oil_wheatfield.gif) | ![ukiyoe](examples/drawing_ukiyoe_fuji.gif) | ![pixel](examples/drawing_pixel_rainy_cafe.gif) |
+<p align="center"><img src="examples/drawing_bawansiqian.gif" width="100%"><br><sub><b>Ink wash · 水墨</b> — every style below is drawn stage by stage like this · 下面每种画风都是这样一步步画出来的</sub></p>
+
+| Watercolour · 水彩 | Paper collage · 剪纸拼贴 | Coloured pencil · 韩国彩铅 | Anime · 日本动漫 |
+|---|---|---|---|
+| ![watercolour](examples/drawing_watercolor_autumn.gif) | ![collage](examples/drawing_papercut_balloons.gif) | ![pencil](examples/drawing_colorpencil_dessert.gif) | ![anime](examples/drawing_anime_summer.gif) |
+| **Editorial · 编辑风手绘** | **Impasto oil · 油画厚涂** | **Ukiyo-e · 浮世绘木版画** | **Pixel art · 像素风** |
+| ![editorial](examples/drawing_editorial_ideas.gif) | ![oil](examples/drawing_oil_wheatfield.gif) | ![ukiyoe](examples/drawing_ukiyoe_fuji.gif) | ![pixel](examples/drawing_pixel_rainy_cafe.gif) |
+| **Stop-motion clay · 黏土定格** | **Cyanotype · 蓝晒** | **Cross-stitch · 十字绣** | **Retro panel · 复古仪器面板** |
+| ![clay](examples/drawing_clay_lighthouse.gif) | ![cyanotype](examples/drawing_cyanotype_botanicals.gif) | ![stitch](examples/drawing_stitch_sampler.gif) | ![panel](examples/drawing_panel_radio.gif) |
 
 ### Gallery · 画廊
 
@@ -27,8 +29,12 @@
 | <img src="examples/editorial_ideas.jpg" width="100%"> | <img src="examples/oil_wheatfield.jpg" width="100%"> |
 | **富士曙** · *Fuji at Dawn*<br><sub>Ukiyo-e · 浮世绘</sub> | **雨夜咖啡店** · *Rainy Night Cafe*<br><sub>Pixel art · 像素风</sub> |
 | <img src="examples/ukiyoe_fuji.jpg" width="100%"> | <img src="examples/pixel_rainy_cafe.png" width="100%"> |
+| **灯塔岛** · *Lighthouse Island*<br><sub>Stop-motion clay · 黏土定格</sub> | **蓝晒植物** · *Sun-Print Botanicals*<br><sub>Cyanotype · 蓝晒</sub> |
+| <img src="examples/clay_lighthouse.jpg" width="100%"> | <img src="examples/cyanotype_botanicals.jpg" width="100%"> |
+| **家** · *Home Sampler*<br><sub>Cross-stitch · 十字绣</sub> | **Aurora 64 收音机** · *Aurora 64 Radio*<br><sub>Vintage instrument panel · 复古仪器面板</sub> |
+| <img src="examples/stitch_sampler.jpg" width="100%"> | <img src="examples/panel_radio.jpg" width="100%"> |
 
-Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 30 s per 1920×1080 image.
+Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 30 s per 1920×1080 image.
 
 ---
 
@@ -36,7 +42,7 @@ Every mark above is computed: paper fibres, ink washes and mist, dry-brush strok
 
 ### What it is
 
-A [Claude Code](https://claude.com/claude-code) skill and a small painting library with nine styles:
+A [Claude Code](https://claude.com/claude-code) skill and a small painting library with thirteen styles:
 
 | Style | Module | What makes it read as the real medium |
 |---|---|---|
@@ -49,6 +55,10 @@ A [Claude Code](https://claude.com/claude-code) skill and a small painting libra
 | **Impasto oil** | `lib/oilpaint.py` · `OilPainting` | thousands of strokes following a *flow field*; each pixel knows its place inside its stroke → flat-topped paint ridges, bristle grooves, heavier paint where the brush lands; lit relief |
 | **Ukiyo-e woodblock** | `lib/ukiyoe.py` · `Ukiyoe` | one block per colour on washi, with wood grain and registration drift; *bokashi* graded wipes; black key-block outlines; seigaiha waves; cloud bands; title cartouche and seal |
 | **Pixel art** | `lib/pixelart.py` · `PixelArt` | a 320×180 canvas painted pixel by pixel; limited palette; ordered (Bayer) dithering for gradients, glows and reflections; 3×5 bitmap font; crisp ×6 upscale |
+| **Stop-motion clay** | `lib/clay.py` · `Clay` | a *height map* of pressed pieces (pads, balls, rolled snakes, puffy letters, finger-smeared slabs, tool grooves, pokes) with lumps and fingerprints; lit like a photo of a set: wrap-diffuse key + cool fill, waxy sheen, shadows marched through the height field, ambient occlusion |
+| **Cyanotype (sun print)** | `lib/cyanotype.py` · `Cyanotype` | emulsion brushed on in strokes with dry-brush ends; objects *block UV* (transmissions multiply): translucent leaves with whiter veins, fluff lifted off the paper with a soft penumbra, light scattering under edges; a Prussian-blue density curve; white handwriting printed in, pencil notes on the margin |
+| **Cross-stitch embroidery** | `lib/stitch.py` · `Stitch` | Aida cloth with a hole at every block corner; one X per cell, lit as round twisted thread with a shadow, in hand-made variants; half stitches; back-stitch snapped hole to hole; padded glossy satin stitch; French knots; ASCII charts and a 5×7 sampler alphabet; a sewn-on woven label |
+| **Vintage instrument panel** | `lib/panel.py` · `Panel` | teak veneer, brushed aluminium, moulded plastic, grille cloth with lurex floats, perforated metal; bevels, wells and drop shadows from one key light; machined knobs, piano keys, toggle switch, jewel lamp, magic-eye tube, meter; silkscreened scales and a backlit dial behind glass |
 
 Ask Claude to *"draw it yourself"*, *"paint this with code"*, or *"claude绘图"*, and name a style if you like. Claude then:
 
@@ -70,7 +80,7 @@ git clone https://github.com/cloveric/claude-drawing-skill.git ~/.claude/skills/
 pip install -r ~/.claude/skills/claude-drawing/requirements.txt   # numpy, Pillow
 ```
 
-Titles and notes need a CJK font. macOS Kaiti/Songti, Linux Noto CJK and Windows KaiTi/SimSun are found automatically; you can also set `INKPAINT_FONT=/path/to/font`.
+Titles and notes need a CJK font. macOS Kaiti/Songti, Linux Noto CJK and Windows KaiTi/SimSun are found automatically; you can also set `INKPAINT_FONT=/path/to/font`. The clay, cyanotype, cross-stitch and panel styles also look for common Latin system fonts (a sans, a rounded bold, a script and a handwriting face, via `core.latin_font`); override any of them with `INKPAINT_FONT_<STYLE>`, e.g. `INKPAINT_FONT_HAND`. No font files are bundled.
 
 ### Quick start
 
@@ -113,6 +123,10 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 - **Oil**: lay big strokes first, then smaller ones, then detail only where it matters. Keep the relief modest (flat-topped ridges, soft speculars), or strokes turn into plastic tubes.
 - **Ukiyo-e**: flat colour blocks plus bokashi only on skies and seas. Clouds are opaque bands. The key block outlines everything, and a cartouche and seal sit in the empty sky.
 - **Pixel art**: paint at the true low resolution and dither instead of blending. Keep glows small (a big dither glow turns into a square). Upscale with nearest-neighbour only.
+- **Clay**: think in heights (px) and let pieces drape over what is below. Finger smears must be wide, soft and few, or the sky turns into crumpled foil. Never wrap non-tileable noise: it leaves straight seams.
+- **Cyanotype**: think in UV transmission, not paint. Thin leaves ~0.85 opacity with fully blocking veins; lift fluff off the paper for a soft penumbra. A fern pinna is one lobed blade, not a row of separate leaflets. Dry-brush stroke ends are crisp broken streaks, not a blur.
+- **Cross-stitch**: everything lives on the hole grid. Never lay half stitches over cross stitches (switch floss colour instead). A short diagonal back-stitch is one stitch from hole to hole, or it snaps into L-shaped steps.
+- **Panel**: one key light for every part: lit upper-left edges, shadows to the lower right. Grille-cloth lurex needs long floats (short ones read as a perforated dot grid). Keep legends off busy textures and away from scale ends.
 
 ### Roadmap
 
@@ -124,7 +138,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 
 ### 这是什么
 
-一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置九种画风：
+一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置十三种画风：
 
 | 画风 | 模块 | 为什么看起来像真的 |
 |---|---|---|
@@ -137,6 +151,10 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 | **油画厚涂** | `lib/oilpaint.py` · `OilPainting` | 几万道笔触顺着**流向图**排列；每个像素都知道自己在笔触里的位置，算出平顶鼓边的颜料、笔毛沟、落笔处更厚的颜料，再打光出凸起 |
 | **浮世绘木版画** | `lib/ukiyoe.py` · `Ukiyoe` | 每种颜色一块版，印在和纸上，带木纹和套印偏移；天空和海面用**晕色（bokashi）**；墨色主版勾线；青海波纹；横向云带；标题签和朱印 |
 | **像素风** | `lib/pixelart.py` · `PixelArt` | 在 320×180 的小画布上逐像素作画；有限调色板；渐变、光晕、倒影都用 Bayer 抖动；3×5 像素字体；无插值放大 6 倍 |
+| **黏土定格** | `lib/clay.py` · `Clay` | 用**高度图**一块块捏：压平的泥片、小球、搓条、鼓起的黏土字、手指抹开的泥面、刻线和戳洞，表面带小疙瘩和指纹；再像拍定格动画一样打光：暖色主光+冷色补光、蜡质光泽、沿光线步进算出的投影、缝隙里的环境光遮蔽 |
+| **蓝晒** | `lib/cyanotype.py` · `Cyanotype` | 药水一笔笔刷上去，笔尾是干刷的断续刷丝；放上去的东西**挡紫外线**（透过率相乘）：薄叶透一点光、叶脉更白，蒲公英绒毛离纸有距离、边缘柔和，边缘下还有散射；按普鲁士蓝的显影曲线上色；白色手写字一起晒出来，纸边再加铅笔字 |
+| **十字绣** | `lib/stitch.py` · `Stitch` | Aida 布，每个布块四角有孔；每格一个 X，线按扭绞的圆线打光并投下小影子，还有几种手工误差；半针；回针沿孔走、一针从孔到孔；鼓起有光泽的缎面绣；法式结；字符图样和 5×7 刺绣字母；缝上去的织标 |
+| **复古仪器面板** | `lib/panel.py` · `Panel` | 柚木贴皮、拉丝铝、注塑塑料、带金丝的喇叭布、冲孔网；同一盏主光照出倒角、凹槽和投影；车削旋钮、琴键、拨杆开关、宝石指示灯、绿色魔眼管、指针表；丝印刻度、玻璃后面的背光刻度窗 |
 
 对 Claude 说「claude绘图」「你自己画」「用代码画」，也可以指定画风。它会：
 1. **先定构图**：层次、焦点、留白，而且画面要图解内容本身；
@@ -157,7 +175,7 @@ git clone https://github.com/cloveric/claude-drawing-skill.git ~/.claude/skills/
 pip install -r ~/.claude/skills/claude-drawing/requirements.txt   # numpy、Pillow
 ```
 
-题字和纸条需要中文字体。macOS 的楷体/宋体、Linux 的 Noto CJK、Windows 的楷体/宋体都会自动找到，也可以用 `INKPAINT_FONT=字体路径` 指定。
+题字和纸条需要中文字体。macOS 的楷体/宋体、Linux 的 Noto CJK、Windows 的楷体/宋体都会自动找到，也可以用 `INKPAINT_FONT=字体路径` 指定。黏土、蓝晒、十字绣、复古面板还会找常见的西文字体（无衬线、圆体、花体、手写体，见 `core.latin_font`），可用 `INKPAINT_FONT_<风格>` 指定，比如 `INKPAINT_FONT_HAND`。仓库里不附带任何字体文件。
 
 ### 快速上手
 
@@ -174,6 +192,10 @@ python3 examples/editorial_ideas.py     out.png                    # 编辑风�
 python3 examples/oil_wheatfield.py      out.png                    # 油画厚涂：麦田星空
 python3 examples/ukiyoe_fuji.py         out.png                    # 浮世绘：富士曙
 python3 examples/pixel_rainy_cafe.py    out.png                    # 像素风：雨夜咖啡店
+python3 examples/clay_lighthouse.py     out.png                    # 黏土定格：灯塔岛
+python3 examples/cyanotype_botanicals.py out.png                   # 蓝晒：蓝晒植物
+python3 examples/stitch_sampler.py      out.png                    # 十字绣：家
+python3 examples/panel_radio.py         out.png                    # 复古仪器面板：Aurora 64 收音机
 ```
 
 ### 作画要点（Claude 交图前逐条自查）
@@ -187,6 +209,10 @@ python3 examples/pixel_rainy_cafe.py    out.png                    # 像素风�
 - **油画**：先大笔铺底，再中笔，细节笔只用在要紧处；颜料凸起要克制（平顶、弱高光），否则笔触像塑料管。
 - **浮世绘**：平涂色块，晕色只用在天空和海面；云带不透明；墨线勾住一切；标题签和印章放在天空留白处。
 - **像素风**：在真正的低分辨率上画，用抖动代替渐变；光晕要小（大面积抖动会变成方块）；放大只能用无插值。
+- **黏土**：按高度（像素）思考，部件顺着下面的东西铺；手指抹痕要宽、要柔、要少，否则天空像揉皱的锡纸；不可平铺的噪声不能循环平移，会留下笔直的接缝。
+- **蓝晒**：想的是挡紫外线，不是上颜料：薄叶不透明度约 0.85、叶脉完全挡光；绒毛要离纸，边缘才柔；蕨类羽片是一整片带圆齿的叶子，不是一排分开的小叶；干刷的笔尾是利落的断续刷丝，不是一片模糊。
+- **十字绣**：一切都在布孔的格子上；半针不要叠在十字绣上（亮部换浅色线）；短的斜向回针一针从孔到孔，否则会被吸附成 L 形台阶。
+- **复古面板**：所有部件同一盏主光：左上边亮、向右下投影；喇叭布的金丝要长浮，短了像冲孔板；丝印字别压在花纹上，也别挤到刻度末端。
 
 ### 计划
 

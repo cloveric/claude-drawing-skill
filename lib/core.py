@@ -148,3 +148,118 @@ def bristle_stroke(buf, pts, width, ink, dry=0.35, taper=(0.25, 0.35), jitter=0.
             k = np.exp(-((kx - (cx - ix)) ** 2 + (ky - (cy - iy)) ** 2) / (2 * (br * press[i]) ** 2 + 1e-3))
             sl = buf[iy - rad:iy + rad + 1, ix - rad:ix + rad + 1]
             np.copyto(sl, 1 - (1 - sl) * (1 - k * ink * load[i] * 0.55))
+
+
+# ---------------------------------------------------------------- helpers shared by clay / cyanotype / stitch / panel
+def shift(a, dx, dy):
+    """zero-padded shift, no wrap-around: out[y, x] = a[y - dy, x - dx]"""
+    dx, dy = int(round(dx)), int(round(dy))
+    H, W = a.shape[:2]
+    out = np.zeros_like(a)
+    if abs(dx) >= W or abs(dy) >= H: return out
+    out[max(dy, 0):H + min(dy, 0), max(dx, 0):W + min(dx, 0)] = a[max(-dy, 0):H + min(-dy, 0), max(-dx, 0):W + min(-dx, 0)]
+    return out
+
+
+_FONT_CANDIDATES = {   # (glob pattern, face index); first hit wins -- macOS, Linux, Windows
+    'sans': [('/System/Library/Fonts/HelveticaNeue.ttc', 0), ('/System/Library/Fonts/Helvetica.ttc', 0),
+             ('/usr/share/fonts/**/DejaVuSans.ttf', 0), ('/usr/share/fonts/**/LiberationSans-Regular.ttf', 0), ('C:/Windows/Fonts/arial.ttf', 0)],
+    'sans_bold': [('/System/Library/Fonts/HelveticaNeue.ttc', 1), ('/System/Library/Fonts/Supplemental/Arial Bold.ttf', 0),
+                  ('/usr/share/fonts/**/DejaVuSans-Bold.ttf', 0), ('/usr/share/fonts/**/LiberationSans-Bold.ttf', 0), ('C:/Windows/Fonts/arialbd.ttf', 0)],
+    'rounded': [('/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf', 0), ('/usr/share/fonts/**/Nunito*Black*.ttf', 0),
+                ('/usr/share/fonts/**/DejaVuSans-Bold.ttf', 0), ('C:/Windows/Fonts/ARLRDBD.TTF', 0), ('C:/Windows/Fonts/arialbd.ttf', 0)],
+    'geometric': [('/System/Library/Fonts/Supplemental/Futura.ttc', 0), ('/System/Library/Fonts/Avenir Next.ttc', 5),
+                  ('/usr/share/fonts/**/URWGothic-Book.*', 0), ('/usr/share/fonts/**/DejaVuSans.ttf', 0), ('C:/Windows/Fonts/GOTHIC.TTF', 0), ('C:/Windows/Fonts/arial.ttf', 0)],
+    'condensed': [('/System/Library/Fonts/Supplemental/DIN Condensed Bold.ttf', 0), ('/System/Library/Fonts/HelveticaNeue.ttc', 4),
+                  ('/usr/share/fonts/**/DejaVuSansCondensed-Bold.ttf', 0), ('C:/Windows/Fonts/ARIALNB.TTF', 0), ('C:/Windows/Fonts/arialbd.ttf', 0)],
+    'serif': [('/System/Library/Fonts/Supplemental/Georgia.ttf', 0), ('/System/Library/Fonts/Times.ttc', 0),
+              ('/usr/share/fonts/**/DejaVuSerif.ttf', 0), ('C:/Windows/Fonts/georgia.ttf', 0)],
+    'typewriter': [('/System/Library/Fonts/Supplemental/AmericanTypewriter.ttc', 0), ('/System/Library/Fonts/Supplemental/Courier New.ttf', 0),
+                   ('/usr/share/fonts/**/DejaVuSansMono.ttf', 0), ('C:/Windows/Fonts/cour.ttf', 0)],
+    'hand': [('/System/Library/Fonts/Supplemental/Bradley Hand Bold.ttf', 0), ('/System/Library/Fonts/Noteworthy.ttc', 0),
+             ('/usr/share/fonts/**/*Kalam*Regular*.ttf', 0), ('/usr/share/fonts/**/*Caveat*.ttf', 0), ('C:/Windows/Fonts/segoepr.ttf', 0), ('C:/Windows/Fonts/comic.ttf', 0)],
+    'script': [('/System/Library/Fonts/Supplemental/SnellRoundhand.ttc', 1), ('/System/Library/Fonts/Supplemental/Apple Chancery.ttf', 0),
+               ('/usr/share/fonts/**/z003*.[ot]tf', 0), ('C:/Windows/Fonts/segoesc.ttf', 0), ('C:/Windows/Fonts/Gabriola.ttf', 0)],
+    'cjk_sans': [('/System/Library/Fonts/STHeiti Medium.ttc', 0), ('/System/Library/Fonts/Hiragino Sans GB.ttc', 2),
+                 ('/usr/share/fonts/**/NotoSansCJK*Bold*.tt[cf]', 0), ('/usr/share/fonts/**/NotoSansCJK*.tt[cf]', 0), ('C:/Windows/Fonts/msyhbd.ttc', 0), ('C:/Windows/Fonts/msyh.ttc', 0)],
+}
+
+
+def latin_font(style='sans'):
+    """(path, face_index) of a system font for `style`, or None.
+    styles: sans, sans_bold, rounded, geometric, condensed, serif, typewriter, hand, script, cjk_sans, cjk.
+    Override any style with $INKPAINT_FONT_<STYLE>, e.g. INKPAINT_FONT_HAND=/path/to/font.ttf"""
+    env = os.environ.get('INKPAINT_FONT_' + style.upper())
+    if env and os.path.exists(env): return env, 0
+    if style == 'cjk':
+        p = cjk_font()
+        return (p, 0) if p else None
+    for pat, idx in _FONT_CANDIDATES.get(style, []):
+        fs = glob.glob(pat, recursive=True)
+        if fs: return fs[0], idx
+    return None
+
+
+def load_font(style, size):
+    """PIL font for `style` at `size` px; falls back to the sans font, then the CJK font, then Pillow's default"""
+    from PIL import ImageFont
+    for st in (style, 'sans', 'cjk'):
+        hit = latin_font(st)
+        if hit:
+            try:
+                return ImageFont.truetype(hit[0], int(size), index=hit[1])
+            except OSError:
+                pass
+    return ImageFont.load_default(size)
+
+
+def text_mask(h, w, s, font, xy, anchor='la', spacing=0.0, rot=0.0):
+    """text -> anti-aliased float mask (h, w) in 0..1.
+    font: a PIL font (see load_font); anchor as in Pillow ('la', 'mm', 'rs', ...);
+    spacing: extra px between letters (letter-spaced legends); rot: degrees counter-clockwise about xy"""
+    from PIL import ImageDraw
+    im = Image.new('L', (w, h), 0)
+    d = ImageDraw.Draw(im)
+    x, y = float(xy[0]), float(xy[1])
+    if not spacing:
+        d.text((x, y), s, font=font, fill=255, anchor=anchor)
+    else:
+        adv = [font.getlength(ch) + spacing for ch in s]
+        total = sum(adv) - spacing
+        x0 = x - total * {'l': 0.0, 'm': 0.5, 'r': 1.0}[anchor[0]]
+        for ch, a in zip(s, adv):
+            d.text((x0, y), ch, font=font, fill=255, anchor='l' + anchor[1])
+            x0 += a
+    if rot:
+        im = im.rotate(rot, resample=Image.BICUBIC, center=(x, y))
+    return np.asarray(im, np.float32) / 255
+
+
+def height_normals(hmap):
+    """unit surface normals (H, W, 3) of a height field measured in pixels"""
+    gy, gx = np.gradient(hmap.astype(np.float32))
+    n = np.stack([-gx, -gy, np.ones_like(gx)], -1)
+    return n / np.linalg.norm(n, axis=-1, keepdims=True)
+
+
+def height_shadow(hmap, light=(-0.45, -0.62, 0.64), reach=160, step=2.0, soft=3.0):
+    """cast shadow of a height field onto itself: 0 lit .. 1 in shadow.
+    March from every pixel toward the light; if the terrain rises above the light ray, the pixel is shadowed."""
+    lx, ly, lz = light
+    l = float(np.hypot(lx, ly)) + 1e-6
+    dx, dy, slope = lx / l, ly / l, lz / l                 # slope: how fast the ray climbs per px
+    occ = np.full(hmap.shape, -1e9, np.float32)
+    t = step
+    while t <= reach:
+        s = shift(hmap, -dx * t, -dy * t) - t * slope
+        np.maximum(occ, s, out=occ)
+        t += step
+    return smoothstep(0.0, soft, occ - hmap)
+
+
+def ambient_occlusion(hmap, radii=(4, 12, 32), depth=(6.0, 14.0, 30.0)):
+    """crevices and the feet of raised shapes get less sky light: 0 open .. 1 occluded"""
+    ao = np.zeros(hmap.shape, np.float32)
+    for r, k in zip(radii, depth):
+        ao += np.clip((blur(hmap, r) - hmap) / k, 0, 1)
+    return np.clip(ao / len(radii), 0, 1)

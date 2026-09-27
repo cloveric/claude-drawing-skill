@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置九种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风，或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
+description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置十三种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
 ---
 
 # Claude 绘图
@@ -23,8 +23,12 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 | 油画厚涂 | `lib/oilpaint.py` · `OilPainting` | `examples/oil_wheatfield.py` 麦田星空（旋转的星空、麦田、柏树、乌鸦） | 约 2 秒 |
 | 浮世绘木版画 | `lib/ukiyoe.py` · `Ukiyoe` | `examples/ukiyoe_fuji.py` 富士曙（晕色天空、富士、云带、青海波、帆船、崖松） | 约 7 秒 |
 | 像素风 | `lib/pixelart.py` · `PixelArt` | `examples/pixel_rainy_cafe.py` 雨夜咖啡店（霓虹、路灯、雨、倒影、猫） | 约 0.1 秒 |
+| 黏土定格 | `lib/clay.py` · `Clay` | `examples/clay_lighthouse.py` 灯塔岛（手指抹开的天空、条纹灯塔、喷水的鲸鱼、搓条浪花、小帆船） | 约 6 秒 |
+| 蓝晒 | `lib/cyanotype.py` · `Cyanotype` | `examples/cyanotype_botanicals.py` 蓝晒植物（蕨叶、银杏、蒲公英、飘散的种子、白色手写标注） | 约 6 秒 |
+| 十字绣 | `lib/stitch.py` · `Stitch` | `examples/stitch_sampler.py` 家（H♥ME 字母、缎面绣爱心、小屋、苹果树、松树、花边、缝上的布标） | 约 20 秒 |
+| 复古仪器面板 | `lib/panel.py` · `Panel` | `examples/panel_radio.py` Aurora 64 收音机（柚木机壳、喇叭布、背光刻度窗、琴键、魔眼管、拨杆、旋钮） | 约 7 秒 |
 
-各画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找。
+各画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找；新四种还用到补零平移 `shift`、文字遮罩 `text_mask`、西文字体查找 `latin_font`/`load_font`，以及高度图打光 `height_normals`、`height_shadow`（沿光线步进的投影）、`ambient_occlusion`。
 
 **用户没有指定画风时怎么选**：
 - 禅意、古典、山水 → 水墨；
@@ -35,9 +39,13 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 - 观点、概念、商业文章配图 → 编辑风手绘；
 - 浓烈、有笔触质感、名画感 → 油画厚涂；
 - 日式古典、海浪、富士、东方装饰感 → 浮世绘；
-- 复古游戏、夜景霓虹、小尺寸动画 → 像素风。
+- 复古游戏、夜景霓虹、小尺寸动画 → 像素风；
+- 童趣立体、讲故事、手作感、定格动画 → 黏土定格；
+- 植物、标本、自然科学、复古工艺感的蓝色海报 → 蓝晒；
+- 家、温馨、手作礼物、贺卡、名字和字母 → 十字绣；
+- 设备、仪表、音响收音机、复古科技与产品感 → 复古仪器面板。
 
-每种画风一幅范例作为质量基准；水墨另加一幅「月印万川」（留白托月、水面倒影）。
+每种画风一幅范例作为质量基准（范例都不用禅意主题）；水墨另加一幅「月印万川」（留白托月、水面倒影）。
 
 ## 一、流程（每幅画都照做）
 
@@ -132,6 +140,33 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 - 其他：`text('CAFE', x, y, 颜色, size)` 3×5 像素字、`rain()` 雨丝
 - 交付用 PNG（无损），像素才清晰
 
+**黏土定格 `Clay`**：
+- 同时维护高度图（像素为单位）和颜色图，最后用影棚光一次性打光。部件默认「铺」在下面的东西上（`base=None`），先远后近、后铺的在上
+- `backdrop(颜色)` 底板；`gradient(top, bottom, y0, y1)` 生成颜色场，可传给 `pad`/`smear`
+- 部件：`pad(mask, 颜色, height, round)` 压平的一片（round 小是硬边薄片，大是鼓鼓的枕头形）、`ball(x, y, r)` 小球、`snake(pts, r, taper=(起, 止))` 搓条（线条、浪花、嘴、茎）、`text(s, x, y, size)` 鼓起的黏土字
+- 工具痕：`groove(pts, width, depth)` 刻线、`poke(x, y, r, depth)` 戳洞；`smear(mask, 颜色场)` 手指抹开的一大片（会把相邻颜色拖混，留下柔和的指痕脊）
+- `marble=('#颜色', 0.25)` 两色没揉匀的纹路；表面自动带小疙瘩和指纹
+- 遮罩：`circle()`、`ellipse()`、`poly()`、`blob()`、`rrect()`
+
+**蓝晒 `Cyanotype`**：
+- 思路是「挡紫外线」而不是「上颜料」：放上去的东西按不透明度挡光，透过率相乘；最后显影成普鲁士蓝
+- `coat(x0, y0, x1, y1)` 刷涂药水：一笔笔横刷，笔尾是干刷的断续刷丝，边上会甩几滴药水
+- `place(mask, opacity, lift, texture)`：opacity 薄叶约 0.85、叶脉 1.0、绒毛约 0.3；lift 是离纸的高度（0 压平清晰，1–3 柔和半影）；texture 是叶肉的不均匀
+- 批量画遮罩：`shapes([轮廓...])` 一次画很多片叶子，`lines([折线...], width, taper)` 一次画很多茎、叶脉、绒毛；`Cyanotype.leaf_pts(x, y, 角度, 长, 宽, tip, blunt)` 叶片轮廓
+- 文字：`label()` 白色手写字（写在透明片上一起晒）、`pencil()` 晒完后写在纸边的铅笔字
+
+**十字绣 `Stitch`**：
+- 一切都在布孔的格子上（`cell` 像素一格）。`cells(mask)` 把像素遮罩变成格子，`at(gx, gy)` 取格子中心
+- 针法：`cross(格子, 颜色)` 十字绣、`half(格子, 颜色)` 半针（天空、云、烟）、`back(pts, 颜色, step)` 回针（路径吸附到孔上，一针约 step 格）、`running(pts)` 平针虚线、`satin(mask, 颜色, angle)` 缎面绣（鼓起、有光泽）、`satin_text(s, x, y, size)`、`knot(x, y, 颜色)` 法式结
+- 图样：`chart(['..#..', '.###.'], gx, gy, {'#': 颜色})` 按字符图绣；`letters('HOME', gx, gy, 颜色, scale)` 5×7 字母
+- `label(x0, y0, x1, y1, 'EST. 2026')` 缝上去的织标
+
+**复古仪器面板 `Panel`**：
+- 所有部件都由同一盏左上方的主光照亮：朝光的边亮、背光的边暗、凸起的部件向右下投影
+- 材质：`surface(mask, 材质, 颜色, height)`，材质可选 wood（柚木）、brushed（拉丝铝）、plastic、painted、fabric（喇叭布，`lurex=` 金丝）；`recess(mask, 材质, 颜色, depth)` 下凹的窗口；`background()`、`paint()`、`glow()`、`drop_shadow()`
+- 控件：`knob(x, y, r, angle)` 车削旋钮、`button()` 琴键（`pressed=True` 按下）、`toggle()` 拨杆开关、`lamp()` 宝石指示灯、`magic_eye()` 绿色魔眼调谐管、`meter()` 指针表、`screw()` 螺丝、`grille()` 冲孔网、`badge()` 镀铬草书铭牌
+- 印刷：`text(s, x, y, size, spacing=)` 丝印字、`scale_arc()` 圆弧刻度、`scale_linear()` 直尺刻度、`glass(mask)` 玻璃反光
+
 **顺序**：都是先远后近、先大后小，文字最后叠加。水墨的雾要画在它该吞没的东西之后；水彩的叶梗要先画，并且只画在叶子外面。
 
 ## 三、毛病清单（都真实出现过）
@@ -214,9 +249,51 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 背景底部露出一条黑带 | 天空渐变和楼群都要铺到地面线，不留缝 |
 | 光晕变成一大块方形点阵 | 光晕半径要小（约 20 像素）、强度约 0.4–0.5；霓虹光晕压扁一些 |
 
+**黏土定格**
+
+| 问题 | 改法 |
+|---|---|
+| 手指抹开的天空像揉皱的锡纸 | 指痕要宽（40–70 像素）、数量适中（200–350 笔）、脊线柔和低矮（`smear` 的 height 约 4）；先铺几种颜色再抹，拖色才看得出来 |
+| 天空里出现笔直的矩形色块边 | 不可平铺的噪声不能取模循环平移，要在噪声图内部取窗口（已修） |
+| 预先铺的色块边缘太硬，抹完还是一块一块 | 色块之间用 smoothstep 柔和过渡，再用手指抹 |
+| 浪花像一排排一模一样的墙纸花纹 | 每朵浪的长短、高低、间距都随机；只排两三行，近大远小 |
+| 鲸鱼像一条面包，尾鳍像两根分开的香肠 | 头要圆、身体向后收窄入水；尾鳍用一整片带中间缺口的翼形轮廓 |
+| 前景水面在藏在下面的尾柄处鼓起一个包 | 部件默认顺着下面的高度铺；被遮住的部分别伸进水面太深，或在水线处用泡沫盖住 |
+
+**蓝晒**
+
+| 问题 | 改法 |
+|---|---|
+| 蕨叶像一串箭头或锯齿（鱼骨状） | 每片羽片做成一整片带圆齿边的叶片，加淡色小叶脉；不要一颗颗分开的小叶 |
+| 小叶改成椭圆后又像含羞草 | 同上，蕨类的羽片是连在一起的 |
+| 蒲公英绒毛几乎看不见 | 细丝不透明度约 0.3、lift 约 1；抬得太高会被半影模糊掉 |
+| 刷涂边缘像毛刺、撕纸或动态模糊 | 按一笔笔横刷建模：每根刷毛在自己的位置干净利落地停住，干刷的断续用横向拉长的噪声（已修） |
+| 茎穿过白色题字 | 题字放在留白处，茎的走向给题字让路 |
+| 飘散的种子被涂布边缘裁掉，只剩一根线 | 小物件要完整落在涂布区域以内 |
+
+**十字绣**
+
+| 问题 | 改法 |
+|---|---|
+| 斜向的短线（太阳光芒）被吸附成一串 L 形台阶 | 短斜线就绣一针，从孔到孔（`step` 设大） |
+| 半针叠在十字绣上，像贴了一层纹理 | 真实绣法不会这样叠：亮部直接换浅一号的线绣十字 |
+| 烟囱被屋顶整个盖住、烟线穿过标题 | 先算好屋顶轮廓再定烟囱高度；烟用半针小烟团，往留白处飘 |
+| 布面格子太黑，像方格纸 | 布孔暗度约 0.34，布块起伏约 0.065 |
+| 花朵和松树重叠 | 摆放前按格子算好每样东西占的列 |
+
+**复古仪器面板**
+
+| 问题 | 改法 |
+|---|---|
+| 喇叭布上的金丝像一排点点，看着像冲孔板 | 金丝纬线要长浮（压过三根经线再钻下一根），闪光沿线缓慢变化 |
+| 刻度单位和最后一个数字挤在一起 | 单位放到刻度末端外侧，或者直接写完整数值（530…1600 kHz） |
+| 浅色字印在浅色喇叭布上看不见 | 丝印颜色要和底材拉开明度 |
+| 一大片喇叭布太平、太假 | 布是半透明的：把后面喇叭的圆形暗影淡淡透出来 |
+
 ## 四、做成动画
 
 - 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的动图就是这样做的。
+- 动图规格（多数现有动图和新增四幅一致）：720×405；每个阶段停 900 毫秒，再用 5 帧（每帧 90 毫秒）叠化到下一阶段，最后一帧停 2600 毫秒，无限循环。新增四幅的所有帧共用一张 256 色调色板，文件小、不闪烁。
 - 更细的逐笔动画：把一组笔画单独画到透明层上导出，再用 Motion Canvas 遮罩按顺序显现。这个还没做成现成接口。
 
 ## 五、文件
@@ -232,6 +309,11 @@ lib/editorial.py       编辑风手绘
 lib/oilpaint.py        油画厚涂
 lib/ukiyoe.py          浮世绘木版画
 lib/pixelart.py        像素风
+lib/clay.py            黏土定格
+lib/cyanotype.py       蓝晒
+lib/stitch.py          十字绣
+lib/panel.py           复古仪器面板
 examples/*.py          范例脚本；*.jpg 成品；drawing_*.gif 逐步画出的动图
 中文字体：自动找 Kaiti/Songti（macOS）、Noto CJK（Linux）、KaiTi/SimSun（Windows），或设 INKPAINT_FONT
+西文字体（新四种用）：core.latin_font(style) 按 sans / sans_bold / rounded / script / hand / typewriter 等找系统字体，可用 INKPAINT_FONT_<STYLE> 指定；字体文件不要放进仓库
 ```
