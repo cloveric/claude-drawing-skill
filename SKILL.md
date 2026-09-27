@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置十三种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
+description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置十五种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）、贴纸拼贴·小票（模切乙烯贴纸、热敏小票、和纸胶带、吊牌、橡皮章）、实验笔记本·贴纸（线圈方格本、铅笔图表、荧光笔、红笔圈、便利贴）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机、贴纸、小票、收据、手帐拼贴、实验笔记本、方格本、荧光笔、便利贴），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio / sticker collage / receipt / lab notebook / graph paper without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
 ---
 
 # Claude 绘图
@@ -27,6 +27,8 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 | 蓝晒 | `lib/cyanotype.py` · `Cyanotype` | `examples/cyanotype_botanicals.py` 蓝晒植物（蕨叶、银杏、蒲公英、飘散的种子、白色手写标注） | 约 6 秒 |
 | 十字绣 | `lib/stitch.py` · `Stitch` | `examples/stitch_sampler.py` 家（H♥ME 字母、缎面绣爱心、小屋、苹果树、松树、花边、缝上的布标） | 约 20 秒 |
 | 复古仪器面板 | `lib/panel.py` · `Panel` | `examples/panel_radio.py` Aurora 64 收音机（柚木机壳、喇叭布、背光刻度窗、琴键、魔眼管、拨杆、旋钮） | 约 7 秒 |
+| 贴纸拼贴 · 小票 | `lib/sticker.py` · `Sticker` | `examples/sticker_market.py` 周末市集（热敏小票、模切贴纸：酸种面包/传家番茄/郁金香花束/咖啡豆、贴纸大字、波浪边促销贴、麻绳吊牌、和纸胶带、「已付」橡皮章） | 约 3 秒 |
+| 实验笔记本 · 贴纸 | `lib/notebook.py` · `Notebook` | `examples/notebook_brewing.py` 咖啡萃取实验（线圈方格笔记本、铅笔表格与折线图、排线标出最佳区间、荧光笔、没闭合的红笔圈、便利贴结论、模切贴纸、标签机日期、桌上的六棱铅笔） | 约 3 秒 |
 
 各画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找；新四种还用到补零平移 `shift`、文字遮罩 `text_mask`、西文字体查找 `latin_font`/`load_font`，以及高度图打光 `height_normals`、`height_shadow`（沿光线步进的投影）、`ambient_occlusion`。
 
@@ -43,7 +45,9 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 - 童趣立体、讲故事、手作感、定格动画 → 黏土定格；
 - 植物、标本、自然科学、复古工艺感的蓝色海报 → 蓝晒；
 - 家、温馨、手作礼物、贺卡、名字和字母 → 十字绣；
-- 设备、仪表、音响收音机、复古科技与产品感 → 复古仪器面板。
+- 设备、仪表、音响收音机、复古科技与产品感 → 复古仪器面板；
+- 清单、账单、价格、购物、市集、活动海报、轻松但成熟的讲解片封面 → 贴纸拼贴 · 小票；
+- 实验记录、数据对比、复盘笔记、讲解片里的「算账 / 结论」页 → 实验笔记本 · 贴纸。
 
 每种画风一幅范例作为质量基准（范例都不用禅意主题）；水墨另加一幅「月印万川」（留白托月、水面倒影）。
 
@@ -166,6 +170,28 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 - 材质：`surface(mask, 材质, 颜色, height)`，材质可选 wood（柚木）、brushed（拉丝铝）、plastic、painted、fabric（喇叭布，`lurex=` 金丝）；`recess(mask, 材质, 颜色, depth)` 下凹的窗口；`background()`、`paint()`、`glow()`、`drop_shadow()`
 - 控件：`knob(x, y, r, angle)` 车削旋钮、`button()` 琴键（`pressed=True` 按下）、`toggle()` 拨杆开关、`lamp()` 宝石指示灯、`magic_eye()` 绿色魔眼调谐管、`meter()` 指针表、`screw()` 螺丝、`grille()` 冲孔网、`badge()` 镀铬草书铭牌
 - 印刷：`text(s, x, y, size, spacing=)` 丝印字、`scale_arc()` 圆弧刻度、`scale_linear()` 直尺刻度、`glass(mask)` 玻璃反光
+
+**贴纸拼贴 · 小票 `Sticker`**：
+- 思路：每样东西先在自己的透明小画纸 `Art` 上画成平面矢量图，再决定材质：`stick()` 做成模切贴纸，`lay()` 当纸平放
+- `board(颜色, kind='cream'|'kraft')`：奶油色或浅牛皮纸底板，带纸纹、斑驳、纤维和杂点
+- `art(w, h)` 返回 `Art`：遮罩 `circle/ring/ellipse/rrect/poly/blob/line/text`（中西文混排，`stroke` 加粗）；上色 `fill(mask, 颜色, alpha, clip)`、`gradient()`、`radial()`；`crescent(mask, dx, dy)` 明暗月牙；`speckle()` 撒面粉、籽粒；`cut()` 打孔；`texture('kraft')` 牛皮纸纹
+- `stick(art, cx, cy, rot, border=14, peel='tr'|'tl'|'br'|'bl', peel_size, lift, gloss)`：模切贴纸。白边按圆角外扩，有切口厚度、覆膜高光和斜向反光，贴地阴影加柔和投影；`peel` 翻起一角，露出浅色背面和它自己的影子
+- `lay(art, cx, cy, rot, curl, lift)`：纸张平放（小票、吊牌），两端微翘、翘起处影子更长；返回局部→画面坐标映射 `T(x, y)`，用来在纸上落笔、盖章
+- `receipt(w, h)` 返回 `Receipt`：锯齿撕边、热敏灰字（断针竖纹、走纸浓淡、小掉点）；`centre()` 居中打印、`row(y, 名称, 金额, was='旧价')` 带点线引导和删除线、`rule('dash'|'stars'|'double')`、`barcode()`、`crease(y)` 折痕
+- `tape(cx, cy, 长, rot, 颜色, pattern='stripe'|'dot'|'grid'|'plain')` 半透明和纸胶带，两头手撕锯齿；`tag_art(w, h, 颜色, 金属扣颜色)` 吊牌（`.hole` 是孔位），`twine(点列)` 双色面包师麻绳
+- `stamp(cx, cy, r, 环形字, 中心字, 小字, 颜色, rot)` 圆形橡皮章（油墨半透明、压力不匀、字边积墨、漏印小坑）；`pen(点列, 颜色, width)` 红色圆珠笔（打勾、圈总价、划掉）
+- 现成贴纸：`lettering_art([(文字, 颜色), ...], size)` 大字、`label_art()` 胶囊标签、`badge_art(r, 颜色, '-20%', top, bottom)` 波浪边促销贴
+
+**实验笔记本 · 贴纸 `Notebook`**：
+- 场景：`desk()` 石墨蓝灰桌面；`notebook(x0, y0, x1, y1, tabs, stack, ear, margin, header, grid, major)` 一整本笔记本（硬封底、分隔标签、错开的页边、青色方格纸、红色双边线、打孔、折角）；`binding()` 线圈（按金属管打光，带投影）
+- 铅笔：`pencil(pts, width, pressure, jitter)` 手绘一笔（样条平滑、手抖、起笔轻收笔提）；`pencils([...])`；`rule(x0, y0, x1, y1)` 靠尺直线；`hatch(mask, angle, spacing, pressure)` 排线；`checkbox(x, y, size, checked)`；`arrowhead(tip, 方向)`；`axes(x0, y0, x1, y1, xlim, ylim, xticks, yticks, xlabels, ylabels)` 返回 `to_px(x, y)`
+- 石墨只挂在纸纹凸起上：pressure 小是颗粒状浅灰，大才填满；线宽约 2–3.5 px
+- 荧光笔 `highlight(x0, x1, y, h, tilt, alpha)`：正片叠底，斜切起笔并积墨、边缘毛、纵向纤维条纹、尾部断续，两遍重叠处更深
+- 红笔：`pen(pts, width)`、`pen_loop(cx, cy, rx, ry, rot, turns=1.12)` 不闭合的圈、`pen_arrow(pts, head)`、`pen_underline(x0, x1, y, double)`
+- 文字 `text(s, x, y, size, colour, font, anchor, rot, spacing, weight, medium)`：font 用 sans / sans_bold / typewriter / cjk_sans（中英混排自动换字体），medium 可选 ink、print、typed（打字机，每字浓淡和基线略不同）、pencil、opaque；`text_width()` 量宽度
+- 纸片：`sticky(cx, cy, w, h, rot, colour)` 便利贴（上端平贴、下端翘起投影），返回 Frame，用 `f.pt(lx, ly)` 和 `rot=f.rot` 往上写字；`sticker(cx, cy, w, h, rot, colour, shape='rrect'|'circle', lines=[...])` 模切贴纸；`label_tape(s, x, y, size, rot)` 标签机胶带；`stain(cx, cy, r)` 咖啡杯印
+- 道具：`pencil_prop(x, y, angle, length, width, label, end='eraser'|'plain')` 六棱铅笔
+- 角度：`rot` 逆时针为正（同 PIL）；`angle`（铅笔、箭头方向）是屏幕角度，顺时针为正。常用色：`INK SOFT LEAD RED HI MINT MINTD`
 
 **顺序**：都是先远后近、先大后小，文字最后叠加。水墨的雾要画在它该吞没的东西之后；水彩的叶梗要先画，并且只画在叶子外面。
 
@@ -290,6 +316,36 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 浅色字印在浅色喇叭布上看不见 | 丝印颜色要和底材拉开明度 |
 | 一大片喇叭布太平、太假 | 布是半透明的：把后面喇叭的圆形暗影淡淡透出来 |
 
+**贴纸拼贴 · 小票**
+
+| 问题 | 改法 |
+|---|---|
+| 面包只有一道长割口，像红薯或叶脉 | 三道斜向交叠的割口：浅色裂口加深色翘边，再撒面粉 |
+| 花束的花用同心圆画，像靶心或棒棒糖 | 侧面郁金香：两片带尖的外瓣，前面一片浅色瓣 |
+| 印章小字压在内圈线上 | 中心字上移，分隔线放在 +0.16r，小字写短，全部收在内圈以内 |
+| 小票字太黑，像打字机不像热敏纸 | 灰色油墨 #4f525a、浓度约 0.8、边缘微糊，加断针竖纹和走纸浓淡 |
+| 小票右半边整条发灰 | 横向卷曲压到很小，只让长边两端翘起 |
+| 纸边的贴地阴影像描了一圈黑线 | 纸张接触阴影降到约 0.26 |
+| 印章盖在条码上看不清 | 盖在金额和星号一带的稀疏处，只压一点字，更像真的 |
+| 印章墨色太匀，像电脑填色 | 加压力倾斜、大块浓淡和漏印小坑 |
+| 标签上的字溢出圆标 | 文字改短、字号调小 |
+| 右下角空出一大块 | 加摊位号圆贴纸，第二个吊牌用长绳垂下来 |
+
+**实验笔记本 · 贴纸**
+
+| 问题 | 改法 |
+|---|---|
+| 铅笔线像干净的矢量墨线：细、匀、太黑 | 手绘线宽约 3 px、抖动约 1.6；石墨只挂在纸纹凸起上，重压也保留一点颗粒 |
+| 轻压的排线、表格横线断成一串点点 | 覆盖率保留约四成连续的浅灰，颗粒只调制剩下的部分（`_graphite` 已处理） |
+| 折线图数据点画成小圆圈，像字母 o、c | 用压实的小铅笔点（很小的螺旋，pressure 1） |
+| 曲线一笔画成，太完美 | 分两笔画，接头处稍错开、稍重叠 |
+| 标注字压在曲线上，单位和刻度撞在一起 | 标注放到曲线下方空白处，用铅笔小箭头指过去；单位放到轴端上方 |
+| 贴纸孤零零浮在图下面，看不出指什么 | 从最佳点画铅笔虚线到横轴，贴纸贴在同一个 x 上 |
+| 标签机胶带两端剪成 V 形缺口，像彩带横幅 | 两端直剪、略斜、小圆角 |
+| 咖啡渍像肥皂泡或透镜 | 外缘一圈细而深的水痕线，内部几乎均匀的淡色；圈有断口、一侧更深 |
+| 红笔箭头被后贴的便利贴盖住 | 箭头停在便利贴边缘外，或先贴便利贴再画箭头 |
+| 标题上的荧光笔起笔压到了前一个字 | 起点按字宽算，落在目标字的左边缘 |
+
 ## 四、做成动画
 
 - 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的动图就是这样做的。
@@ -313,6 +369,8 @@ lib/clay.py            黏土定格
 lib/cyanotype.py       蓝晒
 lib/stitch.py          十字绣
 lib/panel.py           复古仪器面板
+lib/sticker.py         贴纸拼贴 · 小票
+lib/notebook.py        实验笔记本 · 贴纸
 examples/*.py          范例脚本；*.jpg 成品；drawing_*.gif 逐步画出的动图
 中文字体：自动找 Kaiti/Songti（macOS）、Noto CJK（Linux）、KaiTi/SimSun（Windows），或设 INKPAINT_FONT
 西文字体（新四种用）：core.latin_font(style) 按 sans / sans_bold / rounded / script / hand / typewriter 等找系统字体，可用 INKPAINT_FONT_<STYLE> 指定；字体文件不要放进仓库

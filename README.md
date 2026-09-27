@@ -1,7 +1,7 @@
 # Claude Drawing · Claude 绘图
 
-**Claude paints with code — no image model.** Thirteen styles, from ink wash and impasto oil to clay, cyanotype and cross-stitch.
-**不用生图模型，Claude 用代码一笔一笔作画。** 十三种画风，从水墨、油画到黏土、蓝晒和十字绣。
+**Claude paints with code — no image model.** Fifteen styles, from ink wash and impasto oil to clay, cyanotype, cross-stitch, sticker collage and a lab notebook.
+**不用生图模型，Claude 用代码一笔一笔作画。** 十五种画风，从水墨、油画到黏土、蓝晒、十字绣、贴纸小票和实验笔记本。
 
 [English](#english) · [中文](#中文)
 
@@ -14,6 +14,10 @@
 | ![editorial](examples/drawing_editorial_ideas.gif) | ![oil](examples/drawing_oil_wheatfield.gif) | ![ukiyoe](examples/drawing_ukiyoe_fuji.gif) | ![pixel](examples/drawing_pixel_rainy_cafe.gif) |
 | **Stop-motion clay · 黏土定格** | **Cyanotype · 蓝晒** | **Cross-stitch · 十字绣** | **Retro panel · 复古仪器面板** |
 | ![clay](examples/drawing_clay_lighthouse.gif) | ![cyanotype](examples/drawing_cyanotype_botanicals.gif) | ![stitch](examples/drawing_stitch_sampler.gif) | ![panel](examples/drawing_panel_radio.gif) |
+
+| Sticker collage × receipt · 贴纸拼贴 · 小票 | Lab notebook × stickers · 实验笔记本 · 贴纸 |
+|---|---|
+| ![sticker](examples/drawing_sticker_market.gif) | ![notebook](examples/drawing_notebook_brewing.gif) |
 
 ### Gallery · 画廊
 
@@ -33,10 +37,10 @@
 | <img src="examples/clay_lighthouse.jpg" width="100%"> | <img src="examples/cyanotype_botanicals.jpg" width="100%"> |
 | **家** · *Home Sampler*<br><sub>Cross-stitch · 十字绣</sub> | **Aurora 64 收音机** · *Aurora 64 Radio*<br><sub>Vintage instrument panel · 复古仪器面板</sub> |
 | <img src="examples/stitch_sampler.jpg" width="100%"> | <img src="examples/panel_radio.jpg" width="100%"> |
-| **水彩底纹** · *Watercolour Washes*<br><sub>Watercolour · 水彩 — a background for explainer videos · 讲解视频的背景</sub> | |
-| <img src="examples/watercolor_washes.jpg" width="100%"> | |
+| **周末市集** · *Weekend Market*<br><sub>Sticker collage × receipt · 贴纸拼贴 · 小票</sub> | **咖啡萃取实验** · *Coffee Brewing Experiment*<br><sub>Lab notebook × stickers · 实验笔记本 · 贴纸</sub> |
+| <img src="examples/sticker_market.jpg" width="100%"> | <img src="examples/notebook_brewing.jpg" width="100%"> |
 
-Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 30 s per 1920×1080 image.
+Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial, die-cut vinyl with a laminate gloss, streaky thermal print, graphite catching the tooth of graph paper, highlighter pooling at the start of a swipe. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 30 s per 1920×1080 image.
 
 ---
 
@@ -44,7 +48,7 @@ Every mark above is computed: paper fibres, ink washes and mist, dry-brush strok
 
 ### What it is
 
-A [Claude Code](https://claude.com/claude-code) skill and a small painting library with thirteen styles:
+A [Claude Code](https://claude.com/claude-code) skill and a small painting library with fifteen styles:
 
 | Style | Module | What makes it read as the real medium |
 |---|---|---|
@@ -61,6 +65,8 @@ A [Claude Code](https://claude.com/claude-code) skill and a small painting libra
 | **Cyanotype (sun print)** | `lib/cyanotype.py` · `Cyanotype` | emulsion brushed on in strokes with dry-brush ends; objects *block UV* (transmissions multiply): translucent leaves with whiter veins, fluff lifted off the paper with a soft penumbra, light scattering under edges; a Prussian-blue density curve; white handwriting printed in, pencil notes on the margin |
 | **Cross-stitch embroidery** | `lib/stitch.py` · `Stitch` | Aida cloth with a hole at every block corner; one X per cell, lit as round twisted thread with a shadow, in hand-made variants; half stitches; back-stitch snapped hole to hole; padded glossy satin stitch; French knots; ASCII charts and a 5×7 sampler alphabet; a sewn-on woven label |
 | **Vintage instrument panel** | `lib/panel.py` · `Panel` | teak veneer, brushed aluminium, moulded plastic, grille cloth with lurex floats, perforated metal; bevels, wells and drop shadows from one key light; machined knobs, piano keys, toggle switch, jewel lamp, magic-eye tube, meter; silkscreened scales and a backlit dial behind glass |
+| **Sticker collage × receipt** | `lib/sticker.py` · `Sticker` | cream card board with grain, mottling and fibres; flat-vector art die-cut into *vinyl stickers* (rounded white border, cut-edge thickness, laminate gloss rim and sheen, contact + drop shadow, peeled corners showing the pale backing); a thermal receipt with serrated tear edges, grey streaky thermal print, dotted leaders, a printed strike-through, a fold crease and curl; translucent washi tape with torn ends; price tags with grommets on baker's twine; a round rubber stamp in translucent, unevenly pressed ink; red ballpoint ticks |
+| **Lab notebook × stickers** | `lib/notebook.py` · `Notebook` | a wire-o graph-paper notebook on a graphite desk (hard back cover, stepped page stack, divider tabs, dog-ear, wire loops lit as metal tubes); graphite that only catches the paper tooth, with pressure, taper and hand wobble; ruled lines, hatching, pencil charts and check boxes; multiply highlighter swipes with pooled starts, felt streaks and dry tails; red felt-pen loops that overshoot instead of closing; curling sticky notes, die-cut vinyl stickers, embossed label-maker tape, a coffee ring; a hexagonal pencil with a scalloped sharpened edge |
 
 Ask Claude to *"draw it yourself"*, *"paint this with code"*, or *"claude绘图"*, and name a style if you like. Claude then:
 
@@ -140,7 +146,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 
 ### 这是什么
 
-一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置十三种画风：
+一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置十五种画风：
 
 | 画风 | 模块 | 为什么看起来像真的 |
 |---|---|---|
@@ -157,6 +163,8 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 | **蓝晒** | `lib/cyanotype.py` · `Cyanotype` | 药水一笔笔刷上去，笔尾是干刷的断续刷丝；放上去的东西**挡紫外线**（透过率相乘）：薄叶透一点光、叶脉更白，蒲公英绒毛离纸有距离、边缘柔和，边缘下还有散射；按普鲁士蓝的显影曲线上色；白色手写字一起晒出来，纸边再加铅笔字 |
 | **十字绣** | `lib/stitch.py` · `Stitch` | Aida 布，每个布块四角有孔；每格一个 X，线按扭绞的圆线打光并投下小影子，还有几种手工误差；半针；回针沿孔走、一针从孔到孔；鼓起有光泽的缎面绣；法式结；字符图样和 5×7 刺绣字母；缝上去的织标 |
 | **复古仪器面板** | `lib/panel.py` · `Panel` | 柚木贴皮、拉丝铝、注塑塑料、带金丝的喇叭布、冲孔网；同一盏主光照出倒角、凹槽和投影；车削旋钮、琴键、拨杆开关、宝石指示灯、绿色魔眼管、指针表；丝印刻度、玻璃后面的背光刻度窗 |
+| **贴纸拼贴 · 小票** | `lib/sticker.py` · `Sticker` | 奶油卡纸底板，带纸纹、斑驳和纤维；平面矢量图模切成**乙烯贴纸**：圆角白边、切口厚度、覆膜光泽和斜向反光、贴地阴影加投影，翻起一角露出浅色背面；热敏小票：锯齿撕边、灰色断针热敏字、点线引导、删除线、折痕和卷翘；半透明和纸胶带；麻绳吊牌；油墨不匀的圆形橡皮章；红色圆珠笔勾选 |
+| **实验笔记本 · 贴纸** | `lib/notebook.py` · `Notebook` | 石墨蓝灰桌面上的线圈方格本：硬封底、错开的页边、分隔标签、折角，线圈按金属管打光；石墨只挂在纸纹凸起上，有压力、收笔和手抖；靠尺直线、排线、铅笔折线图、勾选框；荧光笔正片叠底，起笔积墨、纤维条纹、尾部干涩；红笔圈故意不闭合；翘角便利贴、模切贴纸、标签机压印胶带、咖啡杯印；六棱铅笔 |
 
 对 Claude 说「claude绘图」「你自己画」「用代码画」，也可以指定画风。它会：
 1. **先定构图**：层次、焦点、留白，而且画面要图解内容本身；
@@ -199,6 +207,8 @@ python3 examples/clay_lighthouse.py     out.png                    # 黏土定�
 python3 examples/cyanotype_botanicals.py out.png                   # 蓝晒：蓝晒植物
 python3 examples/stitch_sampler.py      out.png                    # 十字绣：家
 python3 examples/panel_radio.py         out.png                    # 复古仪器面板：Aurora 64 收音机
+python3 examples/sticker_market.py      out.png                    # 贴纸拼贴 · 小票：周末市集
+python3 examples/notebook_brewing.py    out.png                    # 实验笔记本 · 贴纸：咖啡萃取实验
 ```
 
 ### 作画要点（Claude 交图前逐条自查）
