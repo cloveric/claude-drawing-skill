@@ -185,6 +185,7 @@ pip install -r ~/.claude/skills/claude-drawing/requirements.txt   # numpy、Pill
 python3 examples/bawansiqian.py         out.png --stages stages/   # 水墨：八万四千法门
 python3 examples/moon_river.py          out.png                    # 水墨：月印万川
 python3 examples/watercolor_autumn.py   out.png                    # 水彩：秋日湖畔
+python3 examples/watercolor_washes.py   out.png --layout cover     # 水彩：底纹背景（--layout bill、--seed N 出变体）
 python3 examples/papercut_balloons.py   out.png                    # 剪纸：热气球小镇
 python3 examples/colorpencil_dessert.py out.png                    # 韩国彩铅：午后甜点
 python3 examples/anime_summer.py        out.png                    # 日本动漫：夏空
