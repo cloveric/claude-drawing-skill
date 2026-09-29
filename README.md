@@ -1,7 +1,7 @@
 # Claude Drawing · Claude 绘图
 
-**Claude paints with code — no image model.** Fifteen styles, from ink wash and impasto oil to clay, cyanotype, cross-stitch, sticker collage and a lab notebook.
-**不用生图模型，Claude 用代码一笔一笔作画。** 十五种画风，从水墨、油画到黏土、蓝晒、十字绣、贴纸小票和实验笔记本。
+**Claude paints with code — no image model.** Seventeen styles, from ink wash and impasto oil to clay, cyanotype, cross-stitch, sticker collage, a lab notebook, a chalkboard and a cyberpunk street.
+**不用生图模型，Claude 用代码一笔一笔作画。** 十七种画风，从水墨、油画到黏土、蓝晒、十字绣、贴纸小票、实验笔记本、黑板板书和赛博朋克。
 
 [English](#english) · [中文](#中文)
 
@@ -14,10 +14,8 @@
 | ![editorial](examples/drawing_editorial_ideas.gif) | ![oil](examples/drawing_oil_wheatfield.gif) | ![ukiyoe](examples/drawing_ukiyoe_fuji.gif) | ![pixel](examples/drawing_pixel_rainy_cafe.gif) |
 | **Stop-motion clay · 黏土定格** | **Cyanotype · 蓝晒** | **Cross-stitch · 十字绣** | **Retro panel · 复古仪器面板** |
 | ![clay](examples/drawing_clay_lighthouse.gif) | ![cyanotype](examples/drawing_cyanotype_botanicals.gif) | ![stitch](examples/drawing_stitch_sampler.gif) | ![panel](examples/drawing_panel_radio.gif) |
-
-| Sticker collage × receipt · 贴纸拼贴 · 小票 | Lab notebook × stickers · 实验笔记本 · 贴纸 |
-|---|---|
-| ![sticker](examples/drawing_sticker_market.gif) | ![notebook](examples/drawing_notebook_brewing.gif) |
+| **Sticker collage × receipt · 贴纸拼贴 · 小票** | **Lab notebook × stickers · 实验笔记本 · 贴纸** | **Chalkboard · 黑板板书** | **Cyberpunk · 赛博朋克** |
+| ![sticker](examples/drawing_sticker_market.gif) | ![notebook](examples/drawing_notebook_brewing.gif) | ![chalk](examples/drawing_chalk_lesson.gif) | ![cyberpunk](examples/drawing_cyberpunk_neon_street.gif) |
 
 ### Gallery · 画廊
 
@@ -39,8 +37,10 @@
 | <img src="examples/stitch_sampler.jpg" width="100%"> | <img src="examples/panel_radio.jpg" width="100%"> |
 | **周末市集** · *Weekend Market*<br><sub>Sticker collage × receipt · 贴纸拼贴 · 小票</sub> | **咖啡萃取实验** · *Coffee Brewing Experiment*<br><sub>Lab notebook × stickers · 实验笔记本 · 贴纸</sub> |
 | <img src="examples/sticker_market.jpg" width="100%"> | <img src="examples/notebook_brewing.jpg" width="100%"> |
+| **为什么天空是蓝的** · *Why Is the Sky Blue?*<br><sub>Chalkboard · 黑板板书</sub> | **霓虹不夜城** · *Neon District*<br><sub>Cyberpunk · 赛博朋克</sub> |
+| <img src="examples/chalk_lesson.jpg" width="100%"> | <img src="examples/cyberpunk_neon_street.jpg" width="100%"> |
 
-Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial, die-cut vinyl with a laminate gloss, streaky thermal print, graphite catching the tooth of graph paper, highlighter pooling at the start of a swipe. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 30 s per 1920×1080 image.
+Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial, die-cut vinyl with a laminate gloss, streaky thermal print, graphite catching the tooth of graph paper, highlighter pooling at the start of a swipe, chalk dust settling under half-erased lessons, rain-lit neon glass mirrored in a wet street. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 30 s per 1920×1080 image.
 
 ---
 
@@ -48,7 +48,7 @@ Every mark above is computed: paper fibres, ink washes and mist, dry-brush strok
 
 ### What it is
 
-A [Claude Code](https://claude.com/claude-code) skill and a small painting library with fifteen styles:
+A [Claude Code](https://claude.com/claude-code) skill and a small painting library with seventeen styles:
 
 | Style | Module | What makes it read as the real medium |
 |---|---|---|
@@ -67,6 +67,8 @@ A [Claude Code](https://claude.com/claude-code) skill and a small painting libra
 | **Vintage instrument panel** | `lib/panel.py` · `Panel` | teak veneer, brushed aluminium, moulded plastic, grille cloth with lurex floats, perforated metal; bevels, wells and drop shadows from one key light; machined knobs, piano keys, toggle switch, jewel lamp, magic-eye tube, meter; silkscreened scales and a backlit dial behind glass |
 | **Sticker collage × receipt** | `lib/sticker.py` · `Sticker` | cream card board with grain, mottling and fibres; flat-vector art die-cut into *vinyl stickers* (rounded white border, cut-edge thickness, laminate gloss rim and sheen, contact + drop shadow, peeled corners showing the pale backing); a thermal receipt with serrated tear edges, grey streaky thermal print, dotted leaders, a printed strike-through, a fold crease and curl; translucent washi tape with torn ends; price tags with grommets on baker's twine; a round rubber stamp in translucent, unevenly pressed ink; red ballpoint ticks |
 | **Lab notebook × stickers** | `lib/notebook.py` · `Notebook` | a wire-o graph-paper notebook on a graphite desk (hard back cover, stepped page stack, divider tabs, dog-ear, wire loops lit as metal tubes); graphite that only catches the paper tooth, with pressure, taper and hand wobble; ruled lines, hatching, pencil charts and check boxes; multiply highlighter swipes with pooled starts, felt streaks and dry tails; red felt-pen loops that overshoot instead of closing; curling sticky notes, die-cut vinyl stickers, embossed label-maker tape, a coffee ring; a hexagonal pencil with a scalloped sharpened edge |
+| **Chalkboard** | `lib/chalk.py` · `Chalkboard` | cloudy green slate paint; chalk that only catches the board's tooth, with pressure, grain and broken edges; side-of-the-stick shading; a felt eraser that really removes chalk, drags a smear along the wipe and leaves ghosts of the last lesson; dust settling thicker toward the tray; hand-set text where each character sits a little differently; hand-drawn ∝, waves, arrows and open loops; a mitred wooden frame with chalk sticks and an eraser on the ledge |
+| **Cyberpunk** | `lib/cyberpunk.py` · `Cyberpunk` | a pinhole camera down a rain-soaked street canyon, rendered in HDR with a z-buffer: glass-tube neon with over-exposed cores, dead and flickering tubes; backlit light boxes; a translucent hologram ad with scan lines, tear slices and colour fringing; each object mirrored from its own ground line into the wet asphalt and puddles; depth fog lit by the city; steam lit by the signs; three layers of rain lit only near the neon; flying-car light trails; bloom, halation, grain and one glitch line |
 
 Ask Claude to *"draw it yourself"*, *"paint this with code"*, or *"claude绘图"*, and name a style if you like. Claude then:
 
@@ -135,6 +137,8 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 - **Cyanotype**: think in UV transmission, not paint. Thin leaves ~0.85 opacity with fully blocking veins; lift fluff off the paper for a soft penumbra. A fern pinna is one lobed blade, not a row of separate leaflets. Dry-brush stroke ends are crisp broken streaks, not a blur.
 - **Cross-stitch**: everything lives on the hole grid. Never lay half stitches over cross stitches (switch floss colour instead). A short diagonal back-stitch is one stitch from hole to hole, or it snaps into L-shaped steps.
 - **Panel**: one key light for every part: lit upper-left edges, shadows to the lower right. Grille-cloth lurex needs long floats (short ones read as a perforated dot grid). Keep legends off busy textures and away from scale ends.
+- **Chalkboard**: even full-pressure chalk keeps ~15% pits and soft, broken edges, or it reads as vector lines. Draw ∝ by hand (a bold font's ∝ closes up into ∞). Shade large areas lightly with a pressure gradient. Ghosts of the last lesson stay faint and sit in empty space.
+- **Cyberpunk**: mirror each object from its own ground row, not one horizon line. Keep shop interiors dim (0.2–0.45) or the street turns into over-exposed walls. Light rain streaks only near the neon. Light trails cross the street instead of all flying into the vanishing point.
 
 ### Roadmap
 
@@ -146,7 +150,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 
 ### 这是什么
 
-一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置十五种画风：
+一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置十七种画风：
 
 | 画风 | 模块 | 为什么看起来像真的 |
 |---|---|---|
@@ -165,6 +169,8 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 | **复古仪器面板** | `lib/panel.py` · `Panel` | 柚木贴皮、拉丝铝、注塑塑料、带金丝的喇叭布、冲孔网；同一盏主光照出倒角、凹槽和投影；车削旋钮、琴键、拨杆开关、宝石指示灯、绿色魔眼管、指针表；丝印刻度、玻璃后面的背光刻度窗 |
 | **贴纸拼贴 · 小票** | `lib/sticker.py` · `Sticker` | 奶油卡纸底板，带纸纹、斑驳和纤维；平面矢量图模切成**乙烯贴纸**：圆角白边、切口厚度、覆膜光泽和斜向反光、贴地阴影加投影，翻起一角露出浅色背面；热敏小票：锯齿撕边、灰色断针热敏字、点线引导、删除线、折痕和卷翘；半透明和纸胶带；麻绳吊牌；油墨不匀的圆形橡皮章；红色圆珠笔勾选 |
 | **实验笔记本 · 贴纸** | `lib/notebook.py` · `Notebook` | 石墨蓝灰桌面上的线圈方格本：硬封底、错开的页边、分隔标签、折角，线圈按金属管打光；石墨只挂在纸纹凸起上，有压力、收笔和手抖；靠尺直线、排线、铅笔折线图、勾选框；荧光笔正片叠底，起笔积墨、纤维条纹、尾部干涩；红笔圈故意不闭合；翘角便利贴、模切贴纸、标签机压印胶带、咖啡杯印；六棱铅笔 |
+| **黑板板书** | `lib/chalk.py` · `Chalkboard` | 云状不匀的墨绿石板漆；粉笔只挂在板面「齿」的凸起上，有压力、颗粒和断口；粉笔横躺的侧锋铺色；板擦真的能擦掉粉笔，顺着擦的方向拖出残迹，留下上节课的残影；越往下越厚的粉笔灰；每个字微转、错位、轻重不一；手写 ∝、波浪线、箭头和不闭合的圈；斜接木框，粉笔槽里放着粉笔和板擦 |
+| **赛博朋克** | `lib/cyberpunk.py` · `Cyberpunk` | 一台针孔相机看向雨夜街道深处，HDR 缓冲加深度遮挡：玻璃管霓虹中心过曝、边缘彩色光晕，还有坏管和闪烁管；背光灯箱；半透明全息广告，带扫描线、撕裂切片和色边；每样东西按自己的着地行翻出湿路面和水洼里的倒影；被城市灯光照亮的深度雾；被招牌照亮的井盖蒸汽；三层雨，只在霓虹附近看得见；飞车光轨；泛光、胶片红晕、颗粒和一道故障扫描线 |
 
 对 Claude 说「claude绘图」「你自己画」「用代码画」，也可以指定画风。它会：
 1. **先定构图**：层次、焦点、留白，而且画面要图解内容本身；
@@ -209,6 +215,8 @@ python3 examples/stitch_sampler.py      out.png                    # 十字绣�
 python3 examples/panel_radio.py         out.png                    # 复古仪器面板：Aurora 64 收音机
 python3 examples/sticker_market.py      out.png                    # 贴纸拼贴 · 小票：周末市集
 python3 examples/notebook_brewing.py    out.png                    # 实验笔记本 · 贴纸：咖啡萃取实验
+python3 examples/chalk_lesson.py        out.png                    # 黑板板书：为什么天空是蓝的
+python3 examples/cyberpunk_neon_street.py out.png                  # 赛博朋克：霓虹不夜城
 ```
 
 ### 作画要点（Claude 交图前逐条自查）
@@ -226,6 +234,8 @@ python3 examples/notebook_brewing.py    out.png                    # 实验笔�
 - **蓝晒**：想的是挡紫外线，不是上颜料：薄叶不透明度约 0.85、叶脉完全挡光；绒毛要离纸，边缘才柔；蕨类羽片是一整片带圆齿的叶子，不是一排分开的小叶；干刷的笔尾是利落的断续刷丝，不是一片模糊。
 - **十字绣**：一切都在布孔的格子上；半针不要叠在十字绣上（亮部换浅色线）；短的斜向回针一针从孔到孔，否则会被吸附成 L 形台阶。
 - **复古面板**：所有部件同一盏主光：左上边亮、向右下投影；喇叭布的金丝要长浮，短了像冲孔板；丝印字别压在花纹上，也别挤到刻度末端。
+- **黑板**：满压的粉笔也要留约 15% 的坑点和毛边，否则像矢量线；∝ 要手写一笔（粗体字形会糊成 ∞）；大面积用轻压力加渐变铺色；上节课的残影要淡，放在空白处。
+- **赛博朋克**：倒影按每样东西自己的着地行翻转，不能按一条地平线整体翻；店内亮度压在 0.2–0.45，否则街面成了过曝的墙；雨丝只在霓虹附近被照亮；飞车光轨横穿街道，不要全都飞向灭点。
 
 ### 计划
 

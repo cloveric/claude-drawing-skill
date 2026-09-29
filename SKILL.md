@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置十五种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）、贴纸拼贴·小票（模切乙烯贴纸、热敏小票、和纸胶带、吊牌、橡皮章）、实验笔记本·贴纸（线圈方格本、铅笔图表、荧光笔、红笔圈、便利贴）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机、贴纸、小票、收据、手帐拼贴、实验笔记本、方格本、荧光笔、便利贴），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio / sticker collage / receipt / lab notebook / graph paper without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
+description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置十七种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）、贴纸拼贴·小票（模切乙烯贴纸、热敏小票、和纸胶带、吊牌、橡皮章）、实验笔记本·贴纸（线圈方格本、铅笔图表、荧光笔、红笔圈、便利贴）、黑板板书（墨绿石板、粉笔颗粒、板擦残影、示意图与公式）、赛博朋克（雨夜霓虹街道、玻璃管霓虹招牌、全息广告、湿路面倒影）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机、贴纸、小票、收据、手帐拼贴、实验笔记本、方格本、荧光笔、便利贴、黑板、板书、粉笔、赛博朋克、霓虹、雨夜街道），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio / sticker collage / receipt / lab notebook / graph paper / chalkboard / blackboard / cyberpunk / neon city without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
 ---
 
 # Claude 绘图
@@ -29,6 +29,8 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 | 复古仪器面板 | `lib/panel.py` · `Panel` | `examples/panel_radio.py` Aurora 64 收音机（柚木机壳、喇叭布、背光刻度窗、琴键、魔眼管、拨杆、旋钮） | 约 7 秒 |
 | 贴纸拼贴 · 小票 | `lib/sticker.py` · `Sticker` | `examples/sticker_market.py` 周末市集（热敏小票、模切贴纸：酸种面包/传家番茄/郁金香花束/咖啡豆、贴纸大字、波浪边促销贴、麻绳吊牌、和纸胶带、「已付」橡皮章） | 约 3 秒 |
 | 实验笔记本 · 贴纸 | `lib/notebook.py` · `Notebook` | `examples/notebook_brewing.py` 咖啡萃取实验（线圈方格笔记本、铅笔表格与折线图、排线标出最佳区间、荧光笔、没闭合的红笔圈、便利贴结论、模切贴纸、标签机日期、桌上的六棱铅笔） | 约 3 秒 |
+| 黑板板书 | `lib/chalk.py` · `Chalkboard` | `examples/chalk_lesson.py` 为什么天空是蓝的（墨绿石板、半擦掉的上节课残影与板擦痕、越往下越厚的粉笔灰；白黄粉蓝粉笔写的标题、太阳→大气层→眼睛示意图、长短波浪线、手写 ∝ 与圈出的 1/λ⁴、光谱条与散射曲线、带缺口的「小结」框；木框和粉笔槽里的粉笔、板擦） | 约 5 秒 |
+| 赛博朋克 | `lib/cyberpunk.py` · `Cyberpunk` | `examples/cyberpunk_neon_street.py` 霓虹不夜城 · Neon District（雨夜街道峡谷、真玻璃管霓虹竖招牌（坏管与闪烁管）、背光灯箱、过街天桥「不夜城」、全息海月水母广告、电线、飞车光轨、井盖蒸汽、透明伞背影、湿路面与水洼倒影、胶片颗粒与一道撕裂扫描线） | 约 10 秒 |
 
 各画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找；新四种还用到补零平移 `shift`、文字遮罩 `text_mask`、西文字体查找 `latin_font`/`load_font`，以及高度图打光 `height_normals`、`height_shadow`（沿光线步进的投影）、`ambient_occlusion`。
 
@@ -47,7 +49,9 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 - 家、温馨、手作礼物、贺卡、名字和字母 → 十字绣；
 - 设备、仪表、音响收音机、复古科技与产品感 → 复古仪器面板；
 - 清单、账单、价格、购物、市集、活动海报、轻松但成熟的讲解片封面 → 贴纸拼贴 · 小票；
-- 实验记录、数据对比、复盘笔记、讲解片里的「算账 / 结论」页 → 实验笔记本 · 贴纸。
+- 实验记录、数据对比、复盘笔记、讲解片里的「算账 / 结论」页 → 实验笔记本 · 贴纸；
+- 讲课、知识点、公式推导、原理示意图、讲解片里的「板书 / 课堂」页 → 黑板板书；
+- 夜景、城市、雨、霓虹、电影感氛围、讲解片的「未来 / 科技 / 城市」封面 → 赛博朋克（要复古小尺寸或像素动画仍用像素风）。
 
 每种画风一幅范例作为质量基准（范例都不用禅意主题）；水墨另加一幅「月印万川」（留白托月、水面倒影）。
 
@@ -192,6 +196,29 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 - 纸片：`sticky(cx, cy, w, h, rot, colour)` 便利贴（上端平贴、下端翘起投影），返回 Frame，用 `f.pt(lx, ly)` 和 `rot=f.rot` 往上写字；`sticker(cx, cy, w, h, rot, colour, shape='rrect'|'circle', lines=[...])` 模切贴纸；`label_tape(s, x, y, size, rot)` 标签机胶带；`stain(cx, cy, r)` 咖啡杯印
 - 道具：`pencil_prop(x, y, angle, length, width, label, end='eraser'|'plain')` 六棱铅笔
 - 角度：`rot` 逆时针为正（同 PIL）；`angle`（铅笔、箭头方向）是屏幕角度，顺时针为正。常用色：`INK SOFT LEAD RED HI MINT MINTD`
+
+**黑板板书 `Chalkboard`**：
+- 分层：石板漆 → 粉笔层（预乘颜色 + 透明度，板擦能擦掉）→ 板前物件（木框、粉笔槽、粉笔、板擦及其投影）→ 室内光与暗角
+- 板面：`slate()` 云状不匀的墨绿石板漆；`dust(amount, specks, haze)` 沉降的粉笔灰，越往下越厚；`frame(rail, top, ledge)` 斜接木框加粉笔槽，会设置写字区 `area` 和槽面高度 `tray_y`。默认尺寸构造时就已知，dust 和擦痕可以先于画框画
+- 板擦：`swipe(pts, width, strength, haze, smear, keep)` 沿路径擦一遍：带走粉笔、顺擦向拖出残迹、毡面梳出细纹、毡面两端积灰；`smudge(cx, cy, w, h, rot)` 短擦一下；`with cb.erased(keep, angle, smear):` 块里画的一切都变成擦过没洗的旧课残影
+- 笔尖：`stroke(pts, colour, width, pressure, jitter)` / `strokes([...])`；`line()` 徒手直线、`rule()` 靠尺直线；`box(x0, y0, x1, y1, gap=(xa, xb))` 四边出头，上边可留缺口写标签；`loop(cx, cy, rx, ry, rot, turns)` 不闭合的圈、`circle()`；`arrow(pts, head)` 两笔箭头在尖端叠厚；`underline(x0, x1, y, double)`；`wave(p0, p1, wavelength, amplitude)` 光波曲线带箭头；`dashed()` 一段段画的虚线；`dot()`；`hatch(mask, angle, spacing)` 排线；`propto(x, y, size)` 手写 ∝，返回宽度
+- 侧锋：`side(p0, p1, stick, pressure)` 粉笔横躺拖一笔；`shade(mask, colour, angle, stick, pressure, overlap, weight)` 侧锋铺色，weight 是全画布 0–1 的压力图，可做渐变
+- 粉笔只挂在板面「齿」的凸起上：pressure 0.2–0.4 颗粒稀疏（铺色），0.8–0.95 写字画线
+- 文字 `text(s, x, y, size, colour, font, anchor, pressure, weight, rot, spacing, hand, grain)`：font 用 sans / sans_bold / cjk_sans，某套字体缺字自动换另一套；每个字各自微转、错位、轻重不一（hand=0 为排版体）；`text_width()` 量宽度
+- 道具：`chalk_stick(x, cb.tray_y, length, colour, rot, worn='right'|'left'|None)` 粉笔，一端磨斜；`eraser(x, cb.tray_y + 2)` 板擦；`crumbs(x0, x1, n)` 碎粉笔
+- 颜色：`WHITE YELLOW PINK BLUE` 为主，`RED ORANGE GREEN VIOLET` 用于光谱和彩色粉笔，另有 `DUST`；所有 angle 和 rot 都是逆时针为正
+
+**赛博朋克 `Cyberpunk`**：
+- 思路：一台水平的针孔相机看向街道深处，世界坐标 X 右、Y 上、Z 向前，单位是米。所有东西写进 HDR 缓冲（反照率、自发光、z-buffer 深度、倒影镜像行），调用顺序不影响遮挡；`render` 时统一算光：环境光 + 光源外溢照明、深度雾（雾色是城市光的散射）、地面倒影、蒸汽、雨、胶片
+- 构造：`Cyberpunk(W, H, seed, focal=1150, vp=(x, y), eye=1.7, fog=125, wall=9.5, road=6, record=True)`；`record=False` 时 `stage()` 不出快照，渲染更快。相机工具：`project(X, Y, Z)`、`ground_row(Z)`、`near_z(side)`
+- 远景：`sky()` 被街灯从下面照亮的低云；`skyline(z, x_range, heights, widths)` 远处塔楼剪影、针点窗光、红色航空灯；`light(x, y, r, 颜色, z)` 小点光源
+- 楼：`building(side, z0, z1, height, wall, colour, lit, shops=(亮店, 卷帘门, 暗店, 自动售货机))` 透视楼块，正面加沿街立面贴图（窗格、空调外机、雨痕、底商、招牌字，右侧立面的字会自动镜像）
+- 霓虹：`blade_sign(side, z, Y0, Y1, '字', 颜色, reach, border=颜色, latin='BAR', dead=[序号], flicker=[序号], kind='neon'|'box', text_colour, level)` 伸向街心、面向镜头的竖招牌；`sign(z, X0, X1, Y0, Y1, ..., vertical=False)` 横招牌或立式灯箱；`neon_text(s, x, y, size, 颜色, z, vertical, dead, flicker)`、`neon_path(点列, 颜色, z)` 任意灯管
+- 全息：`hologram(z, X0, X1, Y0, Y1, '海月', 'SEA MOON', level, jelly=(x, y), sub_y)` 半透明投影广告（海月水母、竖排明朝标题、扫描线、撕裂切片、色边、投影边框），只加光，还会照亮雾和墙
+- 街道：`street(crossing=(z, 宽), puddles)` 湿沥青、路缘、铺砖、斑马线、积水；`puddle(X, Z, rx, rz)` 指定水洼（放在近处招牌的倒影位置上，能倒映出整块招牌）；`grate(X, Z)` 井盖格栅
+- 空中：`walkway(z, Y, thick, deep, windows=None)` 过街天桥（正面可再挂 `neon_text`）；`cables(n, z=(近, 远), Y=(低, 高))` 电线；`light_trail(三维控制点, 颜色, pair, strobe, fade)` 飞车光轨（左行交通：尾灯红、头灯暖白）
+- 氛围：`steam(X, Z, height, width, drift, density)` 井盖蒸汽；`mist()` 只躺在远处街面的薄雾；`figure(X, Z, umbrella='clear'|'dark'|None)` 打伞背影（两侧霓虹轮廓光，无脸）；`rain(far, mid, near, slant, rings)` 三层雨和溅落圈；`glitch(y, h, shift, split)` 一道撕裂扫描线，只在成片里出现，用一次就够
+- 颜色常量 `MAGENTA CYAN AMBER RED WHITE`；`save('x.jpg')` 默认 quality 88、4:4:4 色度，霓虹边缘不糊
 
 **顺序**：都是先远后近、先大后小，文字最后叠加。水墨的雾要画在它该吞没的东西之后；水彩的叶梗要先画，并且只画在叶子外面。
 
@@ -346,10 +373,33 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 红笔箭头被后贴的便利贴盖住 | 箭头停在便利贴边缘外，或先贴便利贴再画箭头 |
 | 标题上的荧光笔起笔压到了前一个字 | 起点按字宽算，落在目标字的左边缘 |
 
+**黑板板书**
+
+| 问题 | 改法 |
+|---|---|
+| 粉笔线像干净的矢量线：满压几乎实心、边缘光滑 | 满压也要留约 15% 的坑点（阈值 0.98 − 0.86 × 压力）；笔尖接触面按线宽的 0.26 倍模糊，边缘才会毛、才会断 |
+| 中文（黑体）比 Helvetica Bold 细一截；加粗后 30 px 的复杂字糊成一团 | 中文按字号加粗，小字加粗减弱；40 px 以下自动加压、减轻颗粒和边缘扭曲（已处理） |
+| 字体的粗体 ∝ 被粉笔加粗后闭合，看着像 ∞ | 用 `propto()` 手写一笔：双纽线的左瓣加两条向右的尾巴 |
+| 大气层用侧锋铺色，成了一整块发闷的矩形，压住上面的波浪和标注 | 压力约 0.3、strength 约 0.6，用 `weight` 做渐变（近地面浓、往上淡），左右两端长距离渐隐 |
+| 上节课的残影被后来的大擦痕又擦没了，或者压在新板书下面影响阅读 | 残影 keep 取 0.26–0.34，大擦痕 strength 不超过 0.6；残影放在空白处（上沿、角落、标题和图之间） |
+| 动图调色板只取最后一帧，满屏绿色吃掉色位，粉彩粉笔、光谱条发灰 | 调色板用加权像素样本做中值切分（彩色像素 ×5、亮色 ×2），所有帧仍共用这一张 |
+
+**赛博朋克**
+
+| 问题 | 改法 |
+|---|---|
+| 倒影按一条地平线整体翻转，位置全错；被近处天桥挡住的远景在倒影里成了黑洞 | 每个物体按自己的着地行（mirror row）翻转，最近者优先；被挡住的空洞用对应行的雾色填 |
+| 一楼店面发光太亮太大，近处成了过曝的纯色墙，货物画成色块像霉斑或柱状图 | 店内亮度 0.2–0.45，从天花板往下衰减、两侧变暗，加货架侧影和人影；最近的街区多放卷帘门和自动售货机 |
+| 雨丝统一提亮成满屏灰帘，溅落圈太大像气泡 | 每根雨丝按周围光照上色，只在霓虹附近看得见；溅落圈半径 3–11 厘米，只在水洼里亮 |
+| 蒸汽用背后的暗画面照亮，完全看不见 | 蒸汽按光源外溢光照明（像一块浅色表面），再加前向散射 |
+| 光轨沿街飞，全都汇向灭点，像激光或钢丝 | 让飞车横穿街道：从一侧墙后出现，拱形掠过，消失在另一侧墙后；加频闪点 |
+| 全息水母的 1 像素线被雾和扫描线吃掉；C 形生殖腺像数字「93」，后排两个像一双眼睛（成了脸） | 线宽至少 2 像素；生殖腺放在伞内的水平面上，侧视压成一条柔和的粉带；副标用 Light 字重，撕裂切片别落在字上 |
+
 ## 四、做成动画
 
 - 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的动图就是这样做的。
 - 动图规格（多数现有动图和新增四幅一致）：720×405；每个阶段停 900 毫秒，再用 5 帧（每帧 90 毫秒）叠化到下一阶段，最后一帧停 2600 毫秒，无限循环。新增四幅的所有帧共用一张 256 色调色板，文件小、不闪烁。
+- 调色板别只取最后一帧：满屏单色（黑板的墨绿、赛博朋克的夜色）会吃掉色位，彩色部分被量化成灰。黑板按加权像素样本做中值切分（彩色像素 ×5、亮色 ×2）；赛博朋克从全部关键帧的拼图取 255 色，留 1 个透明色标记「和上一帧相同」的像素，并去掉 Pillow 每帧重复写入的局部调色板（3.8 MB → 1.8 MB）。
 - 更细的逐笔动画：把一组笔画单独画到透明层上导出，再用 Motion Canvas 遮罩按顺序显现。这个还没做成现成接口。
 
 ## 五、文件
@@ -371,6 +421,8 @@ lib/stitch.py          十字绣
 lib/panel.py           复古仪器面板
 lib/sticker.py         贴纸拼贴 · 小票
 lib/notebook.py        实验笔记本 · 贴纸
+lib/chalk.py           黑板板书
+lib/cyberpunk.py       赛博朋克
 examples/*.py          范例脚本；*.jpg 成品；drawing_*.gif 逐步画出的动图
 中文字体：自动找 Kaiti/Songti（macOS）、Noto CJK（Linux）、KaiTi/SimSun（Windows），或设 INKPAINT_FONT
 西文字体（新四种用）：core.latin_font(style) 按 sans / sans_bold / rounded / script / hand / typewriter 等找系统字体，可用 INKPAINT_FONT_<STYLE> 指定；字体文件不要放进仓库
