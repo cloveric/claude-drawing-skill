@@ -1,11 +1,15 @@
 # Claude Drawing · Claude 绘图
 
-**Claude paints with code — no image model.** Twenty-six styles, from ink wash and impasto oil to clay, cyanotype, cross-stitch, a chalkboard, a cyberpunk street, an isometric island, a ray-traced ball pit and a synthwave sunset.
-**不用生图模型，Claude 用代码一笔一笔作画。** 二十六种画风，从水墨、油画到黏土、蓝晒、十字绣、黑板板书、赛博朋克、等轴小岛、光线追踪的小球海和 Synthwave 落日。
+**Claude paints with code — no image model.** Twenty-seven styles, from ink wash and impasto oil to clay, cyanotype, cross-stitch, a chalkboard, a cyberpunk street, an isometric island, a ray-traced ball pit, perler beads and a synthwave sunset.
+**不用生图模型，Claude 用代码一笔一笔作画。** 二十七种画风，从水墨、油画到黏土、蓝晒、十字绣、黑板板书、赛博朋克、等轴小岛、光线追踪的小球海、拼豆和 Synthwave 落日。
 
 [English](#english) · [中文](#中文)
 
 <p align="center"><img src="examples/drawing_bawansiqian.gif" width="100%"><br><sub><b>Ink wash · 水墨</b> — every style below is drawn stage by stage like this · 下面每种画风都是这样一步步画出来的</sub></p>
+
+| Isometric 2.5D · 等轴 2.5D | Perler beads · 拼豆 |
+|---|---|
+| ![isometric](examples/drawing_isometric_weather_island.gif) | ![perler](examples/drawing_perler_strawberry_coaster.gif) |
 
 | Watercolour · 水彩 | Paper collage · 剪纸拼贴 | Coloured pencil · 韩国彩铅 | Anime · 日本动漫 |
 |---|---|---|---|
@@ -16,14 +20,10 @@
 | ![clay](examples/drawing_clay_lighthouse.gif) | ![cyanotype](examples/drawing_cyanotype_botanicals.gif) | ![stitch](examples/drawing_stitch_sampler.gif) | ![panel](examples/drawing_panel_radio.gif) |
 | **Sticker collage × receipt · 贴纸拼贴 · 小票** | **Lab notebook × stickers · 实验笔记本 · 贴纸** | **Chalkboard · 黑板板书** | **Cyberpunk · 赛博朋克** |
 | ![sticker](examples/drawing_sticker_market.gif) | ![notebook](examples/drawing_notebook_brewing.gif) | ![chalk](examples/drawing_chalk_lesson.gif) | ![cyberpunk](examples/drawing_cyberpunk_neon_street.gif) |
-
-| Hand-drawn cartoon · 卡通手绘 | Isometric 2.5D · 等轴 2.5D | Continuous line art · 单线画 |
-|---|---|---|
-| ![cartoon](examples/drawing_cartoon_toaster.gif) | ![isometric](examples/drawing_isometric_weather_island.gif) | ![lineart](examples/drawing_lineart_paper_plane.gif) |
-| **Soft 3D · 柔光 3D** | **Shape morph · 形变动画** | **Newspaper collage · 报刊拼贴** |
-| ![soft3d](examples/drawing_soft3d_rise.gif) | ![morph](examples/drawing_morph_water_cycle.gif) | ![newscollage](examples/drawing_newscollage_curiosity.gif) |
-| **Aurora glass · 弥散玻璃** | **Bauhaus geometric · 包豪斯几何** | **Retro synthwave · 复古 Synthwave** |
-| ![aurora](examples/drawing_aurora_morning.gif) | ![bauhaus](examples/drawing_bauhaus_form_colour.gif) | ![synthwave](examples/drawing_synthwave_coastline.gif) |
+| **Hand-drawn cartoon · 卡通手绘** | **Continuous line art · 单线画** | **Soft 3D · 柔光 3D** | **Shape morph · 形变动画** |
+| ![cartoon](examples/drawing_cartoon_toaster.gif) | ![lineart](examples/drawing_lineart_paper_plane.gif) | ![soft3d](examples/drawing_soft3d_rise.gif) | ![morph](examples/drawing_morph_water_cycle.gif) |
+| **Newspaper collage · 报刊拼贴** | **Aurora glass · 弥散玻璃** | **Bauhaus geometric · 包豪斯几何** | **Retro synthwave · 复古 Synthwave** |
+| ![newscollage](examples/drawing_newscollage_curiosity.gif) | ![aurora](examples/drawing_aurora_morning.gif) | ![bauhaus](examples/drawing_bauhaus_form_colour.gif) | ![synthwave](examples/drawing_synthwave_coastline.gif) |
 
 ### Gallery · 画廊
 
@@ -31,34 +31,34 @@
 |---|---|
 | **八万四千法门** · *Many Paths, One Summit*<br><sub>Ink wash · 水墨</sub> | **月印万川** · *One Moon in Ten Thousand Rivers*<br><sub>Ink wash · 水墨</sub> |
 | <img src="examples/bawansiqian.jpg" width="100%"> | <img src="examples/moon_river.jpg" width="100%"> |
-| **秋日湖畔** · *Autumn Lake*<br><sub>Watercolour · 水彩</sub> | **水彩底纹** · *Watercolour Washes*<br><sub>Watercolour · 水彩 — a background for explainer videos · 讲解视频的背景</sub> |
-| <img src="examples/watercolor_autumn.jpg" width="100%"> | <img src="examples/watercolor_washes.jpg" width="100%"> |
-| **热气球小镇** · *Balloon Day*<br><sub>Paper collage · 剪纸拼贴</sub> | **午后甜点** · *Afternoon Dessert*<br><sub>Coloured pencil · 韩国彩铅</sub> |
-| <img src="examples/papercut_balloons.jpg" width="100%"> | <img src="examples/colorpencil_dessert.jpg" width="100%"> |
-| **夏空** · *Summer Sky*<br><sub>Anime · 日本动漫</sub> | **灵感生长** · *Growing Ideas*<br><sub>Editorial · 编辑风手绘</sub> |
-| <img src="examples/anime_summer.jpg" width="100%"> | <img src="examples/editorial_ideas.jpg" width="100%"> |
-| **麦田星空** · *Swirling Sky over the Wheat Field*<br><sub>Impasto oil · 油画厚涂</sub> | **富士曙** · *Fuji at Dawn*<br><sub>Ukiyo-e · 浮世绘</sub> |
-| <img src="examples/oil_wheatfield.jpg" width="100%"> | <img src="examples/ukiyoe_fuji.jpg" width="100%"> |
-| **雨夜咖啡店** · *Rainy Night Cafe*<br><sub>Pixel art · 像素风</sub> | **灯塔岛** · *Lighthouse Island*<br><sub>Stop-motion clay · 黏土定格</sub> |
-| <img src="examples/pixel_rainy_cafe.png" width="100%"> | <img src="examples/clay_lighthouse.jpg" width="100%"> |
-| **蓝晒植物** · *Sun-Print Botanicals*<br><sub>Cyanotype · 蓝晒</sub> | **家** · *Home Sampler*<br><sub>Cross-stitch · 十字绣</sub> |
-| <img src="examples/cyanotype_botanicals.jpg" width="100%"> | <img src="examples/stitch_sampler.jpg" width="100%"> |
-| **Aurora 64 收音机** · *Aurora 64 Radio*<br><sub>Vintage instrument panel · 复古仪器面板</sub> | **周末市集** · *Weekend Market*<br><sub>Sticker collage × receipt · 贴纸拼贴 · 小票</sub> |
-| <img src="examples/panel_radio.jpg" width="100%"> | <img src="examples/sticker_market.jpg" width="100%"> |
-| **咖啡萃取实验** · *Coffee Brewing Experiment*<br><sub>Lab notebook × stickers · 实验笔记本 · 贴纸</sub> | **为什么天空是蓝的** · *Why Is the Sky Blue?*<br><sub>Chalkboard · 黑板板书</sub> |
-| <img src="examples/notebook_brewing.jpg" width="100%"> | <img src="examples/chalk_lesson.jpg" width="100%"> |
-| **霓虹不夜城** · *Neon District*<br><sub>Cyberpunk · 赛博朋克</sub> | **早安吐司** · *Good Morning, Toast*<br><sub>Hand-drawn cartoon · 卡通手绘</sub> |
-| <img src="examples/cyberpunk_neon_street.jpg" width="100%"> | <img src="examples/cartoon_toaster.jpg" width="100%"> |
-| **岛上的气象站** · *Island Weather Station*<br><sub>Isometric 2.5D · 等轴 2.5D</sub> | **从这扇窗到那扇窗** · *From Window to Window*<br><sub>Continuous line art · 单线画</sub> |
-| <img src="examples/isometric_weather_island.jpg" width="100%"> | <img src="examples/lineart_paper_plane.jpg" width="100%"> |
-| **浮出** · *Rise*<br><sub>Soft 3D · 柔光 3D</sub> | **一滴水的旅程** · *A Drop's Round Trip*<br><sub>Shape morph · 形变动画</sub> |
-| <img src="examples/soft3d_rise.jpg" width="100%"> | <img src="examples/morph_water_cycle.jpg" width="100%"> |
-| **好奇心周刊 · 拆开看看** · *Curiosity Weekly · Take It Apart*<br><sub>Newspaper collage · 报刊拼贴</sub> | **晨间计划** · *Morning Plan*<br><sub>Aurora glassmorphism · 弥散玻璃</sub> |
-| <img src="examples/newscollage_curiosity.jpg" width="100%"> | <img src="examples/aurora_morning.jpg" width="100%"> |
-| **形与色** · *Form & Colour*<br><sub>Bauhaus geometric · 包豪斯几何</sub> | **海岸线 1987** · *Coastline 1987*<br><sub>Retro synthwave · 复古 Synthwave</sub> |
-| <img src="examples/bauhaus_form_colour.jpg" width="100%"> | <img src="examples/synthwave_coastline.jpg" width="100%"> |
+| **秋日湖畔** · *Autumn Lake*<br><sub>Watercolour · 水彩</sub> | **热气球小镇** · *Balloon Day*<br><sub>Paper collage · 剪纸拼贴</sub> |
+| <img src="examples/watercolor_autumn.jpg" width="100%"> | <img src="examples/papercut_balloons.jpg" width="100%"> |
+| **午后甜点** · *Afternoon Dessert*<br><sub>Coloured pencil · 韩国彩铅</sub> | **夏空** · *Summer Sky*<br><sub>Anime · 日本动漫</sub> |
+| <img src="examples/colorpencil_dessert.jpg" width="100%"> | <img src="examples/anime_summer.jpg" width="100%"> |
+| **灵感生长** · *Growing Ideas*<br><sub>Editorial · 编辑风手绘</sub> | **麦田星空** · *Swirling Sky over the Wheat Field*<br><sub>Impasto oil · 油画厚涂</sub> |
+| <img src="examples/editorial_ideas.jpg" width="100%"> | <img src="examples/oil_wheatfield.jpg" width="100%"> |
+| **富士曙** · *Fuji at Dawn*<br><sub>Ukiyo-e · 浮世绘</sub> | **雨夜咖啡店** · *Rainy Night Cafe*<br><sub>Pixel art · 像素风</sub> |
+| <img src="examples/ukiyoe_fuji.jpg" width="100%"> | <img src="examples/pixel_rainy_cafe.png" width="100%"> |
+| **灯塔岛** · *Lighthouse Island*<br><sub>Stop-motion clay · 黏土定格</sub> | **蓝晒植物** · *Sun-Print Botanicals*<br><sub>Cyanotype · 蓝晒</sub> |
+| <img src="examples/clay_lighthouse.jpg" width="100%"> | <img src="examples/cyanotype_botanicals.jpg" width="100%"> |
+| **家** · *Home Sampler*<br><sub>Cross-stitch · 十字绣</sub> | **Aurora 64 收音机** · *Aurora 64 Radio*<br><sub>Vintage instrument panel · 复古仪器面板</sub> |
+| <img src="examples/stitch_sampler.jpg" width="100%"> | <img src="examples/panel_radio.jpg" width="100%"> |
+| **周末市集** · *Weekend Market*<br><sub>Sticker collage × receipt · 贴纸拼贴 · 小票</sub> | **咖啡萃取实验** · *Coffee Brewing Experiment*<br><sub>Lab notebook × stickers · 实验笔记本 · 贴纸</sub> |
+| <img src="examples/sticker_market.jpg" width="100%"> | <img src="examples/notebook_brewing.jpg" width="100%"> |
+| **为什么天空是蓝的** · *Why Is the Sky Blue?*<br><sub>Chalkboard · 黑板板书</sub> | **霓虹不夜城** · *Neon District*<br><sub>Cyberpunk · 赛博朋克</sub> |
+| <img src="examples/chalk_lesson.jpg" width="100%"> | <img src="examples/cyberpunk_neon_street.jpg" width="100%"> |
+| **早安吐司** · *Good Morning, Toast*<br><sub>Hand-drawn cartoon · 卡通手绘</sub> | **岛上的气象站** · *Island Weather Station*<br><sub>Isometric 2.5D · 等轴 2.5D</sub> |
+| <img src="examples/cartoon_toaster.jpg" width="100%"> | <img src="examples/isometric_weather_island.jpg" width="100%"> |
+| **从这扇窗到那扇窗** · *From Window to Window*<br><sub>Continuous line art · 单线画</sub> | **浮出** · *Rise*<br><sub>Soft 3D · 柔光 3D</sub> |
+| <img src="examples/lineart_paper_plane.jpg" width="100%"> | <img src="examples/soft3d_rise.jpg" width="100%"> |
+| **一滴水的旅程** · *A Drop's Round Trip*<br><sub>Shape morph · 形变动画</sub> | **好奇心周刊 · 拆开看看** · *Curiosity Weekly · Take It Apart*<br><sub>Newspaper collage · 报刊拼贴</sub> |
+| <img src="examples/morph_water_cycle.jpg" width="100%"> | <img src="examples/newscollage_curiosity.jpg" width="100%"> |
+| **晨间计划** · *Morning Plan*<br><sub>Aurora glassmorphism · 弥散玻璃</sub> | **形与色** · *Form & Colour*<br><sub>Bauhaus geometric · 包豪斯几何</sub> |
+| <img src="examples/aurora_morning.jpg" width="100%"> | <img src="examples/bauhaus_form_colour.jpg" width="100%"> |
+| **海岸线 1987** · *Coastline 1987*<br><sub>Retro synthwave · 复古 Synthwave</sub> | **草莓杯垫** · *Strawberry Coaster*<br><sub>Perler beads · 拼豆</sub> |
+| <img src="examples/synthwave_coastline.jpg" width="100%"> | <img src="examples/perler_strawberry_coaster.jpg" width="100%"> |
 
-Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial, die-cut vinyl with a laminate gloss, streaky thermal print, graphite catching the tooth of graph paper, highlighter pooling at the start of a swipe, chalk dust settling under half-erased lessons, rain-lit neon glass mirrored in a wet street, a blue-pencil rough under boiling brush ink, an island ray-traced under one soft sun, a single unbroken gold line, candy balls with softbox glints, one outline morphing through six shapes, halftone photos cut out with scissors, frosted glass blurring the real pixels behind it, screen-printed primaries out of register, a slit sun sinking behind a neon grid played off tape. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 45 s (the soft 3D ray tracer) per 1920×1080 image.
+Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial, die-cut vinyl with a laminate gloss, streaky thermal print, graphite catching the tooth of graph paper, highlighter pooling at the start of a swipe, chalk dust settling under half-erased lessons, rain-lit neon glass mirrored in a wet street, a blue-pencil rough under boiling brush ink, an island ray-traced under one soft sun, a single unbroken gold line, candy balls with softbox glints, one outline morphing through six shapes, halftone photos cut out with scissors, frosted glass blurring the real pixels behind it, screen-printed primaries out of register, a slit sun sinking behind a neon grid played off tape, hollow fuse beads on a pegboard melting together under an iron. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 45 s (the soft 3D ray tracer) per 1920×1080 image.
 
 ---
 
@@ -66,7 +66,7 @@ Every mark above is computed: paper fibres, ink washes and mist, dry-brush strok
 
 ### What it is
 
-A [Claude Code](https://claude.com/claude-code) skill and a small painting library with twenty-six styles:
+A [Claude Code](https://claude.com/claude-code) skill and a small painting library with twenty-seven styles:
 
 | Style | Module | What makes it read as the real medium |
 |---|---|---|
@@ -96,6 +96,7 @@ A [Claude Code](https://claude.com/claude-code) skill and a small painting libra
 | **Aurora glassmorphism** | `lib/aurora.py` · `Aurora` | a mesh gradient of colour pools mixed in OKLab on a domain-warped grid, with aurora ribbons and fine grain; glossy iridescent orbs; frosted panes that blur the *actual* pixels beneath them (backdrop, orbs, the cards and text behind), boost saturation and add a milky veil that is thicker toward the light; a bevelled rim that bends the view outward with faint dispersion, a light-facing 1 px edge highlight, frost grain and a soft shadow tinted by what it falls on; crisp SDF controls: gradient toggles, sliders, conic progress rings, pill bars, sparklines, glass chips, a glossy sun behind a glass cloud; SF + PingFang lettering |
 | **Bauhaus geometric** | `lib/bauhaus.py` · `Bauhaus` | a press sheet printed screen by screen, light to dark, on cream uncoated stock (cloudy pulp, fibres, flecks, tooth, a slight cockle); each screen has its own registration error, so colour meets black with a sliver of paper or a dark overlap and the register targets print as a stack of offset crosshairs; an ink film streaked along the squeegee pull and thinning toward the end of the stroke, with bare tooth pits and pinholes where it is thin and a mesh-ragged stencil edge; semi-opaque inks that darken where they overprint; circles, sectors, triangles and heavy bars on a strict module grid; Futura-style caps and heavy Hei, knocked out of solids; crop marks, a colour bar and a pencilled edition number |
 | **Retro synthwave** | `lib/synthwave.py` · `Synthwave` | an 80s retro-future dusk through a pinhole camera: a gradient sun cut by slits that thicken toward the horizon; an analytic neon grid with honest line widths that fades to its average instead of moiré; wireframe mountains glowing magenta to cyan; a sea whose reflection is torn into bars stretched about the sun's column; palm silhouettes with sunset rims; chrome caps mirroring sky over ground with a sharp horizon, extrusion and glints; neon script; then played back off tape: chroma bleed, a tracking band, head-switching noise, on-screen display and scanlines |
+| **Perler beads** | `lib/perler.py` · `Perler` | a height field of real tubes seen by a camera leaning back a little (each pixel walks its column to the first surface), so every bead shows a sliver of side wall, its hole shows the inner wall and the peg inside tinted by light through the plastic, and the gaps show the pegboard; a translucent pegboard (square, round, hexagonal) with empty pegs; per-bead dye-lot shade and wobble; opaque, pearl, clear and glow plastics; ironing as melt: tubes slump and spread, holes close from the rim, neighbours flow together through a smooth union until the gaps shrink to diamonds and the top becomes one flat waxy sheet with paper grain; translucent ironing paper that drapes over the beads and peels back with a curl; a soft box seen in reflection (crisp arcs on glossy rims, a drifting sheen on melted plastic); sorting-tray heaps, spilled beads, tweezers held in the air with their own shadow, a printed chart with pencil ticks |
 
 Ask Claude to *"draw it yourself"*, *"paint this with code"*, or *"claude绘图"*, and name a style if you like. Claude then:
 
@@ -175,6 +176,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 - **Aurora glass**: blur what is really under the pane, then veil it lightly (tint ~0.24, saturate ~1.5), or it turns into milky plastic. Let orbs pass a third or more behind the glass and never touch an edge tangentially. Overlap cards only inside each other's padding. Give each gradient one meaning. For the GIF, weight saturated pixels in the palette sample and add one static Bayer pattern.
 - **Bauhaus**: print light to dark, one ink per screen, and keep everything of one colour on its screen so misregistration moves it together. Keep bare-paper pits to ~2% and only in thin-film streaks, or solids turn to sandpaper and type to a worn rubber stamp. Use a light 3×3 edge blur (a big blur rounds the corners). Knock labels out of dark solids instead of printing black on blue, and keep margin text clear of the crop marks.
 - **Synthwave**: keep the sun's base colour low and let the bloom lift it, or it burns to white and the slits fill in. Break the sea's reflection into bands stretched about the sun's column, and let light sources reflect more strongly than the sky. Measure grid lines in screen pixels and swap dense cells for their average. Keep tape damage mild: one tracking band, sub-pixel jitter.
+- **Perler beads**: build real tubes and let the light make the bead: the hole, the peg inside it and a sliver of side wall are what separate it from pixel art. Iron with melt, not paint: 0.4 is the half-melt (holes open, beads stuck, diamond gaps), 0.7 a finished piece; drop seam grooves and fine grain once it is flat, or it turns into hex nuts and frosting. Shade walls from smoothed maps sampled at their foot, never from the anti-aliased edge row. Keep heaps about one bead deep. Gloss comes from a soft box seen in reflection (an arc on the upper-left rim), not a Fresnel ring around every hole.
 
 ### Roadmap
 
@@ -186,7 +188,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 
 ### 这是什么
 
-一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置二十六种画风：
+一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置二十七种画风：
 
 | 画风 | 模块 | 为什么看起来像真的 |
 |---|---|---|
@@ -216,6 +218,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 | **弥散玻璃** | `lib/aurora.py` · `Aurora` | 网格渐变：几团色光在 OKLab 里混色，坐标扭曲成流动的形状，加极光光带和细颗粒；虹彩光泽小球；磨砂玻璃模糊的是它下面**真实的像素**（背景、小球、后面的卡片和字），提高饱和度，蒙一层近光源更厚的白纱；边缘斜面向外折射并带一点色散，朝光的边有 1 px 高光，玻璃上有磨砂颗粒，投影颜色取自下面的背景；界面用距离场画，边缘干净：渐变开关、滑块、锥形渐变进度环、胶囊柱状图、折线图、玻璃小胶囊、躲在玻璃云后的光泽太阳；SF + 苹方字体 |
 | **包豪斯几何** | `lib/bauhaus.py` · `Bauhaus` | 在奶油色未涂布纸（云状纸浆、纤维、纸屑、纸齿、微微不平）上按色版先浅后深逐版刮印；每块网版有自己的套准误差，色块和黑线相接处露出一丝纸白或压出一道深边，套准十字叠成几色错开的样子；墨膜顺刮板方向有条纹、行程末端变薄，薄处露出纸齿坑点和针孔，版边有网目锯齿；墨半透明，叠印变深；圆、扇形、三角、粗黑条都落在严格的模数网格上；Futura 式几何无衬线大写和粗黑体，可从色块里挖空；裁切线、色标条和铅笔版号 |
 | **复古 Synthwave** | `lib/synthwave.py` · `Synthwave` | 针孔相机看 80 年代复古未来的黄昏：横条切口越往下越厚的渐变落日；逐像素解析的霓虹网格，线宽准确，远处换成平均值不出摩尔纹；从品红渐变到青色的线框山脉；倒影按横带拉伸、碎成一条条光带的海面；带落日轮廓光的棕榈剪影；上映天空、下映地面、中间一道锐利地平线的镀铬大字，带挤出和星闪；霓虹手写字；最后「过一遍录像带」：色度渗色、跟踪噪带、磁头噪声、屏显字和扫描线 |
+| **拼豆** | `lib/perler.py` · `Perler` | 整张桌面是高度图，豆子是真的短管，相机略向后仰、逐列找最近的表面：每颗豆露一条侧壁，孔里看得到内壁和被塑料透光染色的钉子，珠间缝里露出钉板；半透明钉板（方、圆、六边形）上的空钉；每颗豆色号深浅略有不同、在钉上略有歪斜；不透明、珠光、透明、夜光几种塑料；熨烫是真的熔化：管子塌低变宽、孔从边缘收小、相邻的豆通过平滑并集流到一起，缝缩成小菱形直到合拢，顶面变成一片带纸纹的蜡质平面；半透明熨烫纸顺着豆子盖下去，可以卷边揭开；镜面里看得到灯箱（亮面豆沿上一道锐利高光弧，熔化后变成一片蜡光）；分色收纳盒里的豆堆、散落的豆、悬空带投影的镊子、带铅笔勾的图纸 |
 
 对 Claude 说「claude绘图」「你自己画」「用代码画」，也可以指定画风。它会：
 1. **先定构图**：层次、焦点、留白，而且画面要图解内容本身；
@@ -271,6 +274,7 @@ python3 examples/newscollage_curiosity.py out.png                  # 报刊拼�
 python3 examples/aurora_morning.py      out.png                    # 弥散玻璃：晨间计划
 python3 examples/bauhaus_form_colour.py out.png                    # 包豪斯几何：形与色
 python3 examples/synthwave_coastline.py out.png                    # 复古 Synthwave：海岸线 1987
+python3 examples/perler_strawberry_coaster.py out.png              # 拼豆：草莓杯垫
 ```
 
 ### 作画要点（Claude 交图前逐条自查）
@@ -299,6 +303,7 @@ python3 examples/synthwave_coastline.py out.png                    # 复古 Synt
 - **弥散玻璃**：玻璃要模糊它下面真实的东西，白纱要薄（约 0.24，饱和度约 1.5），否则像奶白塑料；小球要有三四成压在玻璃后面，别和卡片边相切；卡片只在对方的内边距里重叠；一种渐变只代表一件事；动图调色板给饱和像素加权，再叠同一张 Bayer 抖动。
 - **包豪斯**：先浅后深，一种颜色一块版，同色的东西放在同一块版上，错位才会整体一起动；露纸坑点约 2%、只在墨膜薄的条纹里，否则色块像砂纸、字像旧橡皮章；版边只做 3×3 轻模糊（大模糊会把直角磨圆）；深色块上的标注用挖空，不要黑字压蓝；页边小字让开裁切线。
 - **复古 Synthwave**：太阳底色压低、靠泛光提亮，否则冲成白团、切口被填平；海面倒影按横带以太阳所在列为中心拉伸打碎，光源的倒影比天空更强；网格线按屏幕像素算宽度，格子太密就换成平均值；录像带损伤要轻：一条跟踪噪带、不到一像素的逐行抖动。
+- **拼豆**：先搭出真的管子，让光把豆子「画」出来：孔、孔里的钉子和那一条侧壁，才是它和像素风的区别。熨烫用 melt 控制，不要手涂：0.4 是半熔（孔在、珠粘、留菱形缝），0.7 是成品；熨平后去掉接缝沟和细纹，否则像六角螺母、像糖霜。侧壁从平滑后的图、在墙脚取样着色，别用抗锯齿的边缘行。豆堆只堆一层左右。光泽靠镜面里的灯箱（左上沿一道弧），不要每个孔一圈菲涅尔白环。
 
 ### 计划
 

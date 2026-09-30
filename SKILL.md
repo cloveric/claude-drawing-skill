@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置二十六种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）、贴纸拼贴·小票（模切乙烯贴纸、热敏小票、和纸胶带、吊牌、橡皮章）、实验笔记本·贴纸（线圈方格本、铅笔图表、荧光笔、红笔圈、便利贴）、黑板板书（墨绿石板、粉笔颗粒、板擦残影、示意图与公式）、赛博朋克（雨夜霓虹街道、玻璃管霓虹招牌、全息广告、湿路面倒影）、卡通手绘（蓝铅笔稿、毛笔线、错位平涂、赛璐璐阴影、逐帧抖线）、等轴 2.5D（正等轴微缩模型、一个太阳照出三面明暗、悬浮数据卡）、单线画（一根不断开的线一笔画完、唯一点睛色）、柔光 3D（光线追踪的糖果色小球海和鼓鼓的软字、景深）、形变动画（一条轮廓依次变形、洋葱皮残影、缓动曲线）、报刊拼贴（牛皮纸、手撕旧报纸、网点老照片、勒索信拼贴字）、弥散玻璃（弥散渐变、磨砂玻璃卡片界面）、包豪斯几何（三原色几何、丝网印刷海报）、复古 Synthwave（切口落日、霓虹网格、镀铬字、录像带质感）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机、贴纸、小票、收据、手帐拼贴、实验笔记本、方格本、荧光笔、便利贴、黑板、板书、粉笔、赛博朋克、霓虹、雨夜街道、卡通、手绘卡通、逐帧手绘、抖线、等轴、2.5D、微缩模型、单线画、一笔画、线条动画、柔光 3D、3D 渲染、C4D 风、软糖字、小球海、形变、变形动画、报刊拼贴、剪报、达达、勒索信字、网点印刷、弥散渐变、玻璃拟态、毛玻璃、包豪斯、几何构成、丝网印刷、Synthwave、蒸汽波、合成器浪潮、80 年代复古），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio / sticker collage / receipt / lab notebook / graph paper / chalkboard / blackboard / cyberpunk / neon city / cartoon / hand-drawn animation / isometric / 2.5D / continuous line / one-line drawing / soft 3D / 3D render / puffy letters / ball pit / shape morph / morphing / newspaper collage / Dada / ransom note / halftone / glassmorphism / aurora gradient / Bauhaus / geometric poster / screen print / synthwave / retrowave / outrun without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
+description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置二十七种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）、贴纸拼贴·小票（模切乙烯贴纸、热敏小票、和纸胶带、吊牌、橡皮章）、实验笔记本·贴纸（线圈方格本、铅笔图表、荧光笔、红笔圈、便利贴）、黑板板书（墨绿石板、粉笔颗粒、板擦残影、示意图与公式）、赛博朋克（雨夜霓虹街道、玻璃管霓虹招牌、全息广告、湿路面倒影）、卡通手绘（蓝铅笔稿、毛笔线、错位平涂、赛璐璐阴影、逐帧抖线）、等轴 2.5D（正等轴微缩模型、一个太阳照出三面明暗、悬浮数据卡）、单线画（一根不断开的线一笔画完、唯一点睛色）、柔光 3D（光线追踪的糖果色小球海和鼓鼓的软字、景深）、形变动画（一条轮廓依次变形、洋葱皮残影、缓动曲线）、报刊拼贴（牛皮纸、手撕旧报纸、网点老照片、勒索信拼贴字）、弥散玻璃（弥散渐变、磨砂玻璃卡片界面）、包豪斯几何（三原色几何、丝网印刷海报）、复古 Synthwave（切口落日、霓虹网格、镀铬字、录像带质感）、拼豆（钉板上的熔珠小管、熨烫熔合）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机、贴纸、小票、收据、手帐拼贴、实验笔记本、方格本、荧光笔、便利贴、黑板、板书、粉笔、赛博朋克、霓虹、雨夜街道、卡通、手绘卡通、逐帧手绘、抖线、等轴、2.5D、微缩模型、单线画、一笔画、线条动画、柔光 3D、3D 渲染、C4D 风、软糖字、小球海、形变、变形动画、报刊拼贴、剪报、达达、勒索信字、网点印刷、弥散渐变、玻璃拟态、毛玻璃、包豪斯、几何构成、丝网印刷、Synthwave、蒸汽波、合成器浪潮、80 年代复古、拼豆、拼拼豆、熔珠、熨豆、豆豆画、钉板、烫豆），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio / sticker collage / receipt / lab notebook / graph paper / chalkboard / blackboard / cyberpunk / neon city / cartoon / hand-drawn animation / isometric / 2.5D / continuous line / one-line drawing / soft 3D / 3D render / puffy letters / ball pit / shape morph / morphing / newspaper collage / Dada / ransom note / halftone / glassmorphism / aurora gradient / Bauhaus / geometric poster / screen print / synthwave / retrowave / outrun / perler beads / hama beads / artkal / fuse beads / melty beads / pegboard beads without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
 ---
 
 # Claude 绘图
@@ -40,6 +40,7 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 | 弥散玻璃 | `lib/aurora.py` · `Aurora` | `examples/aurora_morning.py` 晨间计划（日出色弥散渐变与极光光带、光泽小球；磨砂玻璃卡片层叠：晨间计划时间线（3/5 完成，进行中那一行是玻璃叠玻璃）、专注倒计时圆环、光泽太阳躲在玻璃云后的天气卡、勿扰开关与白噪音滑块、近 7 天专注柱状图、9:00 站会提醒胶囊） | 约 2 秒 |
 | 包豪斯几何 | `lib/bauhaus.py` · `Bauhaus` | `examples/bauhaus_form_colour.py` 形与色 · Form & Colour（奶油色纸上的丝网印刷讲座海报：黄三角、红方、蓝圆站在粗黑地线上，60° 弧、直角框、挖空的圆心和半径，下面大字角数 3 / 4 / 0；「形与色」大标题、挖空字的黑条论点「角越尖，色越亮」；构成网格、套准十字、裁切线、色标条、铅笔版号） | 约 2 秒 |
 | 复古 Synthwave | `lib/synthwave.py` · `Synthwave` | `examples/synthwave_coastline.py` 海岸线 1987（横条切口的渐变落日沉入海面、倒影碎成一条条光带、线框小岛与线框山脉、霓虹网格地面、霓虹边线的海岸公路、灭点处亮灯的小城、带落日轮廓光的棕榈剪影、驶向城市的尾灯、镀铬大字 COASTLINE 与霓虹手写 Last Sunset、录像机 PLAY 与日期屏显、色度渗色、跟踪噪带和扫描线） | 约 4 秒 |
+| 拼豆 | `lib/perler.py` · `Perler` | `examples/perler_strawberry_coaster.py` 草莓杯垫（方格图纸上的草莓图样与图例，铅笔勾掉已摆的颜色；透明方钉板上摆到一半：草莓摆完、天蓝底色一行行往下铺，镊子夹着下一颗悬在空钉上，旁边散豆；九格分色收纳盒；熨平的圆杯垫：豆子熔成一片蜡质平面、孔缩小、外沿扇贝形，压着揭下的熨烫纸） | 约 9 秒 |
 
 各画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找；新四种还用到补零平移 `shift`、文字遮罩 `text_mask`、西文字体查找 `latin_font`/`load_font`，以及高度图打光 `height_normals`、`height_shadow`（沿光线步进的投影）、`ambient_occlusion`。
 
@@ -69,7 +70,8 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 - 杂志封面、观点海报、达达 / 复古拼贴、「拆开看看 / 里面有什么」类讲解页、需要老照片质感又不能用真人照片 → 报刊拼贴（要童趣温暖的彩纸拼贴仍用剪纸拼贴）；
 - 产品界面、App / 小组件展示、效率工具与数据面板、明亮通透的科技感、讲解片的「功能 / 界面」页 → 弥散玻璃（要暗夜霓虹氛围仍用赛博朋克）；
 - 设计感海报、讲座 / 展览 / 活动海报、概念图解（形状、比例、对比、原则）、讲解片里的「定义 / 原理」页 → 包豪斯几何；
-- 80 年代复古未来、怀旧、夏夜公路与海边、音乐和歌单封面、讲解片的「复古科技 / 回到过去」封面 → 复古 Synthwave（要雨夜城市用赛博朋克，要低分辨率游戏感用像素风）。
+- 80 年代复古未来、怀旧、夏夜公路与海边、音乐和歌单封面、讲解片的「复古科技 / 回到过去」封面 → 复古 Synthwave（要雨夜城市用赛博朋克，要低分辨率游戏感用像素风）；
+- 手作、DIY 教程、「从图纸到成品」的步骤图、把像素图案做成可爱实物（杯垫、挂件、冰箱贴）、讲解片里的「动手做」页 → 拼豆（要屏幕上的像素游戏感用像素风，要布上的针线用十字绣）。
 
 每种画风一幅范例作为质量基准（范例都不用禅意主题）；水墨另加一幅「月印万川」（留白托月、水面倒影）。
 
@@ -355,6 +357,16 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
   - `osd(s, x, y, px, anchor)`：5×7 块字的录像机屏显（PLAY ▶、日期）；
   - `vhs(bleed, shift_px, jitter, noise, scan, tracking, head)`：只作用于成片，包括 YIQ 色度模糊右移、重影振铃、逐行抖动、一条跟踪噪带、底部磁头噪声、掉磁白线、扫描线、黑位抬升；阶段快照保持干净
 - 颜色常量 `MAGENTA CYAN VIOLET ORANGE YELLOW PINK RED WHITE`；字体用 `synth_font('chrome'|'script'|'caption', size)` 找系统字体（Avenir Next Heavy Italic / Brush Script / 冬青黑体），可用 `INKPAINT_FONT_CHROME` 等指定；`save('x.jpg')` 默认 quality 88、4:4:4 色度
+
+**拼豆 `Perler`**：
+- 思路：整张桌面是高度图，每样东西都是实体（豆是带孔短管、钉板带钉子、纸有厚度），相机略向后仰：每个屏幕像素沿自己那一列找最近的表面，所以豆子露一条侧壁、缝里露出后排侧面、孔里看得到内壁和钉子。光是左上一个大灯箱：局部点光、沿高度图步进的软阴影、天光 AO，镜面反射里看得到灯箱（亮面上是锐利的弧，熔化后变成蜡质光泽）；线性空间着色，`ss` 倍超采样
+- 构造：`Perler(W, H, seed, pitch=22, tilt=0.32, ss=2, light=(x, y, z))`；pitch 是珠距（像素），tilt 是后仰量
+- 桌面与纸：`desk(颜色, kind='wood'|'mat')`；`chart(rows, key, cx, cy, cell, angle, title, subtitle, number, names, done)` 印好的图纸（格子、符号、行列号、每 5 格粗线、图例带颗数），返回对象的 `.done.update('RD')` 用铅笔勾掉已摆的颜色；`tape(字, cx, cy, angle, size, sub, badge='1')` 美纹纸标签；`sheet(draw, cx, cy, angle, thick, translucency, drape, cut, curl, bump)` 任意薄片
+- 钉板与豆：`pegboard(cx, cy, cols, rows, shape='square'|'circle'|'hexagon', colour='clear'|'white'|颜色, angle)` 返回 `Board`（钉子都在方格点上，`xy(row, col)` 取钉子位置）；`place(board, rows, key, at=(行, 列), only='RDP', keep=lambda r, c: ...)` 按文字图样插豆，可按颜色、按区域分批；key 的值用 `BEADS` 色名（含 `pearl` 珠光、`clear` 透明、`glow` 夜光）或 '#rrggbb'
+- 熨烫：`ironing_paper(cx, cy, w, h, angle, cut=((x, y), (nx, ny)), curl, wrinkle)` 盖在豆上的半透明熨烫纸，cut 表示揭开一半（卷边），wrinkle 是热皱；`iron(board, melt, where)`：0.4 半熔，0.7 成品，0.8 全平；`lift_off(board)` 取下成品
+- 道具：`tray(cx, cy, [[色, ...], ...], cell, angle, fill)` 分色收纳盒（每格一堆豆）；`spill(cx, cy, colours, n, spread, standing)` 散豆；`bead(x, y, 颜色, pose='stand'|'side', angle, tilt)`；`tweezers(tip, angle, length, lift, rise, holding='sky', grip)` 悬空的镊子，尖端夹一颗豆，自带投影
+- 层次与动画：`on_top(*objs)` 提到最上层，`remove(obj)` 拿走；`stage(name)` 只存快照，`save(path, stages_dir)` 时才按 1× 渲染各阶段
+- 颜色常量 `BEADS`；角度逆时针为正；`save('x.jpg')` 默认 quality 88、4:4:4 色度
 
 **顺序**：都是先远后近、先大后小，文字最后叠加。水墨的雾要画在它该吞没的东西之后；水彩的叶梗要先画，并且只画在叶子外面。
 
@@ -660,6 +672,21 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 小岛挡住太阳正下方，吃掉最亮的一段倒影 | 小岛只和太阳左缘略微相交 |
 | 阶段快照里地平线下是整块橘色，太阳下半截露在地上 | `sky()` 先铺一层没点亮的暗色地面；太阳在地平线处截断 |
 
+**拼豆**
+
+| 问题 | 改法 |
+|---|---|
+| 钉板四周出现一整块深灰方框 | 豆子高度只写在豆子覆盖处（其余设 -1e3），别把整个窗口抬到板面高度 |
+| 熨过的豆还是一颗颗分开的甜甜圈，和没熨的差不多 | melt 同时控制：外半径 +22%、smooth-min 融合宽度增到 0.55 倍珠距、孔缩 74%、高度降 40%，外沿和孔口分开倒圆；0.4 是半熔（孔在、珠粘、留菱形缝），0.7 是成品 |
+| 熨平的杯垫像一块块六角螺母，表面像糖霜 | 接缝沟只在半熔时有（×(1 − m/0.7)²），顶面只留 5% 的枕形起伏，熨烫纸细纹 0.08 px |
+| 收纳盒里的豆堆成一根根塔 | 散豆落在下面的东西上，但限高约一层豆（`cap`）；每格约 20 颗，按抖动网格铺开 |
+| 镊子像两根筷子、像白纸条 | 两腿成 V 形，尾部合拢、尖端张开一颗豆宽，腿宽 1.5→4.9 px；钢色偏暗，靠拉丝纹和窄的灯箱反射显出金属；悬空层单独投影 |
+| 白豆侧壁出现竖条纹、钟乳石状锯齿 | 侧壁的 AO 和阴影改从平滑图上、在墙脚和墙顶内侧取样；墙顶取最近几行的最大高度；太陡的抗锯齿斜坡按侧壁着色 |
+| 熨烫纸（缓坡）上出现发丝状细线 | 朝镜头的缓坡会把一行拉成约 1.1 屏幕行，超过 1.5 行才算侧壁 |
+| 高光要么看不见，要么每颗豆一圈白光环 | 用灯箱反射：镜面方向落在主光方向 8° 内（越粗糙越宽）才亮，得到左上沿和孔内远侧唇口两道弧；菲涅尔权重压到 0.08 |
+| 熨烫纸盖住标签，字变半透明 | 后放的会盖住先放的，用 `on_top()` 把标签、杯垫提到最上层 |
+| 图例铅笔勾挤到前一栏数量上；深绿、叶绿都印成 G | 勾直接打在豆子图标上；符号原样印，不转大写 |
+
 ## 四、做成动画
 
 - 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的动图就是这样做的。
@@ -704,6 +731,7 @@ lib/newscollage.py     报刊拼贴
 lib/aurora.py          弥散玻璃（弥散渐变 · 玻璃拟态）
 lib/bauhaus.py         包豪斯几何（丝网印刷海报）
 lib/synthwave.py       复古 Synthwave
+lib/perler.py          拼豆（钉板、熔珠小管、熨烫融合）
 examples/*.py          范例脚本；*.jpg 成品；drawing_*.gif 逐步画出的动图
 中文字体：自动找 Kaiti/Songti（macOS）、Noto CJK（Linux）、KaiTi/SimSun（Windows），或设 INKPAINT_FONT
 西文字体（后来新增的画风用）：core.latin_font(style) 按 sans / sans_bold / rounded / script / hand / typewriter 等找系统字体，可用 INKPAINT_FONT_<STYLE> 指定；字体文件不要放进仓库
