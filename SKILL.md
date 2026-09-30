@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置十七种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）、贴纸拼贴·小票（模切乙烯贴纸、热敏小票、和纸胶带、吊牌、橡皮章）、实验笔记本·贴纸（线圈方格本、铅笔图表、荧光笔、红笔圈、便利贴）、黑板板书（墨绿石板、粉笔颗粒、板擦残影、示意图与公式）、赛博朋克（雨夜霓虹街道、玻璃管霓虹招牌、全息广告、湿路面倒影）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机、贴纸、小票、收据、手帐拼贴、实验笔记本、方格本、荧光笔、便利贴、黑板、板书、粉笔、赛博朋克、霓虹、雨夜街道），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio / sticker collage / receipt / lab notebook / graph paper / chalkboard / blackboard / cyberpunk / neon city without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
+description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置二十七种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）、贴纸拼贴·小票（模切乙烯贴纸、热敏小票、和纸胶带、吊牌、橡皮章）、实验笔记本·贴纸（线圈方格本、铅笔图表、荧光笔、红笔圈、便利贴）、黑板板书（墨绿石板、粉笔颗粒、板擦残影、示意图与公式）、赛博朋克（雨夜霓虹街道、玻璃管霓虹招牌、全息广告、湿路面倒影）、卡通手绘（蓝铅笔稿、毛笔线、错位平涂、赛璐璐阴影、逐帧抖线）、等轴 2.5D（正等轴微缩模型、一个太阳照出三面明暗、悬浮数据卡）、扁平矢量（无描边几何色块、限定色板、无五官人物）、单线画（一根不断开的线一笔画完、唯一点睛色）、柔光 3D（光线追踪的糖果色小球海和鼓鼓的软字、景深）、形变动画（一条轮廓依次变形、洋葱皮残影、缓动曲线）、报刊拼贴（牛皮纸、手撕旧报纸、网点老照片、勒索信拼贴字）、弥散玻璃（弥散渐变、磨砂玻璃卡片界面）、包豪斯几何（三原色几何、丝网印刷海报）、复古 Synthwave（切口落日、霓虹网格、镀铬字、录像带质感）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机、贴纸、小票、收据、手帐拼贴、实验笔记本、方格本、荧光笔、便利贴、黑板、板书、粉笔、赛博朋克、霓虹、雨夜街道、卡通、手绘卡通、逐帧手绘、抖线、等轴、2.5D、微缩模型、扁平矢量、扁平插画、单线画、一笔画、线条动画、柔光 3D、3D 渲染、C4D 风、软糖字、小球海、形变、变形动画、报刊拼贴、剪报、达达、勒索信字、网点印刷、弥散渐变、玻璃拟态、毛玻璃、包豪斯、几何构成、丝网印刷、Synthwave、蒸汽波、合成器浪潮、80 年代复古），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio / sticker collage / receipt / lab notebook / graph paper / chalkboard / blackboard / cyberpunk / neon city / cartoon / hand-drawn animation / isometric / 2.5D / flat vector / flat illustration / continuous line / one-line drawing / soft 3D / 3D render / puffy letters / ball pit / shape morph / morphing / newspaper collage / Dada / ransom note / halftone / glassmorphism / aurora gradient / Bauhaus / geometric poster / screen print / synthwave / retrowave / outrun without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
 ---
 
 # Claude 绘图
@@ -31,6 +31,16 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 | 实验笔记本 · 贴纸 | `lib/notebook.py` · `Notebook` | `examples/notebook_brewing.py` 咖啡萃取实验（线圈方格笔记本、铅笔表格与折线图、排线标出最佳区间、荧光笔、没闭合的红笔圈、便利贴结论、模切贴纸、标签机日期、桌上的六棱铅笔） | 约 3 秒 |
 | 黑板板书 | `lib/chalk.py` · `Chalkboard` | `examples/chalk_lesson.py` 为什么天空是蓝的（墨绿石板、半擦掉的上节课残影与板擦痕、越往下越厚的粉笔灰；白黄粉蓝粉笔写的标题、太阳→大气层→眼睛示意图、长短波浪线、手写 ∝ 与圈出的 1/λ⁴、光谱条与散射曲线、带缺口的「小结」框；木框和粉笔槽里的粉笔、板擦） | 约 5 秒 |
 | 赛博朋克 | `lib/cyberpunk.py` · `Cyberpunk` | `examples/cyberpunk_neon_street.py` 霓虹不夜城 · Neon District（雨夜街道峡谷、真玻璃管霓虹竖招牌（坏管与闪烁管）、背光灯箱、过街天桥「不夜城」、全息海月水母广告、电线、飞车光轨、井盖蒸汽、透明伞背影、湿路面与水洼倒影、胶片颗粒与一道撕裂扫描线） | 约 10 秒 |
+| 卡通手绘（逐帧手绘） | `lib/cartoon.py` · `Cartoon` | `examples/cartoon_toaster.py` 早安吐司（薄荷绿吐司机笑着弹出两片举手的吐司、「叮！」爆炸框、盘子上打瞌睡的化黄油、窗外日出、墙上 7 点的钟；左侧 ①按下拉杆 ②电热丝烧红 3 分钟 ③弹起来 的图解；蓝铅笔稿留底、毛笔线、错位平涂、赛璐璐阴影、蜡笔天空与烤边、网点橱柜、抖线） | 约 4 秒 |
+| 等轴 2.5D | `lib/isometric.py` · `Isometric` | `examples/isometric_weather_island.py` 岛上的气象站（漂浮的分层底座、一格一格的倒角地砖与台地、带双道浪花的海；观测场里的百叶箱、雨量筒、带风杯和风向标的风杆；看守小屋与卫星天线、太阳能板、石板路、栈桥小船、风袋、浮标、开花灌木；探空气球和平底云；四张悬浮数据卡用细引线指向各自仪器，地面上一个指北针） | 约 5 秒 |
+| 扁平矢量 | `lib/flatvector.py` · `FlatVector` | `examples/flatvector_bookshop.py` 周末书店（无描边几何色块、七色限定色板、色块叠压出体积、极轻颗粒；梯子上的店员把唯一一本珊瑚色诗集递给仰头伸手的银发顾客，虚线标出它从顶层空位落下的路线；拱窗日落、OPEN 挂牌、台灯光锥下读书的人、窗台橘猫、¥10 旧书箱） | 约 1 秒 |
+| 单线画 | `lib/lineart.py` · `LineArt` | `examples/lineart_paper_plane.py` 从这扇窗到那扇窗（一根不断开的金线：圆树、小屋、从窗口穿墙飞出的纸飞机航迹与顶部翻圈、飞镖形纸飞机穿墙飞进对面小屋的窗；窗子亮起是全画唯一的点睛色；字距拉开的衬线标题） | 约 6 秒 |
+| 柔光 3D | `lib/soft3d.py` · `Soft3D` | `examples/soft3d_rise.py` 浮出（糖果色小球海里顶出鼓鼓的软字 rise：被挤开的球堆在字脚、几颗骑在字肩上、几颗滚落，i 的点是一颗黄球；天光穹顶、柔光箱主光、粉色轮廓光、环境光遮蔽、软阴影、次表面色调、景深） | 约 46 秒 |
+| 形变动画 | `lib/morph.py` · `Morph` | `examples/morph_water_cycle.py` 一滴水的旅程（一条 256 点轮廓线依次变成水滴→云→雪花→雪山→河→海浪，六块纯色背景随之切换；洋葱皮残影、挤压拉伸、虚线运动轨迹、中间帧标出对应点、缓动曲线时间轴） | 约 1 秒 |
+| 报刊拼贴 | `lib/newscollage.py` · `NewsCollage` | `examples/newscollage_curiosity.py` 好奇心周刊 · 拆开看看（牛皮纸底、手撕旧报纸（程序生成的假文字栏）、被剪刀剪开并掀起上半的网点印刷闹钟照片、飞出的齿轮 / 发条 / 红色网点摆轮 / 螺丝各自剪下并配打字标签和引线、大红纸圆、勒索信拼贴字「拆开看看？」和 WHAT MAKES IT TICK、刊头、黑色邮戳、红色「附零件图」印章、美纹纸胶带） | 约 3 秒 |
+| 弥散玻璃 | `lib/aurora.py` · `Aurora` | `examples/aurora_morning.py` 晨间计划（日出色弥散渐变与极光光带、光泽小球；磨砂玻璃卡片层叠：晨间计划时间线（3/5 完成，进行中那一行是玻璃叠玻璃）、专注倒计时圆环、光泽太阳躲在玻璃云后的天气卡、勿扰开关与白噪音滑块、近 7 天专注柱状图、9:00 站会提醒胶囊） | 约 2 秒 |
+| 包豪斯几何 | `lib/bauhaus.py` · `Bauhaus` | `examples/bauhaus_form_colour.py` 形与色 · Form & Colour（奶油色纸上的丝网印刷讲座海报：黄三角、红方、蓝圆站在粗黑地线上，60° 弧、直角框、挖空的圆心和半径，下面大字角数 3 / 4 / 0；「形与色」大标题、挖空字的黑条论点「角越尖，色越亮」；构成网格、套准十字、裁切线、色标条、铅笔版号） | 约 2 秒 |
+| 复古 Synthwave | `lib/synthwave.py` · `Synthwave` | `examples/synthwave_coastline.py` 海岸线 1987（横条切口的渐变落日沉入海面、倒影碎成一条条光带、线框小岛与线框山脉、霓虹网格地面、霓虹边线的海岸公路、灭点处亮灯的小城、带落日轮廓光的棕榈剪影、驶向城市的尾灯、镀铬大字 COASTLINE 与霓虹手写 Last Sunset、录像机 PLAY 与日期屏显、色度渗色、跟踪噪带和扫描线） | 约 4 秒 |
 
 各画风共用 `lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找；新四种还用到补零平移 `shift`、文字遮罩 `text_mask`、西文字体查找 `latin_font`/`load_font`，以及高度图打光 `height_normals`、`height_shadow`（沿光线步进的投影）、`ambient_occlusion`。
 
@@ -51,7 +61,17 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 - 清单、账单、价格、购物、市集、活动海报、轻松但成熟的讲解片封面 → 贴纸拼贴 · 小票；
 - 实验记录、数据对比、复盘笔记、讲解片里的「算账 / 结论」页 → 实验笔记本 · 贴纸；
 - 讲课、知识点、公式推导、原理示意图、讲解片里的「板书 / 课堂」页 → 黑板板书；
-- 夜景、城市、雨、霓虹、电影感氛围、讲解片的「未来 / 科技 / 城市」封面 → 赛博朋克（要复古小尺寸或像素动画仍用像素风）。
+- 夜景、城市、雨、霓虹、电影感氛围、讲解片的「未来 / 科技 / 城市」封面 → 赛博朋克（要复古小尺寸或像素动画仍用像素风）；
+- 可爱的拟人小物件、日常小事讲故事、带表情的角色、讲解片里轻松的「步骤 / 原理」图解、要逐帧抖线的动画 → 卡通手绘（要立体手作感用黏土定格，要纸片感用剪纸拼贴）；
+- 小世界、城市 / 园区 / 工厂 / 校园示意，系统或流程的「微缩模型」图解，围着场景放数据卡的信息图，讲解片的「全景 / 系统概览」页 → 等轴 2.5D（要霓虹夜景用赛博朋克；要复古小尺寸用像素风）；
+- 生活场景、人物小故事、产品 / App 讲解插图、MG 动画式讲解片分镜 → 扁平矢量（要立体手作感用黏土，要纸感用剪纸）；
+- 高级克制、极简、品牌感封面、要看「一笔画出来」的过程、讲一段路线或旅程 → 单线画（深蓝底金线或奶油底墨线，只一个点睛色）；
+- 产品感、软萌立体、糖果色、MG 片头大字、「3D 渲染」、讲解片封面的立体标题 → 柔光 3D（要手作、捏泥的质感仍用黏土定格）；
+- 过程、变化、循环、「从 A 变成 B」的小故事，讲解片的转场、片头和「演变」页 → 形变动画（要真的动起来，用 `Morph.at` 逐帧出图）；
+- 杂志封面、观点海报、达达 / 复古拼贴、「拆开看看 / 里面有什么」类讲解页、需要老照片质感又不能用真人照片 → 报刊拼贴（要童趣温暖的彩纸拼贴仍用剪纸拼贴）；
+- 产品界面、App / 小组件展示、效率工具与数据面板、明亮通透的科技感、讲解片的「功能 / 界面」页 → 弥散玻璃（要暗夜霓虹氛围仍用赛博朋克）；
+- 设计感海报、讲座 / 展览 / 活动海报、概念图解（形状、比例、对比、原则）、讲解片里的「定义 / 原理」页 → 包豪斯几何；
+- 80 年代复古未来、怀旧、夏夜公路与海边、音乐和歌单封面、讲解片的「复古科技 / 回到过去」封面 → 复古 Synthwave（要雨夜城市用赛博朋克，要低分辨率游戏感用像素风）。
 
 每种画风一幅范例作为质量基准（范例都不用禅意主题）；水墨另加一幅「月印万川」（留白托月、水面倒影）。
 
@@ -219,6 +239,133 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 - 空中：`walkway(z, Y, thick, deep, windows=None)` 过街天桥（正面可再挂 `neon_text`）；`cables(n, z=(近, 远), Y=(低, 高))` 电线；`light_trail(三维控制点, 颜色, pair, strobe, fade)` 飞车光轨（左行交通：尾灯红、头灯暖白）
 - 氛围：`steam(X, Z, height, width, drift, density)` 井盖蒸汽；`mist()` 只躺在远处街面的薄雾；`figure(X, Z, umbrella='clear'|'dark'|None)` 打伞背影（两侧霓虹轮廓光，无脸）；`rain(far, mid, near, slant, rings)` 三层雨和溅落圈；`glitch(y, h, shift, split)` 一道撕裂扫描线，只在成片里出现，用一次就够
 - 颜色常量 `MAGENTA CYAN AMBER RED WHITE`；`save('x.jpg')` 默认 quality 88、4:4:4 色度，霓虹边缘不糊
+
+**卡通手绘 `Cartoon`**：
+- 思路：照动画师画一张原画的顺序——蓝铅笔起稿 → 勾线 → 平涂 → 赛璐璐阴影 → 蜡笔/网点 → 特效 → 字。每一笔按种类落进一个「组」：`rough` 铅笔、`ink` 墨线、`flat` 平涂、`shade` 阴影/高光/腮红、`texture` 蜡笔/网点/排线、`fx` 特效、`type` 字。`stage(name, show=[组...], rough=强度)` 只显示这些组，画完的一张图可以按作画顺序回放；`with c.group(ink='ink_bg'):` 把某一类改投到别的组，`with c.group('fx'):` 全部改投
+- 遮挡：东西不透明，`fill` 会挖掉身后已画的墨线和颜色（隐藏线自动去掉），所以先远后近；`fx`、`type` 是最后叠上去的覆盖层，它们的挖空只在显示时生效，阶段快照不会出现空洞
+- 墨线：`line(pts, width, taper)` 毛笔线（落笔细、中段粗、收笔尖，有手抖和压力起伏）；`outline(pts, width, weight, gaps)` 一笔画完的闭合轮廓，首尾两个尖头交叠，背光的右下侧按 weight 加粗，`gaps=n` 留几处小断口；`ink_fill()` 实心墨块、`dot()` 墨点。每条墨线会自动先起一遍蓝铅笔稿（`rough=False` 关掉），`sketch()` 只画铅笔辅助线
+- 颜色：`fill(pts|mask, 颜色, slop)` 平涂，整体错开 slop 像素、边缘游走，返回 `Mask`，可作 clip；`shade(形状, 颜色, offset=(dx, dy), clip)` 硬边赛璐璐阴影（形状减去朝光源挪过的自己，得到背光侧的月牙），offset=None 时直接用给的形状；`glint(pts, width)` 白色高光笔；`shape(pts, 颜色, shade=(颜色, dx, dy), shade2=...)` 一次做完平涂、两层阴影和描边；`darker(颜色)` 取阴影色
+- 质感：`crayon(形状, 颜色, pressure, angle)` 蜡笔（只挂在纸纹凸起上，顺着涂的方向有条纹，毛边；pressure 可以是整幅数组，做渐变）；`tone(形状, 颜色, cell, angle, amount)` 网点纸；`hatch(形状, angle, spacing)` 墨线排线（接触阴影）；`blush()` 腮红
+- 角色：`face(cx, cy, size, mood, rot)`，mood 可选 happy（^ ^ 眼加张嘴吐舌）、wow（圆眼加 o 嘴）、sleepy、smile、wink，自带腮红；`arm(肩, 手, bend, hand, thumb)` 橡皮管手臂加带拇指的白手套（先画手臂再画身体）
+- 特效（默认进 fx 覆盖层，`fx=False` 当普通物件画）：`sparkle()` 四角闪光星、`speed_lines(p0, p1, angle)` 速度线、`steam()` 热气、`puff()` 扇贝边烟团、`burst()` 爆炸星形框、`crumbs(..., avoid=遮罩)` 飞溅碎屑、`pop_lines()` 强调短线
+- 字（默认进 type 覆盖层）：`letter(s, x, y, size, fill, depth, depth_colour)` 大标题字（中文圆体加漫画西文，每个字微转、上下跳，带挤出阴影、左上白边和粗墨描边）；`note()` 手写注释；`arrow()` 手绘箭头；`badge(x, y, r, '1')` 编号圆标；`pencil_note()` 纸角的蓝铅笔编号；`text_width()` 量宽度
+- 形状：`Cartoon.rrect_pts(x0, y0, x1, y1, r 或 (左上, 右上, 右下, 左下))`、`ellipse_pts(cx, cy, rx, ry, rot, a0, a1)`（给 a0/a1 就是一段弧）、`densify()` 保留尖角的折线、`place(局部点, cx, cy, scale, rot)` 摆放在局部坐标里画好的物件；`mask(pts)` 整幅遮罩，可以用 numpy 相乘相减
+- 抖线：`Cartoon(..., boil=2.0)`，每次 `stage()` 用一张新的平滑位移场重描墨线（1–2 像素），颜色和铅笔稿不动；`save()` 用第 0 次描线
+- 角度都是逆时针为正（同 PIL）；颜色常量 `INK PAPER PENCIL WHITE RED YELLOW PINK ORANGE`
+
+**等轴 2.5D `Isometric`**：
+- 思路：一台正等轴正交相机加一个小光线追踪器。每个部件都是解析实体（平面围成的凸多面体、任意轴向的圆台、可被平面切开的椭球），逐像素求交写进 G-buffer（深度、法线、反照率、材质），画的先后不影响遮挡。同样的实体再从太阳方向画一张阴影图、从正上方画一张记录「柱子顶和底」的高度图，最后统一算光：天空环境光 × AO + 太阳 × N·L × 软阴影（PCSS，半影随遮挡距离变宽）
+- 构造：`Isometric(W, H, seed, scale=每格像素, look=(x, y, z), at=(屏幕比例 x, y), sun=(x, y, z), ss=2, floor=-2.4, record=True)`。世界 x 朝屏幕左下、y 朝右下、z 朝上，一格 = 1。`iso(x, y, z)` 世界 → 屏幕；`unproject(sx, sy, z)` 屏幕 → 该高度平面上的世界点（按屏幕位置摆悬浮物）
+- 地面：`backdrop(top, bottom, glow, centre)` 浅色渐变和底座下面看不见的地板（接住底座的影子）；`slab(x0, y0, x1, y1, z0, z1, layers)` 漂浮的分层底座；`tiles(levels, heights, colours, soil, gap, paved=(4,))` 倒角地砖（0 海、1 沙、2 草、3 台地、4 铺装）；`sea(shallow, deep, foam, waves)` 海面（岸边浪花、断续第二道浪线、深浅过渡、浪短线、透亮侧壁）；`top_z(x, y)` 取砖面高度；`road()` 带中心虚线的路；`path(cells)` 石板
+- 基本体：`box(x0, y0, z0, x1, y1, z1, colour, side, bevel)` 倒角盒子；`obox(centre, size, yaw, pitch, roll)`；`prism(pts, z0, z1)`；`convex([(normal, d)], lo, hi)`；`cylinder(x, y, z0, z1, r, r1=None)`（给 r1 是圆锥 / 圆台）；`tube(p0, p1, r)`；`ellipsoid(centre, radii, yaw, pitch, roll, clip=[(normal, d)])`、`sphere()`、`dome()`。都接受 `paint(P, n, tag)`（按世界坐标上色：砖缝、土层、瓦行、百叶、电池片、卡面文字）、`mat='matte'|'water'|'glass'|'soft'|'gloss'|'card'`、`cast=`（投不投影）、`ao=`（进不进高度图：悬浮物和细线都关掉）
+- 建筑：`building(x0, y0, x1, y1, z, h, wall, roof='gable'|'hip'|'shed'|'flat', roof_colour, axis, windows=(行, +x 墙几扇, +y 墙几扇), door=('+x', 位置), trim)`；`roof()`；`window(x, y, z, w, h, facing)`（白框、十字棂、斜向天光、窗台）；`door()`；`sign(x, y, z, w, h, '字', facing)`
+- 自然与道具：`tree(x, y, z, size, kind='round'|'pine'|'poplar'|'bush', flowers=)`、`rock()`、`cloud()` 平底云、`windmill(x, y, z, h, yaw, spin)`、`windsock()`、`dish()` 卫星天线、`solar_panel()`、`fence(pts, z, h, closed)`、`pier()`、`boat()`、`balloon()`
+- 信息图：`card(x, y, z, w, h, facing='+x', title, tag, value, unit, note, series, icon='wind'|'temp'|'rain'|'balloon'|'sun', anchor=(x, y, z), accent)` 竖在空中的数据卡（文字印在等轴平面上，带细引线和锚点）；`compass(x, y, z, r, north)` 平躺在地面上的指北针；`text()`、`rule()`、`dot()` 平面排版叠在最上层
+- 光：太阳从左后上方来，顶面最亮，+x 面（左下）次之，+y 面（右下）只吃天光；`sun_c / sky_c / hor_c / gnd_c`、`soft`、`pen`（最小 / 最大半影）可调。不要霓虹发光、泛光和描边
+
+**扁平矢量 `FlatVector`**：
+- 思路：矢量软件的画板。每样东西都是边缘干净的几何形 `Mask`（覆盖率小块 + 偏移）；`|` 并、`&` 交、`-` 减、`moved(dx, dy)` 平移，只算包围盒重叠处，上千个形状也在 1 秒内
+- 形状：`circle` `ellipse` `rect` `rrect(x0, y0, x1, y1, r 或 (左上, 右上, 右下, 左下), rot)`；`capsule(p0, p1, r0, r1)` 锥形胶囊，`limb(点列, 半径列)`，`tube(控制点, r)` 平滑曲线管；`poly(pts, round=)` 圆弧倒角多边形；`arc` 环段、`pie` 扇形、`leaf(p0, p1, 宽, bend)` 叶片、`star`；`split(m, p0, p1)` 取直线左侧的部分；`text_mask`
+- 上色：`fill(m, 颜色, alpha, grain)`；`tone(c, k)`：k<0 向墨色混、k>0 向奶油色混，所有明暗都是色板色的色调
+- 体积（色块叠压）：`shade(m, strength, depth)` 背光侧月牙（形状减去朝光源挪动的自己）；`glint()` 受光侧亮月牙；`plane(m, p0, p1)` 直线切面；`cast(m, dx, dy, clip=)` 硬边投影（乘墨色，落在几种颜色上各自变深）；`darken` / `lighten`
+- 人物 `person(hip, 身高, facing, lean, head_tilt, arm=(上臂, 前臂), leg=(大腿, 小腿), sit, hand_to, hand_far_to, foot_to, foot_far_to, top, bottom, shoes, skin, hair, hair_style='short'|'bun'|'bob'|'long'|'pony', coat, skirt, apron, bag, draw_near_arm)`：7.5 头身、无五官，远侧手脚暗一档；角度从「竖直向下」量起、朝面向为正；返回关节字典（hand、hand_far、head、knee…）；`draw_near_arm=False` 时先画道具，再调 `near_arm()` 让手压在道具上
+- 物件：`books(x0, x1, 书脚y, 最高, 颜色, gap_at, gap_w, stack_at, back=背板遮罩)` 一排书脊；`book(cx, cy, w, h, rot, colour, open)`；`plant(kind='leafy'|'snake'|'round')`；`pendant(x, 顶, y, r, beam_to=)`；`cat(tail_down=)`；`cloud`；`sun(rays)`；`dashes(点列, arrow=)` 运动虚线；`sparkle`；`text(s, x, y, size, font_style='geo'|'geo_medium', cjk='cjk'|'cjk_light')`
+- 颜色常量 `INK BLUE CORAL MUSTARD TEAL PEACH CREAM`；`light=(0.8, -0.6)` 是指向光源的屏幕方向；`save('x.jpg')` 默认 quality 88、4:4:4 色度
+
+**单线画 `LineArt`**：
+- 思路：整幅画是一条路径。先把各个形状做成点列，再 `chain()` 按作画顺序串成一条线；线只栅格化一次成「时间图」（每个子像素记住笔第一次经过时走了多少像素），画到哪一步就是 `时间 <= s`
+- 底：`backdrop('night'|'cream')`：深蓝丝绒底（中间亮、细颗粒）或奶油纸，同时设定默认线色（金 / 墨）和点睛色（琥珀 / 朱红）
+- 形状（静态方法，返回点列）：`smooth(控制点)` 样条、`poly(点, r, sharp=(下标,))` 圆角折线、`arc(cx, cy, rx, ry, a0, a1)`、`scallop(cx, cy, r, a0, a1, bumps, depth)` 树冠灌木的扇贝边、`place(点, 原点, angle, scale)` 局部坐标摆放、`curl(P, s, r, span, side, aspect)` 在路径第 s 像素处插一个翻圈、`retrace(点)` 原路去再原路回
+- 路径：`chain([(名字, 点列), ...])` 返回 `(P, marks)`，断开处自动用切线连续的三次曲线接上；`trim(P, s0, s1)` 按长度裁剪；`locate(P, (x, y))` 最近点的长度；`at(P, s)` 取点和方向；`length(P)`
+- 画线：`line(P, width, pressure=[(s0, s1, 倍数)], sheen, glow, hot)`：起笔轻、收笔长尖、压力缓慢起伏、急转处变粗、原路折返处提笔收尖；深色底上是随角度变亮、只带一点柔光的金线
+- 动画：`draw_to(s 或 marks 名字)` 移动笔头，没画完时笔头带光点、刚画的一段更亮；`stage(name)`
+- 点睛：`accent(遮罩, 颜色, glow, warm)`，遮罩用 `rect()`、`disc()`；深色底上会发光，并把附近的线染暖
+- 文字：`text(s, x, y, size, colour, font='display', spacing)`（Didot 类衬线，中文自动换细宋体）、`text_width()`、`hairline()` 细装饰线
+- 颜色常量 `GOLD GOLD_HI GOLD_LO AMBER VERMILION NIGHT CREAM INK`；`save('x.jpg')` 默认 quality 88、4:4:4
+
+**柔光 3D `Soft3D`**：
+- 真 3D：`Soft3D(W, H, seed, eye, target, fov)` 针孔相机，世界坐标 X 右、Y 上、Z 远离镜头；每个像素一条光线，numpy 在 CPU 上算
+- 球海 `ball_field(x0, x1, z0, z1, r, gap, colours, weights, mat)`：方格上成千上万颗球，光线逐格查找（DDA），每格只测一颗球，十万颗也不慢；`tint_balls(x, z, radius, colours, chance)` 局部换色；`floor(颜色)` 球缝里看到的地板
+- 主体（有向距离场，只在自己的包围盒里步进）：`text(s, at, size, depth, colour, mat, yaw, spacing, bob, roll, turn, dot)` 鼓鼓的挤出字（字形→精确距离变换→挤出、整圈倒圆、再吹胀；`dot=颜色` 把 i/j 的点换成一颗球；返回 {'heroes', 'dots', 'centre'}）；`rbox()` 圆角盒、`capsule()` 胶囊、`cylinder()` 圆角圆柱、`torus()` 圆环
+- `part(heap, reach, pile, pile_top)`：主体从球海里顶出来，被挤开的球落进最近的空窝、堆在脚边（pile 是被挤开球数的倍数，pile_top 是堆的最高高度，别让它挡住字的下半截），周围的球海微微隆起
+- 散球：`ball(x, y, z, r, 颜色)` 指定位置；`drop(x, z, r, 颜色, roll)` 从上方落下碰到东西为止，再往低处滚进窝里（roll=0 停在落点，比如骑在字肩上）
+- 灯光：`sky(top, horizon, strength, haze, haze_start)` 天光穹顶（背景渐变、地面反光、远处雾）；`key(azimuth, elevation, strength, size)` 大柔光箱主光，size 越大影子越软；`rim()` 轮廓光；`softbox()` 只出现在反光里的灯片。方位角从镜头算：0 从相机身后，−90 左，+90 右，180 主体背后
+- 材质 `mat=`：candy（清漆糖果，锐利灯片高光）、satin（缎面小球）、jelly、matte、pearl；缝隙和阴影变深变饱和而不发灰
+- `lens(focus, aperture)` 景深（focus 可传 text() 的返回值或一个点，最好和相机一起先设）；`film(bloom, vignette, grain)`
+- `save(path, stages_dir, ss=1.5)` 成片超采样；`stage(name)` 是当前场景的真实预览渲染，还没调用 sky() 时是灰色白模
+
+**形变动画 `Morph`**：
+- 思路：每样东西都是**一条**闭合轮廓；两条轮廓重采样成同样点数（默认 `Morph.N = 256`）、统一绕向、对齐起点，再逐点插值，就是形变；背景色和形状颜色跟着切换
+- 形状库 `shape(name, cx, cy, size, rot, flip, stretch)`：`SHAPES` 有 circle / square / triangle / star / heart / drop / cloud / snowflake / mountain / river / wave / sun / moon / leaf / bird / fish / pin / house；`union([('circle', x, y, r), ('line', 点列, 宽), ('poly', 点列), ('sub', 图元)], cx, cy, size)` 用图元拼出自己的形状，自动描出外轮廓
+- 几何：`resample(P, n)` 按弧长等距重采样；`normalise(P)` 顺时针、从正上方起；`align(A, B)` 统一绕向并用 FFT 找最佳起点；`chain([...])` 整串依次对齐；`ease(t, 'inout'|'sine'|'quad'|'in'|'out'|'back'|'expo'|'linear')`；`tween(A, B, s, at=, stretch=, direction=, spin=, scale=)` 轮廓绕质心插值、质心单独走运动路径，stretch 是沿运动方向的挤压拉伸；`at(keys, T)` 整串关键帧在全局时间 T 的轮廓（逐帧做真动画用）；`mix(c0, c1, t)` 在 OKLab 里混色（蓝到黄不发灰）
+- 背景：`paper(颜色)`；`panel(x0, y0, x1, y1, 颜色, ink=)` 一块纯色面板，ink 是画在这块面板上的残影和线条默认用的颜色；`wipe(cx, cy, r, 颜色, ink, clip_box)` 定格的圆形转场
+- 形状层：`fill(P, 颜色, alpha, clip=另一轮廓, half=((x0, y0), (x1, y1)))`，half 只填直线右侧，用来做两色折面；`outline(P, 颜色, width, dash=(实, 虚))`；`stroke(点列, 颜色, width)` 圆头线（高光、水纹、热气）；`dot()`
+- 定格动画：`ghost(P, fill, fill_alpha, line_alpha, width)` 洋葱皮残影，线色为 None 时取下面面板的 ink，跨面板自动换色；`points(P, every)` 标出对应点；`links(A, B, every)` 对应点连线；`path(点列)` 过质心的平滑路径，`along(路径, u)` 取点和方向；`trail(路径, dash=)` 运动轨迹；`chevron()` 方向箭头；`streaks()` 速度线
+- 时间轴：`diamond(x, y, r, fill)` 关键帧菱形；`ease_curve(x0, y0, x1, y1, kind, ticks=帧时间)` 一段缓动曲线，带帧点和虚线投影
+- 文字 `text(s, x, y, size, 颜色, font='sans'|'display'|'mono'|'mono_bold'|'cjk'|'cjk_bold', anchor='l'|'m'|'r', spacing, alpha)`：y 是基线，中西文自动换字体，返回宽度；`text_width()` 量宽度
+- 坐标都是像素、y 向下；角度逆时针为正
+
+**报刊拼贴 `NewsCollage`**：
+- 思路：每样东西都是「先印好、再撕或剪、最后粘上去」的一张纸 `Sheet`；老照片不是贴图，而是 `Photo` 用高度图布光渲染出来，再印成网点
+- 底板：`board()` 牛皮纸（云状纸浆、深浅短纤维、树皮碎屑）
+- 纸片：`sheet(w, h, 颜色)` 返回 `Sheet`，可用 `text()`、`block(…, minus=文字遮罩)` 反白字、`ink()`、`rule()`；`tear('rtb', depth, rim)` 手撕（边线游走、露出白色纸芯、飞出纤维），其余边算剪刀剪；`cut_rect()` 歪一点的剪刀四边形；`cut(pts)`；`wrinkle()` 浆糊起皱；`age()` 泛黄和霉斑
+- 报纸：`newsprint(w, h, columns, size, headline, picture, ad)` 返回一整版假报纸（伪词栏、刊头线、大标题、导语、小标题、栏线、框线广告、网点小照片、背面透印），接着 `tear()`
+- 老照片：在 `Photo(w, h)` 上搭物件：`disc()`、`dome(…, rot, cut)`（钟铃、球）、`ring()`（表圈）、`rod()`、`poly()`（指针）、`gear(r, teeth, spokes, pinion)`、`spiral(r0, r1, turns, flare)`（发条、游丝）、`screw()`；`text()` / `lines()` 印在表面的字和刻度；`glare()` 玻璃反光。z 是底座高度，height 是自身厚度，albedo / metal / gloss 是材质
+- 印成网点：`print_photo(photo, cell, angle, ink)` 显影并印成网点，返回 Sheet；`s.cutout(margin, centre)` 沿轮廓用剪刀剪下；`s.split(p0, p1)` 一剪两半
+- 粘贴：`paste(sheet, cx, cy, rot, lift)` 返回 Frame，`f.pt(lx, ly)` 把局部坐标换成画面坐标；`disc(cx, cy, r, 颜色)` 剪刀剪的色纸圆
+- 字：`ransom('拆开看看', x, y, size, faces=[…], styles=[…])` 勒索信拼贴字，返回 [(Frame, 字)]；`clipping(字, size, face, paper, block, fg, extra)` 单个剪字，extra 可选 'text'（带邻字）或 'tint'（网点底）；`label(文字, x, y, size, face, fg, bg, block)` 剪下的一条印刷字
+- 其他：`tape(cx, cy, 长, rot)` 美纹纸胶带；`stamp(cx, cy, [(字, 字号)], shape='box'|'round', ring=环形字)` 橡皮章；`pen(pts, dash=(实, 虚), dot)` 墨线引线
+- 字体：news / news_bold / news_italic / serif_bold / slab / clarendon / didone / poster / futura / grotesk / typewriter(_bold) / cjk_song / cjk_hei / cjk_round / cjk_kai；缺字自动换中文黑体
+- 颜色常量 `INK BLACK RED MUSTARD KRAFT NEWS PAPER TAPE`；rot 逆时针为正
+
+**弥散玻璃 `Aurora`**：
+- 思路：一块明亮的「光屏」（弥散渐变）上面悬着几片真的磨砂玻璃。透过玻璃看到的是它下面**真实像素**的高斯模糊（背景、小球、后面的卡片和字都算），再蒙一层白纱，界面印在玻璃上。先画的在后面，后画的卡片会把前面画好的卡片连字一起模糊
+- 背景：`backdrop(base, blobs=[(x, y, rx, ry, 颜色, 强度)], ribbons=[(点列, 宽, 颜色, 强度)], warp, grain)` 网格渐变：色团按权重在 OKLab 里混色，坐标扭曲成不规则形状，光带沿样条走，自带细颗粒；`sparkles(n)` 零星光点；`orb(cx, cy, r, (亮, 中, 暗))` 光泽小球：虹彩色阶、菲涅尔边缘映出背景色、高光、落在背景上的彩色投影
+- 玻璃：`glass(x0, y0, x1, y1, radius, blur, tint, sat, shadow, elevation, bevel, rim, sheen)` 返回 `Card`（x0 y0 x1 y1 w h cx cy r）。blur 是磨砂程度（约 20–30）；tint 是白纱（约 0.24，近光源一侧厚）；sat 是透过来的颜色饱和度（约 1.5）；bevel 是边缘斜面，向外折射，各色通道偏移不同，带很淡的色散；rim 是朝光边的高光描边；阴影只落在卡片外，颜色取自下面的背景。`pill()` 是小玻璃胶囊（按钮、提醒、高亮行，玻璃叠玻璃），`cloud(cx, cy, w)` 是玻璃云
+- 形状（带符号距离场，1 px 解析抗锯齿）：`rrect()`、`circle(ring=线宽)`、`line(点列, smooth)`，都可以传 `grad=色阶, angle=`；`divider()` 是蚀刻细线
+- 控件：`toggle(x, y, on)`、`slider(x0, x1, y, value)`、`knob()`、`ring(cx, cy, r, width, frac)`（从 12 点顺时针，锥形渐变、圆头、光晕、末端白点）、`check(cx, cy, r, 'done'|'now'|'todo')`、`bars(x0, y0, x1, y1, values, labels=, highlight=)`、`spark(x0, y0, x1, y1, values, dots=)`（返回各点坐标）、`sun()`、`app_icon(x, y, size, grad, glyph)`
+- 文字 `text(s, x, y, size, fill, weight='light'|'regular'|'medium'|'semibold'|'bold', anchor, alpha, spacing, grad)`：西文用 SF（按字号调光学尺寸），中文用苹方，自动分段；anchor 第二个字母 s 基线、m 居中、t 顶、b 底；`text_width()` 量宽度
+- 颜色：`INK` 深靛文字；渐变色阶 `WARM`（杏→粉→紫）、`COOL`（天蓝→长春花→紫）、`MINT`；`ramp(t, stops)`、`mix()` 在 OKLab 里插值。一种渐变只代表一件事
+- `save('x.jpg')` 默认 quality 88、4:4:4 色度
+
+**包豪斯几何 `Bauhaus`**：
+- 思路：画面是一张丝网印刷的印张，每种颜色一块网版，先浅后深逐版刮印；同一色版上的所有东西共享这块版的套准误差（平移加极小旋转），所以色块和黑线相接处会露出一丝纸白或压出一道深边
+- 纸：`paper(colour, margin, module)` 奶油色未涂布纸（云状纸浆、短纤维、纸屑、纸齿、微微不平的受光），同时设定设计区和网格模数；`at(col, row)` 网格坐标转像素；`grid()` 用浅灰色版印构成网格
+- 遮罩（全画布、抗锯齿，可以相加相减）：`circle()`、`ring()`、`sector(cx, cy, r, a0, a1)` 半圆和四分之一圆、`arc()`、`rect(x0, y0, x1, y1, rot)`、`bar(x0, y0, x1, y1, width, cap='butt'|'square'|'round')` 粗黑条和细线、`poly()`、`triangle(x0, x1, base_y)`（默认正三角）
+- 印刷：`pull(mask, ink, knock, edge, density, opacity)` 刮一版：墨膜顺刮板方向有条纹、行程末端变薄，薄处露出纸齿坑点，网版灰尘留针孔，版边有网目锯齿、边缘略积墨；墨半透明（黄最透、黑最不透），叠印变深。`knock` 是挖空遮罩，`edge=0` 让细线保持干净
+- 文字：`text(s, x, y, size, ink, font, anchor, spacing, rot, weight)` 直接印；`text_mask()` 取遮罩用来挖空；font 用 geo（Futura Bold）、geo_book、geo_cond（窄体特粗）、cjk（粗黑体）、cjk_book，中西文逐字换字体；`text_width()` 量宽度
+- 印刷标记：`marks(targets, crop, bar, inks, overprints)` 套准十字、四角裁切线、色标条。登记后每块色版第一次刮印时自动印上自己那一份，所以十字会叠成几色错开的样子
+- 印完之后：`pencil(s, x, y, size)` 页边铅笔版号，石墨只挂在纸齿凸起上
+- 颜色常量 `YELLOW RED BLUE BLACK`，纸色 `PAPER`，网格色 `TINT`；角度逆时针为正，0° 指 3 点钟；`save('x.jpg')` 默认 quality 88、4:4:4 色度
+
+**复古 Synthwave `Synthwave`**：
+- 思路：
+  - 一台水平针孔相机看向无限平地（X 右、Y 上、Z 向前，单位米），颜色缓冲从远到近画；
+  - 会发光的东西同时写进发光缓冲，后画的不透明物会挡掉身后的光；
+  - 最后四个半径泛光，过曝的通道溢向白色，成片再「过一遍录像带」
+- 构造：`Synthwave(W, H, seed, horizon=610, vp_x=1060, focal=1100, eye=3.5, record=True)`；相机工具 `project(X, Y, Z)`、`ground_row(Z)`
+- 天空：`sky(stops, ground)` 暮色渐变，地平线下先铺没点亮的地面；`stars(n, bright)` 越近地平线越稀，最亮的带四角星芒；`streaks([(y, x0, x1, 厚)])` 底边被照亮的细条云
+- `sun(x, y, r, bands=8, band_top, gaps=(0.2, 0.7), level, gain)`：黄→橙→粉渐变落日，横条切口越往下越厚，切口是真缺口；在地平线处截断
+- 远景：
+  - `mountains(x0, x1, z0, z1, height, cell, taper, edge=(MAGENTA, CYAN))`：世界坐标里的抖动网格高度场，三角面暗色平涂，边线从山脚品红渐变到山脊青色；
+  - `skyline(X0, X1, Z, heights, widths, tall=(X, 高), windows)`：远处小城剪影、窗光、航空红灯
+- 地面：
+  - `floor(colour, spacing, width, fog, scroll, x_range)`：霓虹网格，逐像素解析线宽，远处换成平均值防摩尔纹，带粉色地雾和太阳光带；
+  - `sea(coast, bar, spread, sky, glitter, stretch)`：X < coast 一侧的海，倒影碎成一条条光带；
+  - `road(x0, x1, dash)`：光滑路面加霓虹边线和中心虚线；
+  - `neon_line(X, colour, width, dash)`：地上任意一条纵向霓虹线（海岸线）
+- 物件：
+  - `palm(X, Z, height, lean, fronds)`：棕榈剪影，环节树干、仰角不一的叶柄、下垂小叶、椰子、朝太阳一侧的轮廓光；
+  - `car(X, Z)`：背影跑车，整条尾灯和路面上的红色倒影
+- 字：
+  - `chrome_text(s, x, y, size, depth, glints=(字序号...))`：镀铬大字，深色描边、阶梯挤出、发光浅边，上映天空、下映地面，中间一道锐利地平线，左上打光的倒角和四角星闪；
+  - `glint(x, y, length)`：单独一个四角星闪；
+  - `neon_script(s, x, y, size, colour, rot)`：霓虹手写体；
+  - `caption(s, x, y, size, colour, rules)`：字距拉开的小字加两侧细线
+- 录像带：
+  - `osd(s, x, y, px, anchor)`：5×7 块字的录像机屏显（PLAY ▶、日期）；
+  - `vhs(bleed, shift_px, jitter, noise, scan, tracking, head)`：只作用于成片，包括 YIQ 色度模糊右移、重影振铃、逐行抖动、一条跟踪噪带、底部磁头噪声、掉磁白线、扫描线、黑位抬升；阶段快照保持干净
+- 颜色常量 `MAGENTA CYAN VIOLET ORANGE YELLOW PINK RED WHITE`；字体用 `synth_font('chrome'|'script'|'caption', size)` 找系统字体（Avenir Next Heavy Italic / Brush Script / 冬青黑体），可用 `INKPAINT_FONT_CHROME` 等指定；`save('x.jpg')` 默认 quality 88、4:4:4 色度
 
 **顺序**：都是先远后近、先大后小，文字最后叠加。水墨的雾要画在它该吞没的东西之后；水彩的叶梗要先画，并且只画在叶子外面。
 
@@ -395,11 +542,162 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 光轨沿街飞，全都汇向灭点，像激光或钢丝 | 让飞车横穿街道：从一侧墙后出现，拱形掠过，消失在另一侧墙后；加频闪点 |
 | 全息水母的 1 像素线被雾和扫描线吃掉；C 形生殖腺像数字「93」，后排两个像一双眼睛（成了脸） | 线宽至少 2 像素；生殖腺放在伞内的水平面上，侧视压成一条柔和的粉带；副标用 Light 字重，撕裂切片别落在字上 |
 
+**卡通手绘**
+
+| 问题 | 改法 |
+|---|---|
+| 窗外的太阳画到了墙上 | 窗里的东西都乘玻璃遮罩；被挡住的轮廓只画露出来的那段弧（`ellipse_pts` 给 a0/a1） |
+| 手臂从头顶直直伸出、末端一个圆球，像触角或棒棒糖 | 肩膀放在身体侧面中部，先画手臂再画身体；bend 的正负让手肘朝外弯；手套加拇指、袖口和两道指缝 |
+| 两个角色挨得太近，一个的手套落到另一个脸上 | 只画外侧那只手臂，内侧的藏在身后 |
+| 烤色蜡笔涂在面包中间，像脸上的脏污 | 烤色只涂面包芯内缘一圈（轮廓遮罩减去内缩的轮廓），脸所在的中间保持干净 |
+| 纸纹太粗，色块上像砂纸 | 纸纹受光约 0.026，颜料盖住的地方纹理减半（已处理） |
+| 闪光星像菱形 | 用指数约 3 的星形线，竖向拉长（已处理） |
+| 白字写在米色纸上看不见；白云、手套、烟团都是白色小圆团，挤在一起分不清 | 浅色字只写在深色块上；白色圆团之间拉开距离，背景里不放白云 |
+| 飞溅的碎屑落到脸上 | `crumbs(..., avoid=角色遮罩)` |
+| 动图 2.3 MB：铅笔稿每阶段换强度又跟着抖，网点和蜡笔也跟着抖，每次叠化都整片重编码 | 只抖墨线，颜色和铅笔稿留在纸上不动；铅笔稿强度在勾线之后固定；阴影和质感合成一个阶段（1.9 MB） |
+| 黄油的嘴压在底边线上；滴落太小，水洼像一根黄条 | 脸按物件正面的高度缩放、上移；滴落画成从前沿挂下来连到水洼的一道，最后画，压在轮廓线上 |
+
+**等轴 2.5D**
+
+| 问题 | 改法 |
+|---|---|
+| 白墙整面发灰，比同一面墙上方的山墙暗一截 | 高度图 AO 会把楼自己的高度算进墙面；侧面改为沿法线（及左右 40°）看地平线，只算挡在前面的东西（已处理） |
+| 屋檐、树冠被当成实心柱子，墙顶一圈发黑 | 顶视图同时记录最高那根「柱子」的顶和底：相接的实体合并，悬空的单算，只挡它实际覆盖的那段仰角；檐下不算墙角折痕（已处理） |
+| 平顶楼墙上出现一条锯齿状灰带 | 柱子的顶 / 底不能跨边插值：细檐口一插值就在墙边造出一块假悬空板；改最近邻采样（已处理） |
+| 长投影的半影满是颗粒 | PCSS 每像素旋转采样之后，再做一遍按深度保边的可分离模糊（已处理） |
+| 海面上的短浪线竖着立起来 | 等轴视角里世界 (1, 1) 是屏幕竖直方向；浪线沿世界 y − x 走才是屏幕水平（已处理） |
+| 砖缝像棕色勾缝，沙滩缝像一根根圆木 | 草地砖侧面保持草色，只让台地露出土层；缝宽约 0.028 格 |
+| 岛占满底座，沙滩一圈像棋盘，看不出是岛 | 屏幕左下、右下两条前边留 1.5–2 格海面；沙滩只放在部分岸边 |
+| 卫星天线正对镜头，像棒棒糖或路牌 | 朝向和视线错开（yaw 约 125°、仰约 50°）；反射面中间暗、边缘一圈亮（已处理） |
+| 数据卡字太小，折线图压到单位上 | 卡片约 2.9 × 1.65 格，大数字约 0.7 格高；折线图从「数值 + 单位」之后开始（已处理） |
+| 引线横穿房顶，画面乱 | 卡片围着各自仪器摆，用 `unproject()` 按屏幕位置定点，引线短、不跨主体 |
+| 草地上散落的小花像彩色糖珠 | 花开在灌木上：`tree(kind='bush', flowers=…)` |
+
+**扁平矢量**
+
+| 问题 | 改法 |
+|---|---|
+| 头发像头巾，从前到后裹住脸一直到下巴 | 头发 = 大一圈的椭圆减去向前下方挪动的脸，再沿「后颈→太阳穴」的发际线切掉下半；波波头另加一块只在下颌后面的发帘 |
+| 耳朵画在脸中间 | 耳朵放在发际线上（头心向后约 0.12u），画在头发之后 |
+| 颗粒太重，大色块像砂纸 | 全画面颗粒约 1%，以细颗粒为主；只有光束、光斑用 `grain` 打散透明度 |
+| 手脚按角度摆，手伸进标题、脚踩空 | 用 `hand_to` / `foot_to` 目标点（两段 IK）：手落在栏杆和书上，脚落在梯级上 |
+| 3/4 侧身用近侧手臂向前上方够东西，手臂横扫过脸 | 改用远侧手臂（从前肩出发，画在头后面），近侧手臂垂下挎包 |
+| 没有描边，深色头发、深色裤子、黑猫贴在深色书架或楼影上就消失 | 按身后背景定明度：银发、橘猫、深裤配中蓝护墙板、浅色鞋；深色衣服的远侧手脚改为提亮一档 |
+| 书脊的色带和书名短线交叉成「+」，像十字架 | 色带只放书头书脚，书名短线放中段 |
+| 抽走那本书留下的空位被人挡住，故事看不出来 | 空位放在开阔处，邻书以底角为支点倒进空位，从空位拉一条珊瑚色虚线到手里的书 |
+| 珊瑚色花盆、书架上的珊瑚色书跟主角抢眼 | 点睛色只留给画面要讲的那一样东西 |
+| 动图把小面积的珊瑚色量化成褐色；透明占位色是黑色时，最暗的阴影像素变透明 | 中值切分前饱和像素 ×5，强制放入七个色板色；占位色改成纯品红 |
+
+**单线画**
+
+| 问题 | 改法 |
+|---|---|
+| 纸飞机画成小三角，像风筝或三角旗 | 用 3/4 俯视的飞镖形：近翼大、远翼透视缩小、中间一道折痕；笔从尾部缺口进、从机头出，四个角保持尖 |
+| 航迹从谷底地面起飞又落回地面，看不出从哪飞到哪 | 线从 A 屋的窗里穿墙飞出，从机头穿墙飞进 B 屋的窗；两屋之间不画地面 |
+| 翻圈放在爬升段，像挂在线上的气球或套索 | 翻圈放在轨迹顶部、路径接近水平处，`curl(..., aspect≈1.2)` 让圈更圆 |
+| 航迹和房子一样粗、从地面附近起落，整条读成山丘或山脉轮廓 | 航迹段 `pressure=[(s0, s1, 0.62)]` 用轻手画细，从窗口直接上扬，不先下沉 |
+| 轨迹末端急转直下，在飞机尾部勾出钩子，还和后翼边贴成细长条 | 把飞机尾部缺口的坐标作为轨迹最后一个控制点，入射角放缓到约 35° |
+| 窗户、山肩这类要从里面够到的形状一笔连不过去；原路回来的短线头是钝圆头 | 用 `retrace()` 原路去再原路回（成图看不见）；原路折返处自动提笔收尖（已处理） |
+| 树冠贴着屋檐，两样东西粘成一团 | 物件之间留出间隙 |
+| 动图里深蓝渐变出现一圈圈色带，唯一的琥珀色窗被量化成米黄 | 调色板拆开：空底色 110 色、画出来的东西 145 色（饱和像素 ×6）；量化前加固定的 4×4 Bayer 抖动，每帧相同 |
+
+**柔光 3D**
+
+| 问题 | 改法 |
+|---|---|
+| 掉下去的球悬在字上方，字面上有莫名的暗斑 | AO、阴影、落球这类查询在包围盒外用了盒子距离，球停在了看不见的盒子上；字形距离网格覆盖的范围内一律用精确距离（已修） |
+| 字脚一圈球发黑，字的下半侧有黑带 | 球海距离场只查 2×2 格、封顶半格，清空的格子旁边 AO 以为贴着球；改查 3×3 格、封顶一整格，AO 半径 0.3、强度 1.25、留 0.1 的底（已修） |
+| 字从球海冒出来，脚下一圈空槽露出黑地板，像抠图 | 被挤开的球不删，按「落进最近的空窝、层层叠、要有三点支撑」堆到字脚：`part(pile=10, pile_top=0.3)` |
+| 字埋得太深，s 只露出上半截像 c，整词读成 rice | s、e 用 bob 单独抬高，让它的下半弯露出来；part() 加 pile_top=0.3，只堆一层，堆起的球不能高过字母下半部 |
+| 阴影里的薄荷球发青灰、发脏 | 淡紫天光乘薄荷色会发灰：阴影加按材质自身色调的次表面补光，天光调强、主光调弱 |
+| 球排成直行一直通到远方，像条纹墙纸 | 整个场景转 30°，行列斜着走 |
+| 清晰的字边有锯齿，高光一节一节 | 成片 1.5 倍超采样再 Lanczos 缩小；字形距离场模糊 2 像素，法线差分步长 2.5 个格（已处理） |
+| 上三分之一一片惨白，远处和背景之间有一道硬地平线 | 雾色等于背景地平线色，雾距约 42；镜头稍抬，露出天空渐变 |
+| 动图 3.4 MB，小黄球被量化成一块平色片 | 景深跟相机一起先设好（每个阶段都柔），曝光并进灯光强度，主光和轮廓光合成一个阶段；调色板样本里彩色像素 ×5 |
+
+**形变动画**
+
+| 问题 | 改法 |
+|---|---|
+| 起点、绕向没对齐，中间帧塌成一条条碎片 | 先 `normalise`（同样点数、顺时针、从正上方起），再 `align`（FFT 互相关找最佳起点）；一串关键帧用 `chain` 依次对齐 |
+| 每段 5 个残影、关键帧又太大，雪花和云的花边残影叠成一片噪点 | 关键帧约占面板宽的六成；每段只画 3 个残影，中间那帧填色约 0.42，两侧只留细线和约 0.14 的淡填色 |
+| 运动轨迹画成圆点，和中间帧上的对应点混在一起，看着像轨迹绕了个圈 | 轨迹用虚线（`trail(dash=)`），圆点只用来标对应点，图例里分开写 |
+| 速度线等长等距，像梯子，落在河边还被当成水流线 | 海报里不画速度线，靠挤压拉伸和残影间距表现速度 |
+| 纸纹把奶白色的云也盖成了砂纸 | 形状保持纯平：纸纹只加在露出的纸面上（`tooth` 遮罩），面板和形状只有极轻的印刷颗粒 |
+| 闭合样条在直角处过冲，海浪底角鼓出一个包；太阳的细光芒是断开的小棍 | 只对曲线部分做样条，底边用直线接；光芒用楔形加圆头，和圆盘连成一体再描外轮廓 |
+| 后一段的残影线压在前一个关键帧上；标签重复画了两遍，颜色变深 | 画完残影后重画前一个关键帧（只重画形状内的细节）；文字和形状外的点缀只画一次 |
+| 「↺」在所用中文黑体里没有字形，显示成方框 | 循环箭头用 `outline` 画圆弧再加 `chevron`，方向取圆弧终点的切线 |
+
+**报刊拼贴**
+
+| 问题 | 改法 |
+|---|---|
+| 齿轮像一块灰饼：齿面和背景一样亮，窗口被投影压灰，齿比网点还细 | 齿面反照率约 0.56、metal 约 0.3，加车床纹的「领结」反光；抬起高度约 8，背景投影 0.35；齿距至少约 4 个网点（r=108 用 36 齿），剪边约 9 px |
+| 发条画成一圈圈同心圆，像靶子 | 圈数 4–5，`flare` 约 1.6：里圈密、外圈松，才看得出是螺旋 |
+| 打字机字体没有「→」，出现豆腐块 | 逐字检查字形，缺字自动换中文黑体（已处理） |
+| 问号纸片压住主体表盘的数字 | 用上一个字的 Frame 算位置，整排标题缩小；主体整体右移给标题让位 |
+| 红章盖在密密的报纸字上认不出 | 章盖在牛皮纸的空处 |
+| 邮戳环形小字断成「CUR:OSTI」 | 环形字至少 18 px；橡皮漏印改成部分漏墨（0.3 + 0.7 × keep），细笔画不断（已处理） |
+| 剪下的照片白边处处一样宽，像模切贴纸 | 白边宽度沿周长慢慢变宽变窄（`wander` 约 0.45），但永远不剪进物体（已处理） |
+| 散落的零件看不出是从闹钟里飞出来的 | 先从缺口画几条虚线弧再贴零件，起点错开别汇成尖点；离缺口最近放一颗螺丝 |
+| 带邻字的报纸剪字，邻字太大太黑，抢了主字 | 邻字字号约 0.075 倍、浓度 0.62，主字周围留一圈空 |
+| 报纸透印太重，镜像标题像渲染错误 | 透印浓度约 0.045，模糊 1.4 px |
+| 牛皮纸纤维太长太黑，像裂纹或头发 | 纤维 4–20 px，深色浓度 0.2 |
+| 动图调色板被牛皮纸和报纸占满，芥末黄纸片变成土黄 | 调色板取样时高饱和像素算 5 倍（色差 24 → 2.7 / 255） |
+
+**弥散玻璃**
+
+| 问题 | 改法 |
+|---|---|
+| 前面的卡片压住后面卡片的字（「周三」「60%」被切掉一半） | 卡片只在对方的内边距里重叠（不超过内边距），文字离重叠区远一点 |
+| 列表最后一行和底部按钮撞在一起 | 先按行距（约 84）算好列表总高，按钮从卡片底边往上放，不够就加高卡片 |
+| 玻璃太「奶」，像磨砂塑料，后面的东西透不出来 | 白纱 tint 约 0.24（近光源一侧厚、另一侧薄），saturate 约 1.5；背景色团之间要有足够的色相差 |
+| 小球刚好顶在卡片边上，像放在卡片上面 | 让小球三到四成真正压在玻璃后面，模糊的那一半才读得出「透过玻璃」；小球也别和卡片边相切 |
+| 背景的色团和光带几乎全被卡片挡住 | 光带穿过卡片之间的空隙走，色团饱和度提一点 |
+| 折线图的面积填充在末端成了一团紫雾 | 填充 alpha 约 0.16，两端各 22 px 渐隐（已处理） |
+| 柱状图柱子太细，满高的空槽像幽灵柱，「一」看着像减号 | 柱宽取间距的一半，空槽 alpha 0.1；横轴用日期加「今天」 |
+| 动图调色板被浅色背景占满，渐变控件量化成灰，小球出现等高线色带 | 调色板样本给饱和像素加权（×6 / ×3，暗色 ×4），每帧叠同一张 4×4 Bayer 抖动（约 ±2.4 级）：逐帧不变，「和上一帧相同」的透明差分照样有效 |
+
+**包豪斯几何**
+
+| 问题 | 改法 |
+|---|---|
+| 颗粒太重（约一成面积露纸），色块像砂纸、字像磨旧的橡皮章 | 露纸坑点控制在约 2%，只出现在墨膜偏薄的刮板条纹里；黑墨最少（GRAIN 0.4） |
+| 坑点成团，像均匀撒了一层雪 | 纸齿用像素级白噪声加少量团块；墨膜另加约 ±2.5% 的浓淡微纹理，不全靠露白点 |
+| 方块直角被磨圆 | 版边只做 3×3 轻模糊再加噪声阈值，不用大半径模糊 |
+| 页边小字、铅笔版号、色标条压在裁切线上 | 左起 x≈86、右止 x≈1834，色标条末端离裁切线至少 40 px |
+| 叠印色标全显示成上层颜色 | 丝网墨基本不透明，叠印色标默认关（`overprints=False`） |
+| 黑色标注印在蓝色上看不清 | 深色块上的标注从该色版挖空（`knock=`），露出纸色 |
+| 「60 °」度数符号离得太远 | 度数符号自动收紧 0.1 em（`_KERN`） |
+| 标题和右上角讲座信息撞在一起 | 先按 120 px 模数排好每栏宽度，信息行写短 |
+
+**复古 Synthwave**
+
+| 问题 | 改法 |
+|---|---|
+| 太阳被泛光冲成一团白，横条切口被光晕填平 | 太阳底色先压到约 0.72、发光 level 约 0.4，让泛光提回来；切口厚度从条距的 0.2 递增到 0.7 |
+| 横穿太阳的细条云像多出来的切口 | 有切口的太阳前面不加 `streaks`，细条云只放在太阳外 |
+| 海面倒影是一团糊的圆，像水下还有一个太阳 | 按世界深度把水面切成横带，每带横移、以太阳所在列为中心随机拉伸或压缩（越近越乱），再用短划调制；光源的倒影比天空强约 2.4 倍 |
+| 远处网格变成一大片平的橘色雾带 | 雾距 150 m，雾色压暗、偏品红；网格线按屏幕像素距离算覆盖，格子小于几个像素就换成平均值，不出摩尔纹 |
+| 录像带噪点像画布纹理，线条满屏抖动打折 | 噪点约 0.014、横向拉长；逐行抖动约 0.35 像素，只留一条跟踪噪带和底部磁头噪声 |
+| 霓虹手写字白芯太粗，整句像白字；随机断管像渲染错误 | 白芯只取笔画最中间，core 约 0.5；断管默认不加 |
+| 棕榈冠像冷杉，改了又像平顶伞 | 叶柄仰角从陡到平均匀分配，加两片下垂枯叶；小叶在 3D 里朝叶尖前扫、向两侧展开再下垂后投影，不要一律竖直挂下 |
+| 城市摆在线框山前面，暗对暗，高楼像幽灵 | 城市放在灭点旁、背靠落日余晖，山脉从城市右边才开始 |
+| 小岛挡住太阳正下方，吃掉最亮的一段倒影 | 小岛只和太阳左缘略微相交 |
+| 阶段快照里地平线下是整块橘色，太阳下半截露在地上 | `sky()` 先铺一层没点亮的暗色地面；太阳在地平线处截断 |
+
 ## 四、做成动画
 
 - 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的动图就是这样做的。
-- 动图规格（多数现有动图和新增四幅一致）：720×405；每个阶段停 900 毫秒，再用 5 帧（每帧 90 毫秒）叠化到下一阶段，最后一帧停 2600 毫秒，无限循环。新增四幅的所有帧共用一张 256 色调色板，文件小、不闪烁。
+- 动图规格（多数现有动图和后来新增的都一致）：720×405；每个阶段停 900 毫秒，再用 5 帧（每帧 90 毫秒）叠化到下一阶段，最后一帧停 2600 毫秒，无限循环。后来新增的动图所有帧共用一张 256 色调色板，文件小、不闪烁。
 - 调色板别只取最后一帧：满屏单色（黑板的墨绿、赛博朋克的夜色）会吃掉色位，彩色部分被量化成灰。黑板按加权像素样本做中值切分（彩色像素 ×5、亮色 ×2）；赛博朋克从全部关键帧的拼图取 255 色，留 1 个透明色标记「和上一帧相同」的像素，并去掉 Pillow 每帧重复写入的局部调色板（3.8 MB → 1.8 MB）。
+- 调色板的另外几条经验（新增十种里反复出现）：
+  - 小面积的点睛色（扁平矢量的珊瑚色书、报刊拼贴的芥末黄纸片、单线画的琥珀色窗、柔光 3D 的黄球）会被量化成褐色、土黄或平色片：取调色板样本时饱和像素 ×5 左右，限定色板的画风可以把色板色强制放进调色板。
+  - 大片渐变（弥散玻璃的背景、单线画的深蓝底、Synthwave 的天空）出现一圈圈色带：量化前叠一张固定的 4×4 Bayer 抖动，每帧同一张，「和上一帧相同」的透明差分照样有效。
+  - 标记「和上一帧相同」的透明占位色不要用黑色：最暗的阴影像素会被当成透明（扁平矢量自检时 37 帧对不上），改用纯品红这类画面里没有的颜色。
+  - 最后一个 `stage()` 和成品完全相同时，Pillow 会把相同的帧合并，按帧数自检会报 EOFError：`save()` 前不要紧挨着再调一次 `stage()`。
+  - 卡通手绘的抖线动图只抖墨线，铅笔稿和颜色不动，否则每次叠化都整片重编码，体积翻倍。
+- 形变动画可以直接出真动画：`Morph.at(keys, T)` 给出全局时间 T 的轮廓，逐帧渲染即可。
 - 更细的逐笔动画：把一组笔画单独画到透明层上导出，再用 Motion Canvas 遮罩按顺序显现。这个还没做成现成接口。
 
 ## 五、文件
@@ -423,7 +721,17 @@ lib/sticker.py         贴纸拼贴 · 小票
 lib/notebook.py        实验笔记本 · 贴纸
 lib/chalk.py           黑板板书
 lib/cyberpunk.py       赛博朋克
+lib/cartoon.py         卡通手绘（逐帧手绘）
+lib/isometric.py       等轴 2.5D
+lib/flatvector.py      扁平矢量
+lib/lineart.py         单线画
+lib/soft3d.py          柔光 3D
+lib/morph.py           形变动画
+lib/newscollage.py     报刊拼贴
+lib/aurora.py          弥散玻璃（弥散渐变 · 玻璃拟态）
+lib/bauhaus.py         包豪斯几何（丝网印刷海报）
+lib/synthwave.py       复古 Synthwave
 examples/*.py          范例脚本；*.jpg 成品；drawing_*.gif 逐步画出的动图
 中文字体：自动找 Kaiti/Songti（macOS）、Noto CJK（Linux）、KaiTi/SimSun（Windows），或设 INKPAINT_FONT
-西文字体（新四种用）：core.latin_font(style) 按 sans / sans_bold / rounded / script / hand / typewriter 等找系统字体，可用 INKPAINT_FONT_<STYLE> 指定；字体文件不要放进仓库
+西文字体（后来新增的画风用）：core.latin_font(style) 按 sans / sans_bold / rounded / script / hand / typewriter 等找系统字体，可用 INKPAINT_FONT_<STYLE> 指定；字体文件不要放进仓库
 ```
