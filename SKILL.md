@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置二十七种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）、贴纸拼贴·小票（模切乙烯贴纸、热敏小票、和纸胶带、吊牌、橡皮章）、实验笔记本·贴纸（线圈方格本、铅笔图表、荧光笔、红笔圈、便利贴）、黑板板书（墨绿石板、粉笔颗粒、板擦残影、示意图与公式）、赛博朋克（雨夜霓虹街道、玻璃管霓虹招牌、全息广告、湿路面倒影）、卡通手绘（蓝铅笔稿、毛笔线、错位平涂、赛璐璐阴影、逐帧抖线）、等轴 2.5D（正等轴微缩模型、一个太阳照出三面明暗、悬浮数据卡）、扁平矢量（无描边几何色块、限定色板、无五官人物）、单线画（一根不断开的线一笔画完、唯一点睛色）、柔光 3D（光线追踪的糖果色小球海和鼓鼓的软字、景深）、形变动画（一条轮廓依次变形、洋葱皮残影、缓动曲线）、报刊拼贴（牛皮纸、手撕旧报纸、网点老照片、勒索信拼贴字）、弥散玻璃（弥散渐变、磨砂玻璃卡片界面）、包豪斯几何（三原色几何、丝网印刷海报）、复古 Synthwave（切口落日、霓虹网格、镀铬字、录像带质感）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机、贴纸、小票、收据、手帐拼贴、实验笔记本、方格本、荧光笔、便利贴、黑板、板书、粉笔、赛博朋克、霓虹、雨夜街道、卡通、手绘卡通、逐帧手绘、抖线、等轴、2.5D、微缩模型、扁平矢量、扁平插画、单线画、一笔画、线条动画、柔光 3D、3D 渲染、C4D 风、软糖字、小球海、形变、变形动画、报刊拼贴、剪报、达达、勒索信字、网点印刷、弥散渐变、玻璃拟态、毛玻璃、包豪斯、几何构成、丝网印刷、Synthwave、蒸汽波、合成器浪潮、80 年代复古），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio / sticker collage / receipt / lab notebook / graph paper / chalkboard / blackboard / cyberpunk / neon city / cartoon / hand-drawn animation / isometric / 2.5D / flat vector / flat illustration / continuous line / one-line drawing / soft 3D / 3D render / puffy letters / ball pit / shape morph / morphing / newspaper collage / Dada / ransom note / halftone / glassmorphism / aurora gradient / Bauhaus / geometric poster / screen print / synthwave / retrowave / outrun without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
+description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型，由 Claude 用代码一笔一笔「画」出图片（程序化绘画）。内置二十六种画风：中国水墨、水彩、剪纸拼贴、韩国彩铅、日本动漫、编辑风手绘（Riso）、油画厚涂（梵高式流向笔触+颜料浮雕打光）、浮世绘木版画（晕色、木纹、墨线主版、青海波）、像素风（低分辨率+Bayer 抖动+像素字体）、黏土定格（高度图捏出的彩泥+影棚打光）、蓝晒（普鲁士蓝日光晒图，植物剪影透光）、十字绣（Aida 布十字绣+回针绣+缎面绣+法式结）、复古仪器面板（60 年代收音机/仪器正面：柚木、拉丝铝、旋钮、刻度窗、指示灯）、贴纸拼贴·小票（模切乙烯贴纸、热敏小票、和纸胶带、吊牌、橡皮章）、实验笔记本·贴纸（线圈方格本、铅笔图表、荧光笔、红笔圈、便利贴）、黑板板书（墨绿石板、粉笔颗粒、板擦残影、示意图与公式）、赛博朋克（雨夜霓虹街道、玻璃管霓虹招牌、全息广告、湿路面倒影）、卡通手绘（蓝铅笔稿、毛笔线、错位平涂、赛璐璐阴影、逐帧抖线）、等轴 2.5D（正等轴微缩模型、一个太阳照出三面明暗、悬浮数据卡）、单线画（一根不断开的线一笔画完、唯一点睛色）、柔光 3D（光线追踪的糖果色小球海和鼓鼓的软字、景深）、形变动画（一条轮廓依次变形、洋葱皮残影、缓动曲线）、报刊拼贴（牛皮纸、手撕旧报纸、网点老照片、勒索信拼贴字）、弥散玻璃（弥散渐变、磨砂玻璃卡片界面）、包豪斯几何（三原色几何、丝网印刷海报）、复古 Synthwave（切口落日、霓虹网格、镀铬字、录像带质感）。用户说「claude绘图」「用代码画」「你自己画」「不用生图模型画」「程序化绘画」，或点名以上任一画风（含黏土、彩泥、定格动画、蓝晒、晒图、十字绣、刺绣、复古面板、老式收音机、贴纸、小票、收据、手帐拼贴、实验笔记本、方格本、荧光笔、便利贴、黑板、板书、粉笔、赛博朋克、霓虹、雨夜街道、卡通、手绘卡通、逐帧手绘、抖线、等轴、2.5D、微缩模型、单线画、一笔画、线条动画、柔光 3D、3D 渲染、C4D 风、软糖字、小球海、形变、变形动画、报刊拼贴、剪报、达达、勒索信字、网点印刷、弥散渐变、玻璃拟态、毛玻璃、包豪斯、几何构成、丝网印刷、Synthwave、蒸汽波、合成器浪潮、80 年代复古），或 "draw it yourself", "paint with code", "procedural painting", "watercolor / collage / colored pencil / anime / editorial / impasto oil / ukiyo-e / pixel art / clay / claymation / cyanotype / sun print / cross-stitch / embroidery / retro instrument panel / vintage radio / sticker collage / receipt / lab notebook / graph paper / chalkboard / blackboard / cyberpunk / neon city / cartoon / hand-drawn animation / isometric / 2.5D / continuous line / one-line drawing / soft 3D / 3D render / puffy letters / ball pit / shape morph / morphing / newspaper collage / Dada / ransom note / halftone / glassmorphism / aurora gradient / Bauhaus / geometric poster / screen print / synthwave / retrowave / outrun without an image model" 时使用；也用于需要逐步画出（draw-on）动画的插画。
 ---
 
 # Claude 绘图
@@ -33,7 +33,6 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 | 赛博朋克 | `lib/cyberpunk.py` · `Cyberpunk` | `examples/cyberpunk_neon_street.py` 霓虹不夜城 · Neon District（雨夜街道峡谷、真玻璃管霓虹竖招牌（坏管与闪烁管）、背光灯箱、过街天桥「不夜城」、全息海月水母广告、电线、飞车光轨、井盖蒸汽、透明伞背影、湿路面与水洼倒影、胶片颗粒与一道撕裂扫描线） | 约 10 秒 |
 | 卡通手绘（逐帧手绘） | `lib/cartoon.py` · `Cartoon` | `examples/cartoon_toaster.py` 早安吐司（薄荷绿吐司机笑着弹出两片举手的吐司、「叮！」爆炸框、盘子上打瞌睡的化黄油、窗外日出、墙上 7 点的钟；左侧 ①按下拉杆 ②电热丝烧红 3 分钟 ③弹起来 的图解；蓝铅笔稿留底、毛笔线、错位平涂、赛璐璐阴影、蜡笔天空与烤边、网点橱柜、抖线） | 约 4 秒 |
 | 等轴 2.5D | `lib/isometric.py` · `Isometric` | `examples/isometric_weather_island.py` 岛上的气象站（漂浮的分层底座、一格一格的倒角地砖与台地、带双道浪花的海；观测场里的百叶箱、雨量筒、带风杯和风向标的风杆；看守小屋与卫星天线、太阳能板、石板路、栈桥小船、风袋、浮标、开花灌木；探空气球和平底云；四张悬浮数据卡用细引线指向各自仪器，地面上一个指北针） | 约 5 秒 |
-| 扁平矢量 | `lib/flatvector.py` · `FlatVector` | `examples/flatvector_bookshop.py` 周末书店（无描边几何色块、七色限定色板、色块叠压出体积、极轻颗粒；梯子上的店员把唯一一本珊瑚色诗集递给仰头伸手的银发顾客，虚线标出它从顶层空位落下的路线；拱窗日落、OPEN 挂牌、台灯光锥下读书的人、窗台橘猫、¥10 旧书箱） | 约 1 秒 |
 | 单线画 | `lib/lineart.py` · `LineArt` | `examples/lineart_paper_plane.py` 从这扇窗到那扇窗（一根不断开的金线：圆树、小屋、从窗口穿墙飞出的纸飞机航迹与顶部翻圈、飞镖形纸飞机穿墙飞进对面小屋的窗；窗子亮起是全画唯一的点睛色；字距拉开的衬线标题） | 约 6 秒 |
 | 柔光 3D | `lib/soft3d.py` · `Soft3D` | `examples/soft3d_rise.py` 浮出（糖果色小球海里顶出鼓鼓的软字 rise：被挤开的球堆在字脚、几颗骑在字肩上、几颗滚落，i 的点是一颗黄球；天光穹顶、柔光箱主光、粉色轮廓光、环境光遮蔽、软阴影、次表面色调、景深） | 约 46 秒 |
 | 形变动画 | `lib/morph.py` · `Morph` | `examples/morph_water_cycle.py` 一滴水的旅程（一条 256 点轮廓线依次变成水滴→云→雪花→雪山→河→海浪，六块纯色背景随之切换；洋葱皮残影、挤压拉伸、虚线运动轨迹、中间帧标出对应点、缓动曲线时间轴） | 约 1 秒 |
@@ -64,7 +63,6 @@ description: Claude 绘图 / Claude Drawing —— 不借助任何生图模型�
 - 夜景、城市、雨、霓虹、电影感氛围、讲解片的「未来 / 科技 / 城市」封面 → 赛博朋克（要复古小尺寸或像素动画仍用像素风）；
 - 可爱的拟人小物件、日常小事讲故事、带表情的角色、讲解片里轻松的「步骤 / 原理」图解、要逐帧抖线的动画 → 卡通手绘（要立体手作感用黏土定格，要纸片感用剪纸拼贴）；
 - 小世界、城市 / 园区 / 工厂 / 校园示意，系统或流程的「微缩模型」图解，围着场景放数据卡的信息图，讲解片的「全景 / 系统概览」页 → 等轴 2.5D（要霓虹夜景用赛博朋克；要复古小尺寸用像素风）；
-- 生活场景、人物小故事、产品 / App 讲解插图、MG 动画式讲解片分镜 → 扁平矢量（要立体手作感用黏土，要纸感用剪纸）；
 - 高级克制、极简、品牌感封面、要看「一笔画出来」的过程、讲一段路线或旅程 → 单线画（深蓝底金线或奶油底墨线，只一个点睛色）；
 - 产品感、软萌立体、糖果色、MG 片头大字、「3D 渲染」、讲解片封面的立体标题 → 柔光 3D（要手作、捏泥的质感仍用黏土定格）；
 - 过程、变化、循环、「从 A 变成 B」的小故事，讲解片的转场、片头和「演变」页 → 形变动画（要真的动起来，用 `Morph.at` 逐帧出图）；
@@ -262,15 +260,6 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 - 自然与道具：`tree(x, y, z, size, kind='round'|'pine'|'poplar'|'bush', flowers=)`、`rock()`、`cloud()` 平底云、`windmill(x, y, z, h, yaw, spin)`、`windsock()`、`dish()` 卫星天线、`solar_panel()`、`fence(pts, z, h, closed)`、`pier()`、`boat()`、`balloon()`
 - 信息图：`card(x, y, z, w, h, facing='+x', title, tag, value, unit, note, series, icon='wind'|'temp'|'rain'|'balloon'|'sun', anchor=(x, y, z), accent)` 竖在空中的数据卡（文字印在等轴平面上，带细引线和锚点）；`compass(x, y, z, r, north)` 平躺在地面上的指北针；`text()`、`rule()`、`dot()` 平面排版叠在最上层
 - 光：太阳从左后上方来，顶面最亮，+x 面（左下）次之，+y 面（右下）只吃天光；`sun_c / sky_c / hor_c / gnd_c`、`soft`、`pen`（最小 / 最大半影）可调。不要霓虹发光、泛光和描边
-
-**扁平矢量 `FlatVector`**：
-- 思路：矢量软件的画板。每样东西都是边缘干净的几何形 `Mask`（覆盖率小块 + 偏移）；`|` 并、`&` 交、`-` 减、`moved(dx, dy)` 平移，只算包围盒重叠处，上千个形状也在 1 秒内
-- 形状：`circle` `ellipse` `rect` `rrect(x0, y0, x1, y1, r 或 (左上, 右上, 右下, 左下), rot)`；`capsule(p0, p1, r0, r1)` 锥形胶囊，`limb(点列, 半径列)`，`tube(控制点, r)` 平滑曲线管；`poly(pts, round=)` 圆弧倒角多边形；`arc` 环段、`pie` 扇形、`leaf(p0, p1, 宽, bend)` 叶片、`star`；`split(m, p0, p1)` 取直线左侧的部分；`text_mask`
-- 上色：`fill(m, 颜色, alpha, grain)`；`tone(c, k)`：k<0 向墨色混、k>0 向奶油色混，所有明暗都是色板色的色调
-- 体积（色块叠压）：`shade(m, strength, depth)` 背光侧月牙（形状减去朝光源挪动的自己）；`glint()` 受光侧亮月牙；`plane(m, p0, p1)` 直线切面；`cast(m, dx, dy, clip=)` 硬边投影（乘墨色，落在几种颜色上各自变深）；`darken` / `lighten`
-- 人物 `person(hip, 身高, facing, lean, head_tilt, arm=(上臂, 前臂), leg=(大腿, 小腿), sit, hand_to, hand_far_to, foot_to, foot_far_to, top, bottom, shoes, skin, hair, hair_style='short'|'bun'|'bob'|'long'|'pony', coat, skirt, apron, bag, draw_near_arm)`：7.5 头身、无五官，远侧手脚暗一档；角度从「竖直向下」量起、朝面向为正；返回关节字典（hand、hand_far、head、knee…）；`draw_near_arm=False` 时先画道具，再调 `near_arm()` 让手压在道具上
-- 物件：`books(x0, x1, 书脚y, 最高, 颜色, gap_at, gap_w, stack_at, back=背板遮罩)` 一排书脊；`book(cx, cy, w, h, rot, colour, open)`；`plant(kind='leafy'|'snake'|'round')`；`pendant(x, 顶, y, r, beam_to=)`；`cat(tail_down=)`；`cloud`；`sun(rays)`；`dashes(点列, arrow=)` 运动虚线；`sparkle`；`text(s, x, y, size, font_style='geo'|'geo_medium', cjk='cjk'|'cjk_light')`
-- 颜色常量 `INK BLUE CORAL MUSTARD TEAL PEACH CREAM`；`light=(0.8, -0.6)` 是指向光源的屏幕方向；`save('x.jpg')` 默认 quality 88、4:4:4 色度
 
 **单线画 `LineArt`**：
 - 思路：整幅画是一条路径。先把各个形状做成点列，再 `chain()` 按作画顺序串成一条线；线只栅格化一次成「时间图」（每个子像素记住笔第一次经过时走了多少像素），画到哪一步就是 `时间 <= s`
@@ -573,21 +562,6 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 | 引线横穿房顶，画面乱 | 卡片围着各自仪器摆，用 `unproject()` 按屏幕位置定点，引线短、不跨主体 |
 | 草地上散落的小花像彩色糖珠 | 花开在灌木上：`tree(kind='bush', flowers=…)` |
 
-**扁平矢量**
-
-| 问题 | 改法 |
-|---|---|
-| 头发像头巾，从前到后裹住脸一直到下巴 | 头发 = 大一圈的椭圆减去向前下方挪动的脸，再沿「后颈→太阳穴」的发际线切掉下半；波波头另加一块只在下颌后面的发帘 |
-| 耳朵画在脸中间 | 耳朵放在发际线上（头心向后约 0.12u），画在头发之后 |
-| 颗粒太重，大色块像砂纸 | 全画面颗粒约 1%，以细颗粒为主；只有光束、光斑用 `grain` 打散透明度 |
-| 手脚按角度摆，手伸进标题、脚踩空 | 用 `hand_to` / `foot_to` 目标点（两段 IK）：手落在栏杆和书上，脚落在梯级上 |
-| 3/4 侧身用近侧手臂向前上方够东西，手臂横扫过脸 | 改用远侧手臂（从前肩出发，画在头后面），近侧手臂垂下挎包 |
-| 没有描边，深色头发、深色裤子、黑猫贴在深色书架或楼影上就消失 | 按身后背景定明度：银发、橘猫、深裤配中蓝护墙板、浅色鞋；深色衣服的远侧手脚改为提亮一档 |
-| 书脊的色带和书名短线交叉成「+」，像十字架 | 色带只放书头书脚，书名短线放中段 |
-| 抽走那本书留下的空位被人挡住，故事看不出来 | 空位放在开阔处，邻书以底角为支点倒进空位，从空位拉一条珊瑚色虚线到手里的书 |
-| 珊瑚色花盆、书架上的珊瑚色书跟主角抢眼 | 点睛色只留给画面要讲的那一样东西 |
-| 动图把小面积的珊瑚色量化成褐色；透明占位色是黑色时，最暗的阴影像素变透明 | 中值切分前饱和像素 ×5，强制放入七个色板色；占位色改成纯品红 |
-
 **单线画**
 
 | 问题 | 改法 |
@@ -691,10 +665,10 @@ from core import spline, curve, blob_pts, fbm1d, blur, polygon_mask
 - 各画风都有 `stage(name)` 和 `save(path, stages_dir)`，按阶段依次淡入叠化，就是「一幅画被逐步画出来」。README 里的动图就是这样做的。
 - 动图规格（多数现有动图和后来新增的都一致）：720×405；每个阶段停 900 毫秒，再用 5 帧（每帧 90 毫秒）叠化到下一阶段，最后一帧停 2600 毫秒，无限循环。后来新增的动图所有帧共用一张 256 色调色板，文件小、不闪烁。
 - 调色板别只取最后一帧：满屏单色（黑板的墨绿、赛博朋克的夜色）会吃掉色位，彩色部分被量化成灰。黑板按加权像素样本做中值切分（彩色像素 ×5、亮色 ×2）；赛博朋克从全部关键帧的拼图取 255 色，留 1 个透明色标记「和上一帧相同」的像素，并去掉 Pillow 每帧重复写入的局部调色板（3.8 MB → 1.8 MB）。
-- 调色板的另外几条经验（新增十种里反复出现）：
-  - 小面积的点睛色（扁平矢量的珊瑚色书、报刊拼贴的芥末黄纸片、单线画的琥珀色窗、柔光 3D 的黄球）会被量化成褐色、土黄或平色片：取调色板样本时饱和像素 ×5 左右，限定色板的画风可以把色板色强制放进调色板。
+- 调色板的另外几条经验（新增的几种里反复出现）：
+  - 小面积的点睛色（报刊拼贴的芥末黄纸片、单线画的琥珀色窗、柔光 3D 的黄球）会被量化成土黄、米黄或平色片：取调色板样本时饱和像素 ×5 左右，限定色板的画风可以把色板色强制放进调色板。
   - 大片渐变（弥散玻璃的背景、单线画的深蓝底、Synthwave 的天空）出现一圈圈色带：量化前叠一张固定的 4×4 Bayer 抖动，每帧同一张，「和上一帧相同」的透明差分照样有效。
-  - 标记「和上一帧相同」的透明占位色不要用黑色：最暗的阴影像素会被当成透明（扁平矢量自检时 37 帧对不上），改用纯品红这类画面里没有的颜色。
+  - 标记「和上一帧相同」的透明占位色不要用黑色：最暗的阴影像素会被当成透明，自检时大批帧对不上，改用纯品红这类画面里没有的颜色。
   - 最后一个 `stage()` 和成品完全相同时，Pillow 会把相同的帧合并，按帧数自检会报 EOFError：`save()` 前不要紧挨着再调一次 `stage()`。
   - 卡通手绘的抖线动图只抖墨线，铅笔稿和颜色不动，否则每次叠化都整片重编码，体积翻倍。
 - 形变动画可以直接出真动画：`Morph.at(keys, T)` 给出全局时间 T 的轮廓，逐帧渲染即可。
@@ -723,7 +697,6 @@ lib/chalk.py           黑板板书
 lib/cyberpunk.py       赛博朋克
 lib/cartoon.py         卡通手绘（逐帧手绘）
 lib/isometric.py       等轴 2.5D
-lib/flatvector.py      扁平矢量
 lib/lineart.py         单线画
 lib/soft3d.py          柔光 3D
 lib/morph.py           形变动画

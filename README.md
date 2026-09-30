@@ -1,15 +1,11 @@
 # Claude Drawing · Claude 绘图
 
-**Claude paints with code — no image model.** Twenty-seven styles, from ink wash and impasto oil to clay, cyanotype, cross-stitch, a chalkboard, a cyberpunk street, an isometric island, a ray-traced ball pit and a synthwave sunset.
-**不用生图模型，Claude 用代码一笔一笔作画。** 二十七种画风，从水墨、油画到黏土、蓝晒、十字绣、黑板板书、赛博朋克、等轴小岛、光线追踪的小球海和 Synthwave 落日。
+**Claude paints with code — no image model.** Twenty-six styles, from ink wash and impasto oil to clay, cyanotype, cross-stitch, a chalkboard, a cyberpunk street, an isometric island, a ray-traced ball pit and a synthwave sunset.
+**不用生图模型，Claude 用代码一笔一笔作画。** 二十六种画风，从水墨、油画到黏土、蓝晒、十字绣、黑板板书、赛博朋克、等轴小岛、光线追踪的小球海和 Synthwave 落日。
 
 [English](#english) · [中文](#中文)
 
 <p align="center"><img src="examples/drawing_bawansiqian.gif" width="100%"><br><sub><b>Ink wash · 水墨</b> — every style below is drawn stage by stage like this · 下面每种画风都是这样一步步画出来的</sub></p>
-
-| Isometric 2.5D · 等轴 2.5D | Soft 3D · 柔光 3D |
-|---|---|
-| ![isometric](examples/drawing_isometric_weather_island.gif) | ![soft3d](examples/drawing_soft3d_rise.gif) |
 
 | Watercolour · 水彩 | Paper collage · 剪纸拼贴 | Coloured pencil · 韩国彩铅 | Anime · 日本动漫 |
 |---|---|---|---|
@@ -20,10 +16,14 @@
 | ![clay](examples/drawing_clay_lighthouse.gif) | ![cyanotype](examples/drawing_cyanotype_botanicals.gif) | ![stitch](examples/drawing_stitch_sampler.gif) | ![panel](examples/drawing_panel_radio.gif) |
 | **Sticker collage × receipt · 贴纸拼贴 · 小票** | **Lab notebook × stickers · 实验笔记本 · 贴纸** | **Chalkboard · 黑板板书** | **Cyberpunk · 赛博朋克** |
 | ![sticker](examples/drawing_sticker_market.gif) | ![notebook](examples/drawing_notebook_brewing.gif) | ![chalk](examples/drawing_chalk_lesson.gif) | ![cyberpunk](examples/drawing_cyberpunk_neon_street.gif) |
-| **Hand-drawn cartoon · 卡通手绘** | **Flat vector · 扁平矢量** | **Continuous line art · 单线画** | **Shape morph · 形变动画** |
-| ![cartoon](examples/drawing_cartoon_toaster.gif) | ![flatvector](examples/drawing_flatvector_bookshop.gif) | ![lineart](examples/drawing_lineart_paper_plane.gif) | ![morph](examples/drawing_morph_water_cycle.gif) |
-| **Newspaper collage · 报刊拼贴** | **Aurora glass · 弥散玻璃** | **Bauhaus geometric · 包豪斯几何** | **Retro synthwave · 复古 Synthwave** |
-| ![newscollage](examples/drawing_newscollage_curiosity.gif) | ![aurora](examples/drawing_aurora_morning.gif) | ![bauhaus](examples/drawing_bauhaus_form_colour.gif) | ![synthwave](examples/drawing_synthwave_coastline.gif) |
+
+| Hand-drawn cartoon · 卡通手绘 | Isometric 2.5D · 等轴 2.5D | Continuous line art · 单线画 |
+|---|---|---|
+| ![cartoon](examples/drawing_cartoon_toaster.gif) | ![isometric](examples/drawing_isometric_weather_island.gif) | ![lineart](examples/drawing_lineart_paper_plane.gif) |
+| **Soft 3D · 柔光 3D** | **Shape morph · 形变动画** | **Newspaper collage · 报刊拼贴** |
+| ![soft3d](examples/drawing_soft3d_rise.gif) | ![morph](examples/drawing_morph_water_cycle.gif) | ![newscollage](examples/drawing_newscollage_curiosity.gif) |
+| **Aurora glass · 弥散玻璃** | **Bauhaus geometric · 包豪斯几何** | **Retro synthwave · 复古 Synthwave** |
+| ![aurora](examples/drawing_aurora_morning.gif) | ![bauhaus](examples/drawing_bauhaus_form_colour.gif) | ![synthwave](examples/drawing_synthwave_coastline.gif) |
 
 ### Gallery · 画廊
 
@@ -31,26 +31,26 @@
 |---|---|
 | **八万四千法门** · *Many Paths, One Summit*<br><sub>Ink wash · 水墨</sub> | **月印万川** · *One Moon in Ten Thousand Rivers*<br><sub>Ink wash · 水墨</sub> |
 | <img src="examples/bawansiqian.jpg" width="100%"> | <img src="examples/moon_river.jpg" width="100%"> |
-| **秋日湖畔** · *Autumn Lake*<br><sub>Watercolour · 水彩</sub> | **热气球小镇** · *Balloon Day*<br><sub>Paper collage · 剪纸拼贴</sub> |
-| <img src="examples/watercolor_autumn.jpg" width="100%"> | <img src="examples/papercut_balloons.jpg" width="100%"> |
-| **午后甜点** · *Afternoon Dessert*<br><sub>Coloured pencil · 韩国彩铅</sub> | **夏空** · *Summer Sky*<br><sub>Anime · 日本动漫</sub> |
-| <img src="examples/colorpencil_dessert.jpg" width="100%"> | <img src="examples/anime_summer.jpg" width="100%"> |
-| **灵感生长** · *Growing Ideas*<br><sub>Editorial · 编辑风手绘</sub> | **麦田星空** · *Swirling Sky over the Wheat Field*<br><sub>Impasto oil · 油画厚涂</sub> |
-| <img src="examples/editorial_ideas.jpg" width="100%"> | <img src="examples/oil_wheatfield.jpg" width="100%"> |
-| **富士曙** · *Fuji at Dawn*<br><sub>Ukiyo-e · 浮世绘</sub> | **雨夜咖啡店** · *Rainy Night Cafe*<br><sub>Pixel art · 像素风</sub> |
-| <img src="examples/ukiyoe_fuji.jpg" width="100%"> | <img src="examples/pixel_rainy_cafe.png" width="100%"> |
-| **灯塔岛** · *Lighthouse Island*<br><sub>Stop-motion clay · 黏土定格</sub> | **蓝晒植物** · *Sun-Print Botanicals*<br><sub>Cyanotype · 蓝晒</sub> |
-| <img src="examples/clay_lighthouse.jpg" width="100%"> | <img src="examples/cyanotype_botanicals.jpg" width="100%"> |
-| **家** · *Home Sampler*<br><sub>Cross-stitch · 十字绣</sub> | **Aurora 64 收音机** · *Aurora 64 Radio*<br><sub>Vintage instrument panel · 复古仪器面板</sub> |
-| <img src="examples/stitch_sampler.jpg" width="100%"> | <img src="examples/panel_radio.jpg" width="100%"> |
-| **周末市集** · *Weekend Market*<br><sub>Sticker collage × receipt · 贴纸拼贴 · 小票</sub> | **咖啡萃取实验** · *Coffee Brewing Experiment*<br><sub>Lab notebook × stickers · 实验笔记本 · 贴纸</sub> |
-| <img src="examples/sticker_market.jpg" width="100%"> | <img src="examples/notebook_brewing.jpg" width="100%"> |
-| **为什么天空是蓝的** · *Why Is the Sky Blue?*<br><sub>Chalkboard · 黑板板书</sub> | **霓虹不夜城** · *Neon District*<br><sub>Cyberpunk · 赛博朋克</sub> |
-| <img src="examples/chalk_lesson.jpg" width="100%"> | <img src="examples/cyberpunk_neon_street.jpg" width="100%"> |
-| **早安吐司** · *Good Morning, Toast*<br><sub>Hand-drawn cartoon · 卡通手绘</sub> | **岛上的气象站** · *Island Weather Station*<br><sub>Isometric 2.5D · 等轴 2.5D</sub> |
-| <img src="examples/cartoon_toaster.jpg" width="100%"> | <img src="examples/isometric_weather_island.jpg" width="100%"> |
-| **周末书店** · *The Weekend Bookshop*<br><sub>Flat vector · 扁平矢量</sub> | **从这扇窗到那扇窗** · *From Window to Window*<br><sub>Continuous line art · 单线画</sub> |
-| <img src="examples/flatvector_bookshop.jpg" width="100%"> | <img src="examples/lineart_paper_plane.jpg" width="100%"> |
+| **秋日湖畔** · *Autumn Lake*<br><sub>Watercolour · 水彩</sub> | **水彩底纹** · *Watercolour Washes*<br><sub>Watercolour · 水彩 — a background for explainer videos · 讲解视频的背景</sub> |
+| <img src="examples/watercolor_autumn.jpg" width="100%"> | <img src="examples/watercolor_washes.jpg" width="100%"> |
+| **热气球小镇** · *Balloon Day*<br><sub>Paper collage · 剪纸拼贴</sub> | **午后甜点** · *Afternoon Dessert*<br><sub>Coloured pencil · 韩国彩铅</sub> |
+| <img src="examples/papercut_balloons.jpg" width="100%"> | <img src="examples/colorpencil_dessert.jpg" width="100%"> |
+| **夏空** · *Summer Sky*<br><sub>Anime · 日本动漫</sub> | **灵感生长** · *Growing Ideas*<br><sub>Editorial · 编辑风手绘</sub> |
+| <img src="examples/anime_summer.jpg" width="100%"> | <img src="examples/editorial_ideas.jpg" width="100%"> |
+| **麦田星空** · *Swirling Sky over the Wheat Field*<br><sub>Impasto oil · 油画厚涂</sub> | **富士曙** · *Fuji at Dawn*<br><sub>Ukiyo-e · 浮世绘</sub> |
+| <img src="examples/oil_wheatfield.jpg" width="100%"> | <img src="examples/ukiyoe_fuji.jpg" width="100%"> |
+| **雨夜咖啡店** · *Rainy Night Cafe*<br><sub>Pixel art · 像素风</sub> | **灯塔岛** · *Lighthouse Island*<br><sub>Stop-motion clay · 黏土定格</sub> |
+| <img src="examples/pixel_rainy_cafe.png" width="100%"> | <img src="examples/clay_lighthouse.jpg" width="100%"> |
+| **蓝晒植物** · *Sun-Print Botanicals*<br><sub>Cyanotype · 蓝晒</sub> | **家** · *Home Sampler*<br><sub>Cross-stitch · 十字绣</sub> |
+| <img src="examples/cyanotype_botanicals.jpg" width="100%"> | <img src="examples/stitch_sampler.jpg" width="100%"> |
+| **Aurora 64 收音机** · *Aurora 64 Radio*<br><sub>Vintage instrument panel · 复古仪器面板</sub> | **周末市集** · *Weekend Market*<br><sub>Sticker collage × receipt · 贴纸拼贴 · 小票</sub> |
+| <img src="examples/panel_radio.jpg" width="100%"> | <img src="examples/sticker_market.jpg" width="100%"> |
+| **咖啡萃取实验** · *Coffee Brewing Experiment*<br><sub>Lab notebook × stickers · 实验笔记本 · 贴纸</sub> | **为什么天空是蓝的** · *Why Is the Sky Blue?*<br><sub>Chalkboard · 黑板板书</sub> |
+| <img src="examples/notebook_brewing.jpg" width="100%"> | <img src="examples/chalk_lesson.jpg" width="100%"> |
+| **霓虹不夜城** · *Neon District*<br><sub>Cyberpunk · 赛博朋克</sub> | **早安吐司** · *Good Morning, Toast*<br><sub>Hand-drawn cartoon · 卡通手绘</sub> |
+| <img src="examples/cyberpunk_neon_street.jpg" width="100%"> | <img src="examples/cartoon_toaster.jpg" width="100%"> |
+| **岛上的气象站** · *Island Weather Station*<br><sub>Isometric 2.5D · 等轴 2.5D</sub> | **从这扇窗到那扇窗** · *From Window to Window*<br><sub>Continuous line art · 单线画</sub> |
+| <img src="examples/isometric_weather_island.jpg" width="100%"> | <img src="examples/lineart_paper_plane.jpg" width="100%"> |
 | **浮出** · *Rise*<br><sub>Soft 3D · 柔光 3D</sub> | **一滴水的旅程** · *A Drop's Round Trip*<br><sub>Shape morph · 形变动画</sub> |
 | <img src="examples/soft3d_rise.jpg" width="100%"> | <img src="examples/morph_water_cycle.jpg" width="100%"> |
 | **好奇心周刊 · 拆开看看** · *Curiosity Weekly · Take It Apart*<br><sub>Newspaper collage · 报刊拼贴</sub> | **晨间计划** · *Morning Plan*<br><sub>Aurora glassmorphism · 弥散玻璃</sub> |
@@ -58,7 +58,7 @@
 | **形与色** · *Form & Colour*<br><sub>Bauhaus geometric · 包豪斯几何</sub> | **海岸线 1987** · *Coastline 1987*<br><sub>Retro synthwave · 复古 Synthwave</sub> |
 | <img src="examples/bauhaus_form_colour.jpg" width="100%"> | <img src="examples/synthwave_coastline.jpg" width="100%"> |
 
-Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial, die-cut vinyl with a laminate gloss, streaky thermal print, graphite catching the tooth of graph paper, highlighter pooling at the start of a swipe, chalk dust settling under half-erased lessons, rain-lit neon glass mirrored in a wet street, a blue-pencil rough under boiling brush ink, an island ray-traced under one soft sun, faceless flat-vector figures, a single unbroken gold line, candy balls with softbox glints, one outline morphing through six shapes, halftone photos cut out with scissors, frosted glass blurring the real pixels behind it, screen-printed primaries out of register, a slit sun sinking behind a neon grid played off tape. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 45 s (the soft 3D ray tracer) per 1920×1080 image.
+Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial, die-cut vinyl with a laminate gloss, streaky thermal print, graphite catching the tooth of graph paper, highlighter pooling at the start of a swipe, chalk dust settling under half-erased lessons, rain-lit neon glass mirrored in a wet street, a blue-pencil rough under boiling brush ink, an island ray-traced under one soft sun, a single unbroken gold line, candy balls with softbox glints, one outline morphing through six shapes, halftone photos cut out with scissors, frosted glass blurring the real pixels behind it, screen-printed primaries out of register, a slit sun sinking behind a neon grid played off tape. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 45 s (the soft 3D ray tracer) per 1920×1080 image.
 
 ---
 
@@ -66,7 +66,7 @@ Every mark above is computed: paper fibres, ink washes and mist, dry-brush strok
 
 ### What it is
 
-A [Claude Code](https://claude.com/claude-code) skill and a small painting library with twenty-seven styles:
+A [Claude Code](https://claude.com/claude-code) skill and a small painting library with twenty-six styles:
 
 | Style | Module | What makes it read as the real medium |
 |---|---|---|
@@ -89,7 +89,6 @@ A [Claude Code](https://claude.com/claude-code) skill and a small painting libra
 | **Cyberpunk** | `lib/cyberpunk.py` · `Cyberpunk` | a pinhole camera down a rain-soaked street canyon, rendered in HDR with a z-buffer: glass-tube neon with over-exposed cores, dead and flickering tubes; backlit light boxes; a translucent hologram ad with scan lines, tear slices and colour fringing; each object mirrored from its own ground line into the wet asphalt and puddles; depth fog lit by the city; steam lit by the signs; three layers of rain lit only near the neon; flying-car light trails; bloom, halation, grain and one glitch line |
 | **Hand-drawn cartoon** | `lib/cartoon.py` · `Cartoon` | drawn the way an animator draws one frame: a blue col-erase pencil rough left under everything; brush-pen ink that lands thin, swells and lifts off to a point, closed shapes inked in one stroke whose ends overlap, heavier on the shadow side; flat colour painted a little off the lines (a sliver of paper here, a spill there); hard one- or two-tone cel shadows and white glints; crayon that only catches the paper tooth, screentone, ink hatching; faces, rubber-hose arms with mitten gloves, sparkles, speed lines, starbursts; chunky extruded lettering; lines that boil from frame to frame; a staged replay rough → ink → colour → shadow → effects → type |
 | **Isometric 2.5D** | `lib/isometric.py` · `Isometric` | a true isometric orthographic camera and a small ray tracer: every part is an exact analytic solid (chamfered boxes, roofs, rocks and hulls as convex polyhedra; cylinders and cones on any axis; ellipsoids cut by planes) in a G-buffer, so hiding never depends on draw order; one soft sun gives the three-tone faces and percentage-closer soft shadows that widen with distance; occlusion comes from a top-down map that knows eaves and tree crowns float; pastel albedos under a lilac sky, chamfer highlights, shore foam, glassy water walls, a floating slab whose shadow lands on the backdrop; data cards printed on iso planes |
-| **Flat vector** | `lib/flatvector.py` · `FlatVector` | crisp geometric shapes with no outlines (tapered capsules, filleted polygons, rounded rects, leaves); a seven-colour palette where every shade is a tone of it, never grey; volume from stacked flat blocks — a crescent cut as "the shape minus itself nudged toward the light", straight-cut planes, hard multiply cast shadows; translucent grainy light beams; faceless adult figures (7.5 heads, IK hands and feet, far limbs one tone darker); a whisper of print grain |
 | **Continuous line art** | `lib/lineart.py` · `LineArt` | the whole picture is one path: shapes strung together in drawing order with tangent-continuous bridges, loop-the-loops laid along the path, invisible retraces to reach a window; rasterised once into a time map, so every draw-on stage is an exact prefix of the line; a hand-pressure width (touch-down and lift-off tapers, slow drift, heavier in sharp turns, a flick where the pen doubles back, a lighter hand for motion paths); a gilded wire with angle-dependent sheen and a faint, tight glow on night blue (or dark ink on cream); a hot pen tip while drawing; one glowing accent; letter-spaced Didot titles |
 | **Soft 3D** | `lib/soft3d.py` · `Soft3D` | an actual little ray tracer: tens of thousands of balls found by walking a grid (DDA) with exact ray–sphere hits; puffy letters as signed distance fields (exact 2D distance transform of the glyph, extruded, rounded and inflated); a studio sky dome with ambient occlusion sampled in the scene's own distance field; a big softbox key with soft penumbra shadows, a rim light, softbox reflections and Fresnel edges; shade that turns deeper and more saturated instead of grey; displaced balls that settle into real hollows; aerial haze, layered depth of field, 1.5× supersampling |
 | **Shape morph** | `lib/morph.py` · `Morph` | one closed outline per object: resampled to 256 points evenly along its arc length, given the same winding, start point aligned by FFT cross-correlation, then blended point by point while its centroid travels an eased motion path with squash & stretch; compound shapes (cloud, snowflake) are unions of primitives traced back to a single outline; colours switch through OKLab; the poster freezes the animation as a film strip: one flat colour panel per keyframe, onion-skin ghosts that change colour at the panel border, matched points dotted on the middle frame, a dashed motion path and a timeline of ease curves |
@@ -169,7 +168,6 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 - **Cyberpunk**: mirror each object from its own ground row, not one horizon line. Keep shop interiors dim (0.2–0.45) or the street turns into over-exposed walls. Light rain streaks only near the neon. Light trails cross the street instead of all flying into the vanishing point.
 - **Hand-drawn cartoon**: draw back to front, since every fill knocks out what is behind it; put limbs down before the body so the shoulder hides. Lines are heavier on the shadow side, and colour sits a few pixels off the line. Keep texture where it belongs (toasted edges, not across a face). Boil only the ink between frames: pencil and colour stay on the sheet, which also keeps the GIF small.
 - **Isometric**: light real solids with one sun instead of painting three face tones by hand. Wall occlusion must look out along the normal and skip the building's own height and eaves, or white walls turn grey; never interpolate column tops and bottoms across an edge. Keep floating cards, clouds and hairlines out of the height map. Lay wave dashes along world y − x (screen horizontal), and leave a wide sea on the two front edges so the island reads as an island.
-- **Flat vector**: there are no outlines, so plan every value against what sits behind it (dark hair on a dark shelf vanishes). Save the accent colour for the one thing the picture is about. Cut hair at a hairline, or heads turn into hoods; in 3/4 view reach with the far arm so the arm doesn't sweep across the face. Keep grain around 1%.
 - **Line art**: one path, drawn in order: string shapes with `chain()`, reach windows with an invisible retrace, let loops ride along the path, and put a loop where the path runs level, not on a climb. Draw motion paths with a lighter hand (~0.6) or they read as one more hill. Keep exactly one accent colour and plenty of empty space.
 - **Soft 3D**: near a shape, light queries (AO, shadows, dropping a ball) need its exact distance, not its bounding box, or balls rest on thin air. Don't carve a trench around a subject: pile the displaced balls into the hollows at its feet. Fill shade with the material's own hue (grey mint looks dirty). Match the haze to the backdrop, and set the lens with the camera so every stage is soft.
 - **Shape morph**: every object is one closed outline. Resample both shapes to the same point count, same winding, and align the start point before blending, or the in-betweens collapse into slivers. Keep keyframes around 0.6 of the panel width and show only three ghosts per transition, with the middle one filled. Dash the motion path so it doesn't mix with the dotted matched points. Shapes stay perfectly flat: paper tooth only where bare paper shows.
@@ -188,7 +186,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 
 ### 这是什么
 
-一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置二十七种画风：
+一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置二十六种画风：
 
 | 画风 | 模块 | 为什么看起来像真的 |
 |---|---|---|
@@ -211,7 +209,6 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 | **赛博朋克** | `lib/cyberpunk.py` · `Cyberpunk` | 一台针孔相机看向雨夜街道深处，HDR 缓冲加深度遮挡：玻璃管霓虹中心过曝、边缘彩色光晕，还有坏管和闪烁管；背光灯箱；半透明全息广告，带扫描线、撕裂切片和色边；每样东西按自己的着地行翻出湿路面和水洼里的倒影；被城市灯光照亮的深度雾；被招牌照亮的井盖蒸汽；三层雨，只在霓虹附近看得见；飞车光轨；泛光、胶片红晕、颗粒和一道故障扫描线 |
 | **卡通手绘** | `lib/cartoon.py` · `Cartoon` | 照动画师画一张原画的办法画：蓝铅笔稿留在底下；毛笔线落笔细、中段粗、收笔尖，闭合轮廓一笔画完、首尾交叠，背光一侧更粗；平涂颜色略微错开线（这边露一条纸白，那边压过线）；一到两层硬边赛璐璐阴影和白色高光；只挂在纸纹凸起上的蜡笔、网点纸、墨线排线；表情、橡皮管手臂和带拇指的白手套、闪光星、速度线、爆炸框；带挤出阴影的粗描边大字；墨线每一帧都轻微抖动；能按 起稿 → 勾线 → 上色 → 阴影 → 特效 → 字 的顺序回放 |
 | **等轴 2.5D** | `lib/isometric.py` · `Isometric` | 正等轴正交相机加一个小光线追踪器：每个部件都是精确的解析实体（倒角盒子、屋顶、礁石、船体用凸多面体；任意轴向的圆柱圆锥；可被平面切开的椭球），写进 G-buffer，遮挡与绘制顺序无关；一个柔和的太阳照出三个面三种明度，PCSS 软阴影随遮挡距离变宽；AO 来自记得屋檐和树冠是悬空的顶视高度图；粉彩反照率配淡紫天光、倒角高光、岸边浪花、透亮的水体侧壁，漂浮底座的影子落在背景上；数据卡的文字印在等轴平面上 |
-| **扁平矢量** | `lib/flatvector.py` · `FlatVector` | 无描边的干净几何形（锥形胶囊、圆弧倒角多边形、圆角矩形、叶片）；七色限定色板，所有明暗都是色板色的色调，不用灰黑；色块叠压出体积：「形状减去朝光源挪动的自己」切出月牙暗面、直线切面、硬边正片叠底投影；带颗粒的半透明光束；无五官的成年人（7.5 头身、手脚可指定落点、远侧手脚暗一档）；极轻的印刷颗粒 |
 | **单线画** | `lib/lineart.py` · `LineArt` | 整幅画是一条路径：各个形状按作画顺序串起来，断开处用切线连续的曲线接上，翻圈沿路径插入，够不到的窗户用看不见的原路折返；一次栅格化成「时间图」，每个动画阶段都是整条线精确的前一段；带手感的线宽（起笔轻、收笔尖、压力缓慢起伏、急转处变粗、原路折返处提笔收尖、航迹这类运动轨迹用轻手）；深蓝底上是随角度变亮、只带一点柔光的金线（奶油底上是墨线）；画的时候笔尖发光；唯一一处发光的点睛色；字距拉开的 Didot 标题 |
 | **柔光 3D** | `lib/soft3d.py` · `Soft3D` | 真的是一台小光线追踪器：几万颗球靠逐格查找（DDA）加精确的光线–球求交；鼓鼓的字是有向距离场（字形精确距离变换→挤出、倒圆、吹胀）；摄影棚天光穹顶，环境光遮蔽在场景自己的距离场里采样；大柔光箱主光投下边缘渐软的阴影，加轮廓光；光面上映出灯片，边缘有菲涅尔亮边；阴影和缝隙变深变饱和而不发灰；被挤开的球真的落进窝里堆起来；远处空气雾、分层景深、1.5 倍超采样 |
 | **形变动画** | `lib/morph.py` · `Morph` | 每样东西都是一条闭合轮廓：按弧长等距重采样成 256 个点、统一绕向、用 FFT 互相关对齐起点，再逐点插值；质心沿缓动的运动路径走，快的时候沿运动方向挤压拉伸；云、雪花这类组合形状用圆、线、多边形拼好后描出外轮廓；颜色在 OKLab 里切换；海报把动画定格成一条胶片：每个关键帧一块纯色面板，洋葱皮残影跨面板时跟着换色，中间帧标出对应点，加虚线轨迹和缓动曲线时间轴 |
@@ -267,7 +264,6 @@ python3 examples/chalk_lesson.py        out.png                    # 黑板板�
 python3 examples/cyberpunk_neon_street.py out.png                  # 赛博朋克：霓虹不夜城
 python3 examples/cartoon_toaster.py     out.png                    # 卡通手绘：早安吐司
 python3 examples/isometric_weather_island.py out.png               # 等轴 2.5D：岛上的气象站
-python3 examples/flatvector_bookshop.py out.png                    # 扁平矢量：周末书店
 python3 examples/lineart_paper_plane.py out.png                    # 单线画：从这扇窗到那扇窗
 python3 examples/soft3d_rise.py         out.png                    # 柔光 3D：浮出
 python3 examples/morph_water_cycle.py   out.png                    # 形变动画：一滴水的旅程
@@ -296,7 +292,6 @@ python3 examples/synthwave_coastline.py out.png                    # 复古 Synt
 - **赛博朋克**：倒影按每样东西自己的着地行翻转，不能按一条地平线整体翻；店内亮度压在 0.2–0.45，否则街面成了过曝的墙；雨丝只在霓虹附近被照亮；飞车光轨横穿街道，不要全都飞向灭点。
 - **卡通手绘**：先远后近，因为每次平涂都会挖掉身后的东西；手臂先画、身体后画，把肩膀藏起来。背光一侧的线更粗，颜色错开线几像素。质感放在该在的地方（烤边，而不是脸上）。帧与帧之间只抖墨线，铅笔稿和颜色不动，动图也小。
 - **等轴 2.5D**：三个面的明度靠一个太阳照出来，不要手涂；墙面 AO 要沿法线往外看，不能把楼自己和屋檐的高度算进去，否则白墙发灰；柱子的顶和底不能跨边插值；悬浮卡片、云和细线不进高度图；海浪短线沿世界 y − x（屏幕水平）画；岛的前两条边留宽海面，才看得出是岛。
-- **扁平矢量**：没有描边，每块颜色都要按身后的背景定明度（深色头发贴深色书架就消失）；点睛色只留给画面要讲的那一样东西；头发要沿发际线切开，否则像头巾；3/4 侧身够东西用远侧手臂，免得手臂扫过脸；颗粒压在 1% 左右。
 - **单线画**：整幅画只有一条线，按作画顺序串：用 `chain()` 串形状，够不到的窗户原路进出，翻圈沿路径插入，放在路径平缓处，别放在爬升段；航迹这类运动轨迹用轻手（约 0.6 倍），否则会读成又一座山；点睛色只留一处，留白要多。
 - **柔光 3D**：AO、阴影、落球这些查询在物体附近要用精确距离，不能用包围盒，否则球会停在半空；主体周围别挖一圈空槽，把挤开的球堆进脚边的窝里；阴影用材质自身的色调去补（发灰的薄荷色很脏）；雾色和背景一致；景深跟相机一起先设好，每个阶段都是柔的。
 - **形变动画**：每样东西只用一条闭合轮廓；插值前先重采样成同样点数、统一绕向、对齐起点，否则中间帧会塌成碎片；关键帧约占面板宽的六成，每段只画三个残影，中间那帧填色；轨迹用虚线，别和对应点的圆点混；形状保持纯平，纸纹只加在露出的纸面上。
