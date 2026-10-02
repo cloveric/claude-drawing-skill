@@ -7,10 +7,6 @@
 
 <p align="center"><img src="examples/drawing_bawansiqian.gif" width="100%"><br><sub><b>Ink wash · 水墨</b> — every style below is drawn stage by stage like this · 下面每种画风都是这样一步步画出来的</sub></p>
 
-| Isometric 2.5D · 等轴 2.5D | Perler beads · 拼豆 |
-|---|---|
-| ![isometric](examples/drawing_isometric_weather_island.gif) | ![perler](examples/drawing_perler_strawberry_coaster.gif) |
-
 | Watercolour · 水彩 | Paper collage · 剪纸拼贴 | Coloured pencil · 韩国彩铅 | Anime · 日本动漫 |
 |---|---|---|---|
 | ![watercolour](examples/drawing_watercolor_autumn.gif) | ![collage](examples/drawing_papercut_balloons.gif) | ![pencil](examples/drawing_colorpencil_dessert.gif) | ![anime](examples/drawing_anime_summer.gif) |
@@ -25,15 +21,17 @@
 | **Newspaper collage · 报刊拼贴** | **Aurora glass · 弥散玻璃** | **Bauhaus geometric · 包豪斯几何** | **Retro synthwave · 复古 Synthwave** |
 | ![newscollage](examples/drawing_newscollage_curiosity.gif) | ![aurora](examples/drawing_aurora_morning.gif) | ![bauhaus](examples/drawing_bauhaus_form_colour.gif) | ![synthwave](examples/drawing_synthwave_coastline.gif) |
 
-| Petroglyph · 岩画 | Egyptian tomb painting · 古埃及墓室壁画 | Roman mosaic · 罗马马赛克 | Stained glass · 彩色玻璃花窗 |
+| Isometric 2.5D · 等轴 2.5D | Perler beads · 拼豆 | Petroglyph · 岩画 | Egyptian tomb painting · 古埃及墓室壁画 |
 |---|---|---|---|
-| ![petroglyph](examples/drawing_petroglyph_migration.gif) | ![tomb](examples/drawing_tomb_harvest.gif) | ![mosaic](examples/drawing_mosaic_harbor.gif) | ![stainedglass](examples/drawing_stainedglass_seasons.gif) |
-| **Illuminated manuscript · 泥金手抄本** | **Leonardo codex · 达·芬奇手稿** | **Silhouette · 剪影** | **Letterpress poster · 凸版印刷海报** |
-| ![illuminated](examples/drawing_illuminated_starchart.gif) | ![codex](examples/drawing_codex_ornithopter.gif) | ![silhouette](examples/drawing_silhouette_family.gif) | ![letterpress](examples/drawing_letterpress_circus.gif) |
-| **Soviet constructivism · 苏联构成主义** | **Art Deco · 装饰艺术** | **Golden-age comic · 黄金时代漫画** | **Pop silkscreen · 波普丝网** |
-| ![constructivism](examples/drawing_constructivism_radio.gif) | ![artdeco](examples/drawing_artdeco_express.gif) | ![comic](examples/drawing_comic_rocket.gif) | ![popart](examples/drawing_popart_cat_moods.gif) |
-| **ASCII art (line printer) · ASCII 字符画** | **Low poly · 低多边形** | **Stencil graffiti · 喷漆模板涂鸦** | **Embroidered patches · 刺绣徽章** |
-| ![lineprinter](examples/drawing_lineprinter_launch.gif) | ![lowpoly](examples/drawing_lowpoly_canyon.gif) | ![stencil](examples/drawing_stencil_kite.gif) | ![patch](examples/drawing_patch_camping.gif) |
+| ![isometric](examples/drawing_isometric_weather_island.gif) | ![perler](examples/drawing_perler_strawberry_coaster.gif) | ![petroglyph](examples/drawing_petroglyph_migration.gif) | ![tomb](examples/drawing_tomb_harvest.gif) |
+| **Roman mosaic · 罗马马赛克** | **Stained glass · 彩色玻璃花窗** | **Illuminated manuscript · 泥金手抄本** | **Leonardo codex · 达·芬奇手稿** |
+| ![mosaic](examples/drawing_mosaic_harbor.gif) | ![stainedglass](examples/drawing_stainedglass_seasons.gif) | ![illuminated](examples/drawing_illuminated_starchart.gif) | ![codex](examples/drawing_codex_ornithopter.gif) |
+| **Silhouette · 剪影** | **Letterpress poster · 凸版印刷海报** | **Soviet constructivism · 苏联构成主义** | **Art Deco · 装饰艺术** |
+| ![silhouette](examples/drawing_silhouette_family.gif) | ![letterpress](examples/drawing_letterpress_circus.gif) | ![constructivism](examples/drawing_constructivism_radio.gif) | ![artdeco](examples/drawing_artdeco_express.gif) |
+| **Golden-age comic · 黄金时代漫画** | **Pop silkscreen · 波普丝网** | **ASCII art (line printer) · ASCII 字符画** | **Low poly · 低多边形** |
+| ![comic](examples/drawing_comic_rocket.gif) | ![popart](examples/drawing_popart_cat_moods.gif) | ![lineprinter](examples/drawing_lineprinter_launch.gif) | ![lowpoly](examples/drawing_lowpoly_canyon.gif) |
+| **Stencil graffiti · 喷漆模板涂鸦** | **Embroidered patches · 刺绣徽章** |   |   |
+| ![stencil](examples/drawing_stencil_kite.gif) | ![patch](examples/drawing_patch_camping.gif) |   |   |
 
 ### Gallery · 画廊
 
