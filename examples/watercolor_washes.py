@@ -3,7 +3,7 @@ back-run blooms, granulation, splatters) in indigo / ochre-to-burnt-sienna / sag
 leaving open paper in the middle. Made as backgrounds for an explainer video: crisp UI cards sit on top of the paint
 (Opus 5.5 cost explainer, 2026-09). Two layouts; change the seed, or mirror / rotate the image, for more variants.
 Pure code, no image model.
-python3 watercolor_washes.py [out.png] [--layout cover|bill] [--seed N]
+python3 watercolor_washes.py [out.png] [--layout cover|bill] [--seed N] [--stages DIR]
 """
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib'))
@@ -45,23 +45,29 @@ def grade(p, x0, y0, x1, y1, lo=0.35, hi=1.0):
 def cover(seed=5302):
     p = Watercolor(1920, 1080, seed=seed, paper_tone='#fdfbf6')
     p.paper()
+    p.stage('paper')
     # thin ochre pass across the top-left, fading to the right (just a warm breath above the title card)
     p.glaze(sweep(p, [(-120, 150), (300, 70), (760, 40), (1060, 60)], 150, 50) * grade(p, 0, 100, 1060, 60, 0.2, 1), OCHRE, 0.5, edge=0.8, gran=0.5)
+    p.stage('ochre_breath')
     # ochre -> burnt sienna pool, bottom-left, sienna dropped in wet
     och = sweep(p, [(-160, 690), (220, 780), (560, 960), (820, 1160)], 300, 230)
     p.glaze(och * grade(p, 0, 1000, 700, 700, 0.55, 1), OCHRE, 0.72, edge=0.8, gran=0.55, bloom=2)
     p.glaze(blob(p, 120, 1000, 380, 190, rough=0.3, soft=26, ragged=0.5) * np.clip(och * 1.2, 0, 1), SIENNA, 0.62, edge=0.2, gran=0.6)
+    p.stage('ochre_sienna')
     # sage band along the bottom, overlapping the ochre (mixes to olive where they cross)
     p.glaze(sweep(p, [(1560, 1160), (1150, 980), (760, 920), (420, 960)], 190, 120), SAGE, 0.66, edge=0.75, gran=0.45, bloom=1)
+    p.stage('sage')
     # the big indigo sweep from the top-right corner diagonally down (ultramarine granulates hard)
     ind = sweep(p, [(2120, -120), (1760, 170), (1420, 400), (1100, 560)], 470, 190, rough=0.2)
     p.glaze(ind * grade(p, 1920, 0, 1150, 560, 0.5, 1), INDIGO, 0.85, edge=0.8, gran=0.8, bloom=3, variation=0.35)
     p.glaze(blob(p, 1860, 80, 470, 300, rough=0.3, soft=38, ragged=0.5) * np.clip(ind * 1.3, 0, 1), INDIGO_D, 0.55, edge=0.1, gran=0.65)
+    p.stage('indigo')
     # teal pass along the lower rim of the indigo -> deep blue-green overlap
     p.glaze(sweep(p, [(2050, 560), (1700, 690), (1330, 770), (1000, 800)], 150, 90) * grade(p, 1920, 600, 1000, 800, 0.5, 1), TEAL, 0.7, edge=0.8, gran=0.55, bloom=1)
     # sage echo near the top, ochre spark inside the indigo (complementary glint)
     p.glaze(blob(p, 1190, 95, 170, 80, rot=0.35, rough=0.35, soft=3), SAGE, 0.5, edge=0.7, gran=0.4)
     p.glaze(blob(p, 1560, 620, 90, 55, rot=-0.3, rough=0.35, soft=10, ragged=0.45), OCHRE, 0.55, edge=0.4, gran=0.5)
+    p.stage('teal_accents')
     # splatters
     p.splatter(INDIGO, n=44, box=(980, 0, 1900, 760), size=(1.5, 6), strength=0.75)
     p.splatter(INDIGO, n=7, box=(1050, 30, 1850, 700), size=(8, 14), strength=0.55)
@@ -104,5 +110,6 @@ if __name__ == '__main__':
     seed = int(args[args.index('--seed') + 1]) if '--seed' in args else None
     fn = cover if layout == 'cover' else bill
     p = fn(seed) if seed is not None else fn()
-    p.save(out)
+    stages = args[args.index('--stages') + 1] if '--stages' in args else None
+    p.save(out, stages_dir=stages)
     print('saved', out)
