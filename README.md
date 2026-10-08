@@ -1,55 +1,55 @@
 # Claude Drawing · Claude 绘图
 
-**Claude paints with code — no image model.** Sixty-three styles, from ink wash and impasto oil to clay, cyanotype, stained glass, a Roman mosaic, Delft tiles, a cyberpunk street, a ray-traced ball pit, low-poly 3D, a thermal camera, an X-ray, a VHS tape, a synthwave sunset, a pastel product-film UI, an answer sheet marked in red and a lamp-lit shadow-puppet play.
-**不用生图模型，Claude 用代码一笔一笔作画。** 六十三种画风，从水墨、油画到黏土、蓝晒、彩色玻璃花窗、罗马马赛克、代尔夫特蓝瓷砖、赛博朋克、光线追踪的小球海、低多边形 3D、热成像、X 光片、VHS 录像带、Synthwave 落日、产品发布片式的粉彩界面、红笔批改的答题卡和油灯下的皮影戏。
+**Claude paints with code — no image model.** Sixty-four styles, from ink wash and impasto oil to clay, cyanotype, stained glass, a Roman mosaic, Delft tiles, a cyberpunk street, a ray-traced ball pit, low-poly 3D, a thermal camera, an X-ray, a VHS tape, a synthwave sunset, a pastel product-film UI, an answer sheet marked in red, a lamp-lit shadow-puppet play and pen-and-wash sketch cards.
+**不用生图模型，Claude 用代码一笔一笔作画。** 六十四种画风，从水墨、油画到黏土、蓝晒、彩色玻璃花窗、罗马马赛克、代尔夫特蓝瓷砖、赛博朋克、光线追踪的小球海、低多边形 3D、热成像、X 光片、VHS 录像带、Synthwave 落日、产品发布片式的粉彩界面、红笔批改的答题卡、油灯下的皮影戏和钢笔淡彩的速写小卡。
 
 [English](#english) · [中文](#中文)
 
 <p align="center"><img src="examples/drawing_bawansiqian.gif" width="100%"><br><sub><b>Ink wash · 水墨</b> — every style below is drawn stage by stage like this (the storybook one is a real character animation) · 下面每种画风都是这样一步步画出来的（绘本角色动画是一段真正的角色动画）</sub></p>
 
-| Watercolour · 水彩 | Watercolour washes · 水彩底纹 | Paper collage · 剪纸拼贴 |
+| Watercolour · 水彩 | Paper collage · 剪纸拼贴 | Coloured pencil · 韩国彩铅 |
 |---|---|---|
-| ![watercolour](examples/drawing_watercolor_autumn.gif) | ![washes](examples/drawing_watercolor_washes.gif) | ![collage](examples/drawing_papercut_balloons.gif) |
-| **Coloured pencil · 韩国彩铅** | **Anime · 日本动漫** | **Editorial · 编辑风手绘** |
-| ![pencil](examples/drawing_colorpencil_dessert.gif) | ![anime](examples/drawing_anime_summer.gif) | ![editorial](examples/drawing_editorial_ideas.gif) |
-| **Impasto oil · 油画厚涂** | **Ukiyo-e · 浮世绘木版画** | **Pixel art · 像素风** |
-| ![oil](examples/drawing_oil_wheatfield.gif) | ![ukiyoe](examples/drawing_ukiyoe_fuji.gif) | ![pixel](examples/drawing_pixel_rainy_cafe.gif) |
-| **Stop-motion clay · 黏土定格** | **Cyanotype · 蓝晒** | **Cross-stitch · 十字绣** |
-| ![clay](examples/drawing_clay_lighthouse.gif) | ![cyanotype](examples/drawing_cyanotype_botanicals.gif) | ![stitch](examples/drawing_stitch_sampler.gif) |
-| **Retro panel · 复古仪器面板** | **Sticker collage × receipt · 贴纸拼贴 · 小票** | **Lab notebook × stickers · 实验笔记本 · 贴纸** |
-| ![panel](examples/drawing_panel_radio.gif) | ![sticker](examples/drawing_sticker_market.gif) | ![notebook](examples/drawing_notebook_brewing.gif) |
-| **Chalkboard · 黑板板书** | **Cyberpunk · 赛博朋克** | **Hand-drawn cartoon · 卡通手绘** |
-| ![chalk](examples/drawing_chalk_lesson.gif) | ![cyberpunk](examples/drawing_cyberpunk_neon_street.gif) | ![cartoon](examples/drawing_cartoon_toaster.gif) |
-| **Continuous line art · 单线画** | **Soft 3D · 柔光 3D** | **Shape morph · 形变动画** |
-| ![lineart](examples/drawing_lineart_paper_plane.gif) | ![soft3d](examples/drawing_soft3d_rise.gif) | ![morph](examples/drawing_morph_water_cycle.gif) |
-| **Newspaper collage · 报刊拼贴** | **Aurora glass · 弥散玻璃** | **Bauhaus geometric · 包豪斯几何** |
-| ![newscollage](examples/drawing_newscollage_curiosity.gif) | ![aurora](examples/drawing_aurora_morning.gif) | ![bauhaus](examples/drawing_bauhaus_form_colour.gif) |
-| **Retro synthwave · 复古 Synthwave** | **Isometric 2.5D · 等轴 2.5D** | **Perler beads · 拼豆** |
-| ![synthwave](examples/drawing_synthwave_coastline.gif) | ![isometric](examples/drawing_isometric_weather_island.gif) | ![perler](examples/drawing_perler_strawberry_coaster.gif) |
-| **Petroglyph · 岩画** | **Egyptian tomb painting · 古埃及墓室壁画** | **Roman mosaic · 罗马马赛克** |
-| ![petroglyph](examples/drawing_petroglyph_migration.gif) | ![tomb](examples/drawing_tomb_harvest.gif) | ![mosaic](examples/drawing_mosaic_harbor.gif) |
-| **Stained glass · 彩色玻璃花窗** | **Illuminated manuscript · 泥金手抄本** | **Leonardo codex · 达·芬奇手稿** |
-| ![stainedglass](examples/drawing_stainedglass_seasons.gif) | ![illuminated](examples/drawing_illuminated_starchart.gif) | ![codex](examples/drawing_codex_ornithopter.gif) |
-| **Silhouette · 剪影** | **Letterpress poster · 凸版印刷海报** | **Soviet constructivism · 苏联构成主义** |
-| ![silhouette](examples/drawing_silhouette_family.gif) | ![letterpress](examples/drawing_letterpress_circus.gif) | ![constructivism](examples/drawing_constructivism_radio.gif) |
-| **Art Deco · 装饰艺术** | **Golden-age comic · 黄金时代漫画** | **Pop silkscreen · 波普丝网** |
-| ![artdeco](examples/drawing_artdeco_express.gif) | ![comic](examples/drawing_comic_rocket.gif) | ![popart](examples/drawing_popart_cat_moods.gif) |
-| **ASCII art (line printer) · ASCII 字符画** | **Low poly · 低多边形** | **Stencil graffiti · 喷漆模板涂鸦** |
-| ![lineprinter](examples/drawing_lineprinter_launch.gif) | ![lowpoly](examples/drawing_lowpoly_canyon.gif) | ![stencil](examples/drawing_stencil_kite.gif) |
-| **Embroidered patches · 刺绣徽章** | **Blueprint · 蓝图工程图** | **Children's crayon · 儿童蜡笔画** |
-| ![patch](examples/drawing_patch_camping.gif) | ![blueprint](examples/drawing_blueprint_lighthouse.gif) | ![crayon](examples/drawing_crayon_picnic.gif) |
-| **Green-screen CRT · 绿屏终端** | **Thermal camera · 热成像** | **Delft tiles · 代尔夫特蓝瓷砖** |
-| ![crt](examples/drawing_crt_weather.gif) | ![thermal](examples/drawing_thermal_kitchen.gif) | ![delft](examples/drawing_delft_canal.gif) |
-| **Cave painting · 洞穴壁画** | **1-bit paint program · 1-bit 早期画图软件** | **Greek black-figure vase · 古希腊黑绘陶瓶** |
-| ![cave](examples/drawing_cave_hunt.gif) | ![macpaint](examples/drawing_macpaint_garden.gif) | ![blackfigure](examples/drawing_blackfigure_games.gif) |
-| **Graphite pencil · 铅笔素描** | **X-ray · X 光片** | **1930s rubber hose · 1930 年代黑白橡皮管动画** |
-| ![graphite](examples/drawing_graphite_bicycle.gif) | ![xray](examples/drawing_xray_luggage.gif) | ![rubberhose](examples/drawing_rubberhose_morning.gif) |
-| **Linocut · 黑白麻胶版画** | **VHS home video · VHS 家庭录像** | **Flat vector · 扁平矢量** |
-| ![linocut](examples/drawing_linocut_snowy_village.gif) | ![vhs](examples/drawing_vhs_birthday.gif) | ![flatvector](examples/drawing_flatvector_night_camp.gif) |
-| **Storybook animation · 绘本角色动画** | **Ballpoint doodle · 圆珠笔涂鸦** | **Overlay sheets · 描图纸叠层** |
-| ![storybook](examples/drawing_storybook_acorn.gif) | ![ballpoint](examples/drawing_ballpoint_board_game.gif) | ![overlay](examples/drawing_overlay_city_map.gif) |
-| **Pastel UI · 粉彩界面** | **Exam grading · 阅卷批改** | **Shadow puppetry · 皮影戏** |
-| ![pastelui](examples/drawing_pastelui_packing.gif) | ![grading](examples/drawing_grading_math_quiz.gif) | ![shadowpuppet](examples/drawing_shadowpuppet_cuju.gif) |
+| ![watercolour](examples/drawing_watercolor_autumn.gif) | ![collage](examples/drawing_papercut_balloons.gif) | ![pencil](examples/drawing_colorpencil_dessert.gif) |
+| **Anime · 日本动漫** | **Editorial · 编辑风手绘** | **Impasto oil · 油画厚涂** |
+| ![anime](examples/drawing_anime_summer.gif) | ![editorial](examples/drawing_editorial_ideas.gif) | ![oil](examples/drawing_oil_wheatfield.gif) |
+| **Ukiyo-e · 浮世绘木版画** | **Pixel art · 像素风** | **Stop-motion clay · 黏土定格** |
+| ![ukiyoe](examples/drawing_ukiyoe_fuji.gif) | ![pixel](examples/drawing_pixel_rainy_cafe.gif) | ![clay](examples/drawing_clay_lighthouse.gif) |
+| **Cyanotype · 蓝晒** | **Cross-stitch · 十字绣** | **Retro panel · 复古仪器面板** |
+| ![cyanotype](examples/drawing_cyanotype_botanicals.gif) | ![stitch](examples/drawing_stitch_sampler.gif) | ![panel](examples/drawing_panel_radio.gif) |
+| **Sticker collage × receipt · 贴纸拼贴 · 小票** | **Lab notebook × stickers · 实验笔记本 · 贴纸** | **Chalkboard · 黑板板书** |
+| ![sticker](examples/drawing_sticker_market.gif) | ![notebook](examples/drawing_notebook_brewing.gif) | ![chalk](examples/drawing_chalk_lesson.gif) |
+| **Cyberpunk · 赛博朋克** | **Hand-drawn cartoon · 卡通手绘** | **Continuous line art · 单线画** |
+| ![cyberpunk](examples/drawing_cyberpunk_neon_street.gif) | ![cartoon](examples/drawing_cartoon_toaster.gif) | ![lineart](examples/drawing_lineart_paper_plane.gif) |
+| **Soft 3D · 柔光 3D** | **Shape morph · 形变动画** | **Newspaper collage · 报刊拼贴** |
+| ![soft3d](examples/drawing_soft3d_rise.gif) | ![morph](examples/drawing_morph_water_cycle.gif) | ![newscollage](examples/drawing_newscollage_curiosity.gif) |
+| **Aurora glass · 弥散玻璃** | **Bauhaus geometric · 包豪斯几何** | **Retro synthwave · 复古 Synthwave** |
+| ![aurora](examples/drawing_aurora_morning.gif) | ![bauhaus](examples/drawing_bauhaus_form_colour.gif) | ![synthwave](examples/drawing_synthwave_coastline.gif) |
+| **Isometric 2.5D · 等轴 2.5D** | **Perler beads · 拼豆** | **Petroglyph · 岩画** |
+| ![isometric](examples/drawing_isometric_weather_island.gif) | ![perler](examples/drawing_perler_strawberry_coaster.gif) | ![petroglyph](examples/drawing_petroglyph_migration.gif) |
+| **Egyptian tomb painting · 古埃及墓室壁画** | **Roman mosaic · 罗马马赛克** | **Stained glass · 彩色玻璃花窗** |
+| ![tomb](examples/drawing_tomb_harvest.gif) | ![mosaic](examples/drawing_mosaic_harbor.gif) | ![stainedglass](examples/drawing_stainedglass_seasons.gif) |
+| **Illuminated manuscript · 泥金手抄本** | **Leonardo codex · 达·芬奇手稿** | **Silhouette · 剪影** |
+| ![illuminated](examples/drawing_illuminated_starchart.gif) | ![codex](examples/drawing_codex_ornithopter.gif) | ![silhouette](examples/drawing_silhouette_family.gif) |
+| **Letterpress poster · 凸版印刷海报** | **Soviet constructivism · 苏联构成主义** | **Art Deco · 装饰艺术** |
+| ![letterpress](examples/drawing_letterpress_circus.gif) | ![constructivism](examples/drawing_constructivism_radio.gif) | ![artdeco](examples/drawing_artdeco_express.gif) |
+| **Golden-age comic · 黄金时代漫画** | **Pop silkscreen · 波普丝网** | **ASCII art (line printer) · ASCII 字符画** |
+| ![comic](examples/drawing_comic_rocket.gif) | ![popart](examples/drawing_popart_cat_moods.gif) | ![lineprinter](examples/drawing_lineprinter_launch.gif) |
+| **Low poly · 低多边形** | **Stencil graffiti · 喷漆模板涂鸦** | **Embroidered patches · 刺绣徽章** |
+| ![lowpoly](examples/drawing_lowpoly_canyon.gif) | ![stencil](examples/drawing_stencil_kite.gif) | ![patch](examples/drawing_patch_camping.gif) |
+| **Blueprint · 蓝图工程图** | **Children's crayon · 儿童蜡笔画** | **Green-screen CRT · 绿屏终端** |
+| ![blueprint](examples/drawing_blueprint_lighthouse.gif) | ![crayon](examples/drawing_crayon_picnic.gif) | ![crt](examples/drawing_crt_weather.gif) |
+| **Thermal camera · 热成像** | **Delft tiles · 代尔夫特蓝瓷砖** | **Cave painting · 洞穴壁画** |
+| ![thermal](examples/drawing_thermal_kitchen.gif) | ![delft](examples/drawing_delft_canal.gif) | ![cave](examples/drawing_cave_hunt.gif) |
+| **1-bit paint program · 1-bit 早期画图软件** | **Greek black-figure vase · 古希腊黑绘陶瓶** | **Graphite pencil · 铅笔素描** |
+| ![macpaint](examples/drawing_macpaint_garden.gif) | ![blackfigure](examples/drawing_blackfigure_games.gif) | ![graphite](examples/drawing_graphite_bicycle.gif) |
+| **X-ray · X 光片** | **1930s rubber hose · 1930 年代黑白橡皮管动画** | **Linocut · 黑白麻胶版画** |
+| ![xray](examples/drawing_xray_luggage.gif) | ![rubberhose](examples/drawing_rubberhose_morning.gif) | ![linocut](examples/drawing_linocut_snowy_village.gif) |
+| **VHS home video · VHS 家庭录像** | **Flat vector · 扁平矢量** | **Storybook animation · 绘本角色动画** |
+| ![vhs](examples/drawing_vhs_birthday.gif) | ![flatvector](examples/drawing_flatvector_night_camp.gif) | ![storybook](examples/drawing_storybook_acorn.gif) |
+| **Ballpoint doodle · 圆珠笔涂鸦** | **Overlay sheets · 描图纸叠层** | **Pastel UI · 粉彩界面** |
+| ![ballpoint](examples/drawing_ballpoint_board_game.gif) | ![overlay](examples/drawing_overlay_city_map.gif) | ![pastelui](examples/drawing_pastelui_packing.gif) |
+| **Exam grading · 阅卷批改** | **Shadow puppetry · 皮影戏** | **Pen & wash · 钢笔淡彩** |
+| ![grading](examples/drawing_grading_math_quiz.gif) | ![shadowpuppet](examples/drawing_shadowpuppet_cuju.gif) | ![penwash](examples/drawing_penwash_neighbours.gif) |
 
 ### Gallery · 画廊
 
@@ -57,68 +57,70 @@
 |---|---|
 | **八万四千法门** · *Many Paths, One Summit*<br><sub>Ink wash · 水墨</sub> | **月印万川** · *One Moon in Ten Thousand Rivers*<br><sub>Ink wash · 水墨</sub> |
 | <img src="examples/bawansiqian.jpg" width="100%"> | <img src="examples/moon_river.jpg" width="100%"> |
-| **秋日湖畔** · *Autumn Lake*<br><sub>Watercolour · 水彩</sub> | **热气球小镇** · *Balloon Day*<br><sub>Paper collage · 剪纸拼贴</sub> |
-| <img src="examples/watercolor_autumn.jpg" width="100%"> | <img src="examples/papercut_balloons.jpg" width="100%"> |
-| **午后甜点** · *Afternoon Dessert*<br><sub>Coloured pencil · 韩国彩铅</sub> | **夏空** · *Summer Sky*<br><sub>Anime · 日本动漫</sub> |
-| <img src="examples/colorpencil_dessert.jpg" width="100%"> | <img src="examples/anime_summer.jpg" width="100%"> |
-| **灵感生长** · *Growing Ideas*<br><sub>Editorial · 编辑风手绘</sub> | **麦田星空** · *Swirling Sky over the Wheat Field*<br><sub>Impasto oil · 油画厚涂</sub> |
-| <img src="examples/editorial_ideas.jpg" width="100%"> | <img src="examples/oil_wheatfield.jpg" width="100%"> |
-| **富士曙** · *Fuji at Dawn*<br><sub>Ukiyo-e · 浮世绘</sub> | **雨夜咖啡店** · *Rainy Night Cafe*<br><sub>Pixel art · 像素风</sub> |
-| <img src="examples/ukiyoe_fuji.jpg" width="100%"> | <img src="examples/pixel_rainy_cafe.png" width="100%"> |
-| **灯塔岛** · *Lighthouse Island*<br><sub>Stop-motion clay · 黏土定格</sub> | **蓝晒植物** · *Sun-Print Botanicals*<br><sub>Cyanotype · 蓝晒</sub> |
-| <img src="examples/clay_lighthouse.jpg" width="100%"> | <img src="examples/cyanotype_botanicals.jpg" width="100%"> |
-| **家** · *Home Sampler*<br><sub>Cross-stitch · 十字绣</sub> | **Aurora 64 收音机** · *Aurora 64 Radio*<br><sub>Vintage instrument panel · 复古仪器面板</sub> |
-| <img src="examples/stitch_sampler.jpg" width="100%"> | <img src="examples/panel_radio.jpg" width="100%"> |
-| **周末市集** · *Weekend Market*<br><sub>Sticker collage × receipt · 贴纸拼贴 · 小票</sub> | **咖啡萃取实验** · *Coffee Brewing Experiment*<br><sub>Lab notebook × stickers · 实验笔记本 · 贴纸</sub> |
-| <img src="examples/sticker_market.jpg" width="100%"> | <img src="examples/notebook_brewing.jpg" width="100%"> |
-| **为什么天空是蓝的** · *Why Is the Sky Blue?*<br><sub>Chalkboard · 黑板板书</sub> | **霓虹不夜城** · *Neon District*<br><sub>Cyberpunk · 赛博朋克</sub> |
-| <img src="examples/chalk_lesson.jpg" width="100%"> | <img src="examples/cyberpunk_neon_street.jpg" width="100%"> |
-| **早安吐司** · *Good Morning, Toast*<br><sub>Hand-drawn cartoon · 卡通手绘</sub> | **岛上的气象站** · *Island Weather Station*<br><sub>Isometric 2.5D · 等轴 2.5D</sub> |
-| <img src="examples/cartoon_toaster.jpg" width="100%"> | <img src="examples/isometric_weather_island.jpg" width="100%"> |
-| **从这扇窗到那扇窗** · *From Window to Window*<br><sub>Continuous line art · 单线画</sub> | **浮出** · *Rise*<br><sub>Soft 3D · 柔光 3D</sub> |
-| <img src="examples/lineart_paper_plane.jpg" width="100%"> | <img src="examples/soft3d_rise.jpg" width="100%"> |
-| **一滴水的旅程** · *A Drop's Round Trip*<br><sub>Shape morph · 形变动画</sub> | **好奇心周刊 · 拆开看看** · *Curiosity Weekly · Take It Apart*<br><sub>Newspaper collage · 报刊拼贴</sub> |
-| <img src="examples/morph_water_cycle.jpg" width="100%"> | <img src="examples/newscollage_curiosity.jpg" width="100%"> |
-| **晨间计划** · *Morning Plan*<br><sub>Aurora glassmorphism · 弥散玻璃</sub> | **形与色** · *Form & Colour*<br><sub>Bauhaus geometric · 包豪斯几何</sub> |
-| <img src="examples/aurora_morning.jpg" width="100%"> | <img src="examples/bauhaus_form_colour.jpg" width="100%"> |
-| **海岸线 1987** · *Coastline 1987*<br><sub>Retro synthwave · 复古 Synthwave</sub> | **草莓杯垫** · *Strawberry Coaster*<br><sub>Perler beads · 拼豆</sub> |
-| <img src="examples/synthwave_coastline.jpg" width="100%"> | <img src="examples/perler_strawberry_coaster.jpg" width="100%"> |
-| **迁徙季** · *Migration Season*<br><sub>Petroglyph · 岩画</sub> | **尼罗河丰收** · *Harvest on the Nile*<br><sub>Egyptian tomb painting · 古埃及墓室壁画</sub> |
-| <img src="examples/petroglyph_migration.jpg" width="100%"> | <img src="examples/tomb_harvest.jpg" width="100%"> |
-| **港口渔获** · *The Day's Catch*<br><sub>Roman mosaic · 罗马马赛克</sub> | **四季之窗** · *Window of the Seasons*<br><sub>Stained glass · 彩色玻璃花窗</sub> |
-| <img src="examples/mosaic_harbor.jpg" width="100%"> | <img src="examples/stainedglass_seasons.jpg" width="100%"> |
-| **星辰之书** · *Liber Stellarum*<br><sub>Illuminated manuscript · 泥金手抄本</sub> | **扑翼机** · *The Ornithopter*<br><sub>Leonardo codex · 达·芬奇手稿</sub> |
-| <img src="examples/illuminated_starchart.jpg" width="100%"> | <img src="examples/codex_ornithopter.jpg" width="100%"> |
-| **剪影小像** · *Shades of the Wren Household*<br><sub>Silhouette · 剪影</sub> | **马戏团来了** · *The Circus Is Coming*<br><sub>Letterpress poster · 凸版印刷海报</sub> |
-| <img src="examples/silhouette_family.jpg" width="100%"> | <img src="examples/letterpress_circus.jpg" width="100%"> |
-| **无线电** · *Radio*<br><sub>Soviet constructivism · 苏联构成主义</sub> | **夜行快车** · *Night Express*<br><sub>Art Deco · 装饰艺术</sub> |
-| <img src="examples/constructivism_radio.jpg" width="100%"> | <img src="examples/artdeco_express.jpg" width="100%"> |
-| **火箭小队** · *Rocket Squad*<br><sub>Golden-age comic · 黄金时代漫画</sub> | **猫的六种心情** · *Six Moods of a Cat*<br><sub>Pop silkscreen · 波普丝网</sub> |
-| <img src="examples/comic_rocket.jpg" width="100%"> | <img src="examples/popart_cat_moods.jpg" width="100%"> |
-| **发射记录** · *Liftoff Trace*<br><sub>ASCII art (line printer) · ASCII 字符画（行式打印机）</sub> | **峡谷飞行** · *Canyon Run*<br><sub>Low poly · 低多边形</sub> |
-| <img src="examples/lineprinter_launch.jpg" width="100%"> | <img src="examples/lowpoly_canyon.jpg" width="100%"> |
-| **放风筝** · *Hold On*<br><sub>Stencil graffiti · 喷漆模板涂鸦</sub> | **三晚露营** · *Three Nights Out*<br><sub>Embroidered patches · 刺绣徽章</sub> |
-| <img src="examples/stencil_kite.jpg" width="100%"> | <img src="examples/patch_camping.jpg" width="100%"> |
-| **灯塔剖面** · *Halvard Rock Light*<br><sub>Blueprint · 蓝图工程图</sub> | **我的周末** · *My Weekend*<br><sub>Children's crayon · 儿童蜡笔画</sub> |
-| <img src="examples/blueprint_lighthouse.jpg" width="100%"> | <img src="examples/crayon_picnic.jpg" width="100%"> |
-| **今天带伞吗** · *Bring an Umbrella?*<br><sub>Green-screen CRT terminal · 绿屏终端（荧光字符画）</sub> | **厨房里的温度** · *Kitchen Heat Map*<br><sub>Thermal camera · 热成像</sub> |
-| <img src="examples/crt_weather.jpg" width="100%"> | <img src="examples/thermal_kitchen.jpg" width="100%"> |
-| **一阵风** · *The Gust*<br><sub>Delft tiles · 代尔夫特蓝瓷砖</sub> | **篝火旁的岩洞** · *The Hunt by the Fire*<br><sub>Cave painting · 洞穴壁画</sub> |
-| <img src="examples/delft_canal.jpg" width="100%"> | <img src="examples/cave_hunt.jpg" width="100%"> |
-| **窗台花园** · *Windowsill Garden*<br><sub>1-bit paint program · 1-bit 早期画图软件</sub> | **赛跑与赛车** · *Games on a Vase*<br><sub>Greek black-figure vase · 古希腊黑绘陶瓶</sub> |
-| <img src="examples/macpaint_garden.jpg" width="100%"> | <img src="examples/blackfigure_games.jpg" width="100%"> |
-| **老街角的自行车** · *The Bread Run*<br><sub>Graphite pencil · 铅笔素描</sub> | **行李安检** · *Security Check*<br><sub>X-ray · X 光片</sub> |
-| <img src="examples/graphite_bicycle.jpg" width="100%"> | <img src="examples/xray_luggage.jpg" width="100%"> |
-| **早晨的闹钟** · *Seven O'Clock*<br><sub>1930s rubber hose · 1930 年代黑白橡皮管动画</sub> | **雪夜归途** · *Homeward, First Snow*<br><sub>Linocut · 黑白麻胶版画</sub> |
-| <img src="examples/rubberhose_morning.jpg" width="100%"> | <img src="examples/linocut_snowy_village.jpg" width="100%"> |
-| **吹蜡烛** · *Blow Out the Candles*<br><sub>VHS home video · VHS 家庭录像</sub> | **山间夜营** · *Night Camp*<br><sub>Flat vector · 扁平矢量</sub> |
-| <img src="examples/vhs_birthday.jpg" width="100%"> | <img src="examples/flatvector_night_camp.jpg" width="100%"> |
-| **小橡果的秋天** · *An Acorn's Autumn*<br><sub>Storybook animation · 绘本角色动画</sub> | **蛇梯棋大冒险** · *Snakes & Ladders, Round 7*<br><sub>Ballpoint doodle · 圆珠笔涂鸦</sub> |
-| <img src="examples/storybook_acorn.jpg" width="100%"> | <img src="examples/ballpoint_board_game.jpg" width="100%"> |
-| **海港步行图** · *Larkhaven on Foot*<br><sub>Overlay sheets · 描图纸叠层</sub> | **出发前，再查一遍行李** · *Pack Check*<br><sub>Pastel UI · 粉彩界面</sub> |
-| <img src="examples/overlay_city_map.jpg" width="100%"> | <img src="examples/pastelui_packing.jpg" width="100%"> |
-| **数学单元测验** · *Unit Test, Graded*<br><sub>Exam grading · 阅卷批改</sub> | **蹴鞠** · *Cuju by Lamplight*<br><sub>Shadow puppetry · 皮影戏</sub> |
-| <img src="examples/grading_math_quiz.jpg" width="100%"> | <img src="examples/shadowpuppet_cuju.jpg" width="100%"> |
+| **秋日湖畔** · *Autumn Lake*<br><sub>Watercolour · 水彩</sub> | **水彩底纹** · *Watercolour Washes*<br><sub>Watercolour · 水彩 — a background for explainer videos · 讲解视频的背景</sub> |
+| <img src="examples/watercolor_autumn.jpg" width="100%"> | <img src="examples/watercolor_washes.jpg" width="100%"> |
+| **热气球小镇** · *Balloon Day*<br><sub>Paper collage · 剪纸拼贴</sub> | **午后甜点** · *Afternoon Dessert*<br><sub>Coloured pencil · 韩国彩铅</sub> |
+| <img src="examples/papercut_balloons.jpg" width="100%"> | <img src="examples/colorpencil_dessert.jpg" width="100%"> |
+| **夏空** · *Summer Sky*<br><sub>Anime · 日本动漫</sub> | **灵感生长** · *Growing Ideas*<br><sub>Editorial · 编辑风手绘</sub> |
+| <img src="examples/anime_summer.jpg" width="100%"> | <img src="examples/editorial_ideas.jpg" width="100%"> |
+| **麦田星空** · *Swirling Sky over the Wheat Field*<br><sub>Impasto oil · 油画厚涂</sub> | **富士曙** · *Fuji at Dawn*<br><sub>Ukiyo-e · 浮世绘</sub> |
+| <img src="examples/oil_wheatfield.jpg" width="100%"> | <img src="examples/ukiyoe_fuji.jpg" width="100%"> |
+| **雨夜咖啡店** · *Rainy Night Cafe*<br><sub>Pixel art · 像素风</sub> | **灯塔岛** · *Lighthouse Island*<br><sub>Stop-motion clay · 黏土定格</sub> |
+| <img src="examples/pixel_rainy_cafe.png" width="100%"> | <img src="examples/clay_lighthouse.jpg" width="100%"> |
+| **蓝晒植物** · *Sun-Print Botanicals*<br><sub>Cyanotype · 蓝晒</sub> | **家** · *Home Sampler*<br><sub>Cross-stitch · 十字绣</sub> |
+| <img src="examples/cyanotype_botanicals.jpg" width="100%"> | <img src="examples/stitch_sampler.jpg" width="100%"> |
+| **Aurora 64 收音机** · *Aurora 64 Radio*<br><sub>Vintage instrument panel · 复古仪器面板</sub> | **周末市集** · *Weekend Market*<br><sub>Sticker collage × receipt · 贴纸拼贴 · 小票</sub> |
+| <img src="examples/panel_radio.jpg" width="100%"> | <img src="examples/sticker_market.jpg" width="100%"> |
+| **咖啡萃取实验** · *Coffee Brewing Experiment*<br><sub>Lab notebook × stickers · 实验笔记本 · 贴纸</sub> | **为什么天空是蓝的** · *Why Is the Sky Blue?*<br><sub>Chalkboard · 黑板板书</sub> |
+| <img src="examples/notebook_brewing.jpg" width="100%"> | <img src="examples/chalk_lesson.jpg" width="100%"> |
+| **霓虹不夜城** · *Neon District*<br><sub>Cyberpunk · 赛博朋克</sub> | **早安吐司** · *Good Morning, Toast*<br><sub>Hand-drawn cartoon · 卡通手绘</sub> |
+| <img src="examples/cyberpunk_neon_street.jpg" width="100%"> | <img src="examples/cartoon_toaster.jpg" width="100%"> |
+| **岛上的气象站** · *Island Weather Station*<br><sub>Isometric 2.5D · 等轴 2.5D</sub> | **从这扇窗到那扇窗** · *From Window to Window*<br><sub>Continuous line art · 单线画</sub> |
+| <img src="examples/isometric_weather_island.jpg" width="100%"> | <img src="examples/lineart_paper_plane.jpg" width="100%"> |
+| **浮出** · *Rise*<br><sub>Soft 3D · 柔光 3D</sub> | **一滴水的旅程** · *A Drop's Round Trip*<br><sub>Shape morph · 形变动画</sub> |
+| <img src="examples/soft3d_rise.jpg" width="100%"> | <img src="examples/morph_water_cycle.jpg" width="100%"> |
+| **好奇心周刊 · 拆开看看** · *Curiosity Weekly · Take It Apart*<br><sub>Newspaper collage · 报刊拼贴</sub> | **晨间计划** · *Morning Plan*<br><sub>Aurora glassmorphism · 弥散玻璃</sub> |
+| <img src="examples/newscollage_curiosity.jpg" width="100%"> | <img src="examples/aurora_morning.jpg" width="100%"> |
+| **形与色** · *Form & Colour*<br><sub>Bauhaus geometric · 包豪斯几何</sub> | **海岸线 1987** · *Coastline 1987*<br><sub>Retro synthwave · 复古 Synthwave</sub> |
+| <img src="examples/bauhaus_form_colour.jpg" width="100%"> | <img src="examples/synthwave_coastline.jpg" width="100%"> |
+| **草莓杯垫** · *Strawberry Coaster*<br><sub>Perler beads · 拼豆</sub> | **迁徙季** · *Migration Season*<br><sub>Petroglyph · 岩画</sub> |
+| <img src="examples/perler_strawberry_coaster.jpg" width="100%"> | <img src="examples/petroglyph_migration.jpg" width="100%"> |
+| **尼罗河丰收** · *Harvest on the Nile*<br><sub>Egyptian tomb painting · 古埃及墓室壁画</sub> | **港口渔获** · *The Day's Catch*<br><sub>Roman mosaic · 罗马马赛克</sub> |
+| <img src="examples/tomb_harvest.jpg" width="100%"> | <img src="examples/mosaic_harbor.jpg" width="100%"> |
+| **四季之窗** · *Window of the Seasons*<br><sub>Stained glass · 彩色玻璃花窗</sub> | **星辰之书** · *Liber Stellarum*<br><sub>Illuminated manuscript · 泥金手抄本</sub> |
+| <img src="examples/stainedglass_seasons.jpg" width="100%"> | <img src="examples/illuminated_starchart.jpg" width="100%"> |
+| **扑翼机** · *The Ornithopter*<br><sub>Leonardo codex · 达·芬奇手稿</sub> | **剪影小像** · *Shades of the Wren Household*<br><sub>Silhouette · 剪影</sub> |
+| <img src="examples/codex_ornithopter.jpg" width="100%"> | <img src="examples/silhouette_family.jpg" width="100%"> |
+| **马戏团来了** · *The Circus Is Coming*<br><sub>Letterpress poster · 凸版印刷海报</sub> | **无线电** · *Radio*<br><sub>Soviet constructivism · 苏联构成主义</sub> |
+| <img src="examples/letterpress_circus.jpg" width="100%"> | <img src="examples/constructivism_radio.jpg" width="100%"> |
+| **夜行快车** · *Night Express*<br><sub>Art Deco · 装饰艺术</sub> | **火箭小队** · *Rocket Squad*<br><sub>Golden-age comic · 黄金时代漫画</sub> |
+| <img src="examples/artdeco_express.jpg" width="100%"> | <img src="examples/comic_rocket.jpg" width="100%"> |
+| **猫的六种心情** · *Six Moods of a Cat*<br><sub>Pop silkscreen · 波普丝网</sub> | **发射记录** · *Liftoff Trace*<br><sub>ASCII art (line printer) · ASCII 字符画（行式打印机）</sub> |
+| <img src="examples/popart_cat_moods.jpg" width="100%"> | <img src="examples/lineprinter_launch.jpg" width="100%"> |
+| **峡谷飞行** · *Canyon Run*<br><sub>Low poly · 低多边形</sub> | **放风筝** · *Hold On*<br><sub>Stencil graffiti · 喷漆模板涂鸦</sub> |
+| <img src="examples/lowpoly_canyon.jpg" width="100%"> | <img src="examples/stencil_kite.jpg" width="100%"> |
+| **三晚露营** · *Three Nights Out*<br><sub>Embroidered patches · 刺绣徽章</sub> | **灯塔剖面** · *Halvard Rock Light*<br><sub>Blueprint · 蓝图工程图</sub> |
+| <img src="examples/patch_camping.jpg" width="100%"> | <img src="examples/blueprint_lighthouse.jpg" width="100%"> |
+| **我的周末** · *My Weekend*<br><sub>Children's crayon · 儿童蜡笔画</sub> | **今天带伞吗** · *Bring an Umbrella?*<br><sub>Green-screen CRT terminal · 绿屏终端（荧光字符画）</sub> |
+| <img src="examples/crayon_picnic.jpg" width="100%"> | <img src="examples/crt_weather.jpg" width="100%"> |
+| **厨房里的温度** · *Kitchen Heat Map*<br><sub>Thermal camera · 热成像</sub> | **一阵风** · *The Gust*<br><sub>Delft tiles · 代尔夫特蓝瓷砖</sub> |
+| <img src="examples/thermal_kitchen.jpg" width="100%"> | <img src="examples/delft_canal.jpg" width="100%"> |
+| **篝火旁的岩洞** · *The Hunt by the Fire*<br><sub>Cave painting · 洞穴壁画</sub> | **窗台花园** · *Windowsill Garden*<br><sub>1-bit paint program · 1-bit 早期画图软件</sub> |
+| <img src="examples/cave_hunt.jpg" width="100%"> | <img src="examples/macpaint_garden.jpg" width="100%"> |
+| **赛跑与赛车** · *Games on a Vase*<br><sub>Greek black-figure vase · 古希腊黑绘陶瓶</sub> | **老街角的自行车** · *The Bread Run*<br><sub>Graphite pencil · 铅笔素描</sub> |
+| <img src="examples/blackfigure_games.jpg" width="100%"> | <img src="examples/graphite_bicycle.jpg" width="100%"> |
+| **行李安检** · *Security Check*<br><sub>X-ray · X 光片</sub> | **早晨的闹钟** · *Seven O'Clock*<br><sub>1930s rubber hose · 1930 年代黑白橡皮管动画</sub> |
+| <img src="examples/xray_luggage.jpg" width="100%"> | <img src="examples/rubberhose_morning.jpg" width="100%"> |
+| **雪夜归途** · *Homeward, First Snow*<br><sub>Linocut · 黑白麻胶版画</sub> | **吹蜡烛** · *Blow Out the Candles*<br><sub>VHS home video · VHS 家庭录像</sub> |
+| <img src="examples/linocut_snowy_village.jpg" width="100%"> | <img src="examples/vhs_birthday.jpg" width="100%"> |
+| **山间夜营** · *Night Camp*<br><sub>Flat vector · 扁平矢量</sub> | **小橡果的秋天** · *An Acorn's Autumn*<br><sub>Storybook animation · 绘本角色动画</sub> |
+| <img src="examples/flatvector_night_camp.jpg" width="100%"> | <img src="examples/storybook_acorn.jpg" width="100%"> |
+| **蛇梯棋大冒险** · *Snakes & Ladders, Round 7*<br><sub>Ballpoint doodle · 圆珠笔涂鸦</sub> | **海港步行图** · *Larkhaven on Foot*<br><sub>Overlay sheets · 描图纸叠层</sub> |
+| <img src="examples/ballpoint_board_game.jpg" width="100%"> | <img src="examples/overlay_city_map.jpg" width="100%"> |
+| **出发前，再查一遍行李** · *Pack Check*<br><sub>Pastel UI · 粉彩界面</sub> | **数学单元测验** · *Unit Test, Graded*<br><sub>Exam grading · 阅卷批改</sub> |
+| <img src="examples/pastelui_packing.jpg" width="100%"> | <img src="examples/grading_math_quiz.jpg" width="100%"> |
+| **蹴鞠** · *Cuju by Lamplight*<br><sub>Shadow puppetry · 皮影戏</sub> | **街角速写** · *Sketchbook Neighbours*<br><sub>Pen & wash · 钢笔淡彩</sub> |
+| <img src="examples/shadowpuppet_cuju.jpg" width="100%"> | <img src="examples/penwash_neighbours.jpg" width="100%"> |
 
 Every mark above is computed: paper fibres, ink washes and mist, dry-brush strokes, pigment granulation and blooms, torn-paper edges, pencil wax on paper tooth, cel-shaded clouds, risograph grain and halftones, lit impasto relief, woodblock grain and bokashi, dithered pixels, plasticine lit like a film set, sunlight through leaves on Prussian blue, twisted thread on Aida cloth, machined knobs behind a backlit dial, die-cut vinyl with a laminate gloss, streaky thermal print, graphite catching the tooth of graph paper, highlighter pooling at the start of a swipe, chalk dust settling under half-erased lessons, rain-lit neon glass mirrored in a wet street, a blue-pencil rough under boiling brush ink, an island ray-traced under one soft sun, a single unbroken gold line, candy balls with softbox glints, one outline morphing through six shapes, halftone photos cut out with scissors, frosted glass blurring the real pixels behind it, screen-printed primaries out of register, a slit sun sinking behind a neon grid played off tape, hollow fuse beads on a pegboard melting together under an iron, pits knocked through desert varnish, a red grid showing through flaking plaster, stones laid row by row along an outline, daylight through leaded glass, burnished gold that mirrors the room, left-handed hatching in iron-gall ink, black paper cut with scissors, wood type printed a hair out of register, red and black plates slipping apart, airbrush fades inside knife-cut friskets, Ben-Day dots on yellowed newsprint, one photo key pulled across hand-painted colour, characters struck through a fading ribbon, flat-shaded triangles dithered to 15 bits, spray drifting past cut card, satin stitches catching the light by their angle, ink lines printed white on Prussian blue, wax scribbles skipping the paper's pits, phosphor glowing behind curved glass, heat leaking out of a kitchen, cobalt fired into tin glaze tile by tile, ochre blown onto rock lit by a fire, 1-bit patterns in an old paint program, slip silhouettes incised to the clay, graphite that never quite reaches black, X-rays adding up through a suitcase, grey cels shot on scratched film, gouge marks in a rolled-up block, a birthday smeared onto tape, seven flat colours lifting off each other, an acorn squashing and stretching through a world drawn as it goes, ballpoint ink blobbing at every corner of a hand-drawn game, inks multiplying through tracing paper on a light box, window cards floating on a pastel field over shadows tinted by it, a vermilion stamp running dry at one end, red ink pooling where the pen slowed down and dyed donkey hide glowing on a lamp-lit screen. No diffusion model, no API, no stock art. It is just Python with **numpy + Pillow** on a CPU: from 0.1 s (pixel art) to about 45 s (the soft 3D ray tracer) per 1920×1080 image.
 
@@ -128,7 +130,7 @@ Every mark above is computed: paper fibres, ink washes and mist, dry-brush strok
 
 ### What it is
 
-A [Claude Code](https://claude.com/claude-code) skill and a small painting library with sixty-three styles:
+A [Claude Code](https://claude.com/claude-code) skill and a small painting library with sixty-four styles:
 
 | Style | Module | What makes it read as the real medium |
 |---|---|---|
@@ -195,6 +197,7 @@ A [Claude Code](https://claude.com/claude-code) skill and a small painting libra
 | **Pastel UI (product-film interface)** | `lib/pastelui.py` · `PastelUI` | one frame of a modern product film: a flat pastel field (blue, pink, yellow, lilac, mint, peach) with one big pool of soft light and a few white bokeh discs; macOS window cards with a frosted rim, a white body, the red / yellow / green lights and split panes, side panels, a dot pill and a step strip, a heavy headline with a translucent marker under the key words, status chips, round check / cross badges, text highlights, an inline reference chip and a callout tag; every shape is a signed-distance field with analytic 1 px anti-aliasing, and shadows follow CSS box-shadow (offset, blur, spread; a wide one tinted with the field colour plus a tight neutral one), so cards float without a grey halo; everything is drawn into named layers with a pose (offset, scale, opacity, left-to-right reveal) and a depth, so the same drawing pops a window up, writes a line, pops a badge or lets a companion rise from behind a card; a magnifier that enlarges the real pixels under it; a circular colour wipe between sections; three flat companions peek over the card edges — a starburst in a cream circle, a violet cloud with a >_ prompt, an orange pixel critter |
 | **Exam grading (an answer sheet marked in red)** | `lib/grading.py` · `Grading` | an answer sheet on a green felt desk, printed like the real form — timing marks down the edge, a heavy title, fields, a ticket number with its bubbles filled, a score / grader table, numbered sections, ruled answer lines and a hatched grading column — with an answer key held by a black binder clip beside it; every paper has its own frame and pose, so a sheet can come down onto the desk (a little larger with a wide soft shadow while lifted, a thin contact shadow once down); everything written after printing keeps a progress value and a time map, so a stage can show a stroke half drawn: the candidate's blue-black answers, vermilion rubber stamps (ragged edges, clustered pin-holes, one end pressed dry so the thin border breaks, ink pooled at the rims, a wet bleed, a slight tilt, the paper dented round the rubber) and the red pen — a wavy underline, a ring that overshoots its start, a bowed leader, a note set in a bold sans and inked like the pen (no handwriting font), crosses, ticks and a score written stroke by stroke and circled; ink is Beer–Lambert density, so the red deepens where the pen slowed down and where it crosses print; a red pen shaded as a cylinder whose shadow spreads from the tip, and a varnished wooden stamp that comes down, presses and lifts |
 | **Shadow puppetry (皮影戏)** | `lib/shadowpuppet.py` · `ShadowPuppet` | a shadow play seen from the audience, where everything on the screen is lamp light that came through it: a cloth screen lit by an oil lamp behind the middle (pale gold at the hot spot, deep amber toward the rim, thread slubs, a fold or two); puppets of scraped donkey hide kept as coverage plus an optical density per channel, so vermilion, teal, ochre and green glow, black dye is almost opaque and pieces darken where they overlap, in any order; pieces are cut, dyed in fields, inked along every cut edge and punched with the craft's hollow patterns (dots, rings, plum blossoms, coins, fish scales, ruyi cloud heads, lattice, ice cracks, stripes), and the hide's uneven thickness leaves no dye flat; a figure is a tree of jointed pieces with thread knots and an angle per joint (a hollow-carved or solid face in profile with one long eye and a long brow, a helmet with barred pheasant plumes or a crown with pompoms, cloud collar, breastplate mirror, scale armour, cuffs, thick-soled boots), with control rods tied to the collar and the hands; a puppet off the cloth grows, blurs and splits into two shadows (the lamp has two wicks), the soft double edge of a figure not quite pressed, and rods are sharp where they are tied and soft lower down; props come from the same leather (a pailou goal with a lattice net and a round eye, a stitched ball, a key-fret floor band, hanging name plaques); in front, a carved proscenium (key-fret lintel, a red lacquer plaque with raised gilt characters, an openwork valance and corner brackets the screen glows through) lit only by the light the screen spills onto its edges, and red paper lanterns lit from inside, with tassels and a warm halo |
+| **Pen & wash (钢笔淡彩)** | `lib/penwash.py` · `PenWash` | small cold-press sketch cards made the way a sketcher makes them — a fineliner line first, loose watercolour after, then the cards photographed on a table. Each card is its own sheet (paper tooth lit by the window, a cut edge that is not quite straight), drawn unturned and laid down at a slight angle. The ink line is near-uniform but hand-made: low-frequency wobble and tremor, width drifting a few per cent, a dot where the tip rested, a flick at some ends; closed shapes are one to three strokes that stop short or run past the join on the tangent, box corners overshoot, a stretch is sometimes gone over twice; parts have a depth, so an outline stops where a part in front covers it. Washes start from the intended region and are then painted loosely: slipped 2–5 px off the line (spilling over on one side, leaving white paper inside the line on the other), an edge re-found on a wandering threshold that follows the tooth, a darker dried rim, granulation in the valleys of the paper, faint flat-brush streaks, density mottle, wet-in-wet drops for cheeks and crust, cockling where the paper got wet — and a gentler slip for small shapes, so a nose never turns into a white ring. A flat background block that does not fill the card is painted around the figure with a white halo; opaque white gouache glints go on last. Ink and pigments are optical densities, so overlaps darken and mix. Helpers for goofy characters: big round glasses, dot eyes, tufts, simple hands, limbs, inked frames, ground lines. The photo: oak planks with cathedral grain and butt joints, soft card shadows and lit cut edges, a fineliner and a water brush shaded as cylinders (the clear barrel refracts what is under it), window fall-off, vignette and grain |
 
 Ask Claude to *"draw it yourself"*, *"paint this with code"*, or *"claude绘图"*, and name a style if you like. Claude then:
 
@@ -311,6 +314,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 - **Pastel UI**: one screen, one idea — a headline, one main window, one side panel and a status, with few words set large. Keep the field flat and the cards solid white; colour lives in the accents (the step strip, chips, badges, markers), and green is reserved for a pass, so use a blue field when there are checks and crosses. Put companions on a lower layer than the card they peek over, so the card itself hides the rest of them. Give a magnifier room: centre it on one thing with its labels outside the rim (a lens over a narrow column cuts its label and temperature in half). Draw each state of a thing as its own layer and switch them; for the draw-on GIF, give anything that moves a few in-between poses instead of a cross-fade.
 - **Exam grading**: tell one grading story on one sheet — a few answers, one mistake, and every red mark pointing at it: a wave under it, a ring round it, a leader out to the grading column, and the note and the cross on the same row as the error (put that row first in the column so the leader stays short). Keep the words few and large and let the form itself (bubbles, timing marks, hatching) carry the texture. Give a ring room: it needs ~8 px of clear paper on each side, so leave the candidate a wider gap before the wrong figure. Stamps should be uneven but still legible (pressure ~0.64 at the light end). Red ink is Beer–Lambert density and only darkens a little above ~0.8, so light and dark passages come from the density range (about 0.4–1.2), not from the colour. In the GIF, give the pen and the stamps real in-between frames (`~` motion stages) instead of cross-fades.
 - **Shadow puppetry**: keep the screen dark at the rim and pale gold only round the lamp, so dyed leather glows instead of looking printed. Leave big fields of solid dye and put the hollow patterns in bands; a pattern cell under ~12 px on the canvas turns a robe into fishnet. In profile the shoulder sits right under the head, so a near arm raised past ~140° crosses the face: raise the far arm up and back and keep the near one forward (130–147°). The classic 亮相 is one arm high behind, one low in front and a knee up. Give each figure room for its plumes, and keep the shoulder guard on the near arm only. A puppet slightly off the cloth (d ≈ 0.05) should read as a sharp shadow with a soft double edge, not as out of focus. In the GIF, everything that moves gets real in-between frames (`~` motion stages): the lamp glow spreading, players sliding in from the wings blurred and doubled until they are pressed sharp, the kick, the 亮相 snap.
+- **Pen & wash**: ink first, paint second, and let the paint miss: slip each wash a few px off its line so one side spills and the other leaves white paper — but shrink the slip for tiny shapes, or a nose or a crumb becomes a white ring. Keep tooth and granulation quiet; at full strength the card looks like stucco and the washes like coloured pencil. Give parts a depth so outlines break where something is in front, and keep the features inside the head (only the nose may bulge past it). Watch for accidental reads: a small circle under a moustache becomes a letter, a red dome with white spots a toadstool, a white oval belly a snowman, and a scooter stem must not cross a face. Paint the background block around the figure with a halo, never out to the card edge. Draw the tools at real scale (a fineliner is longer than the card is tall). In the GIF, give the bare table a small palette share of its own and cut the rest only from pixels that change, or the oak eats the colours of the pale blocks.
 
 ### Roadmap
 
@@ -322,7 +326,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 
 ### 这是什么
 
-一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置六十三种画风：
+一个 [Claude Code](https://claude.com/claude-code) skill，加上一个小巧的绘图库，内置六十四种画风：
 
 | 画风 | 模块 | 为什么看起来像真的 |
 |---|---|---|
@@ -389,6 +393,7 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
 | **粉彩界面** | `lib/pastelui.py` · `PastelUI` | 产品发布片里的一帧界面：整片纯色粉彩底（蓝 / 粉 / 黄 / 淡紫 / 薄荷 / 桃）加一大片柔光和几颗白色光斑；macOS 窗口卡片（磨砂外框、白色窗体、红黄绿三点、分栏）、侧面板、带圆点的小胶囊和步骤条、粗黑大标题压一条半透明色条、状态标签、圆形 ✓ / ✗ 徽章、文字高亮、嵌在正文里的引用标签和带尖角的小标签；所有形状都是有符号距离场、1 px 解析抗锯齿，阴影按 CSS box-shadow 算（偏移、模糊、扩展；一层染着底色的宽阴影加一层中性的近阴影），卡片浮起来却没有灰边；一切画进带姿态（位移、缩放、不透明度、从左往右揭开）和前后层次的图层，同一套画面既能弹出窗口、逐行写字、弹出徽章，也能让小图标从卡片后面探头；放大镜放大的是它下面真实的像素；节与节之间圆形擦除换底色；三个扁平小图标从卡片边探头——奶油色圆里的橙色星芒、紫色云朵里的 >_、橙色像素小怪 |
 | **阅卷批改** | `lib/grading.py` · `Grading` | 绿毛毡桌上的一张答题卡，照真表格印：左边一排定位黑块、粗黑标题、姓名班级栏、考号格和涂好的圆泡、得分 / 阅卷人表格、分节、作答横线、斜纹阅卷栏；旁边是长尾夹夹住的标准答案卡。每张纸有自己的坐标和位姿，能从空中落到桌上（抬着时略大、投一片宽软的影，放下后只剩贴边细影）；印刷之后写上去的东西都带「写到第几成」的进度和时间图，阶段快照能画出写到一半的笔画：考生的蓝黑作答、朱红橡皮章（毛边、成簇针孔、一头压得轻而细框断开飞白、边缘积墨、刚盖下的湿晕、轻微歪斜、纸面压出的凹痕），以及红笔的波浪线、越过起点的手画圈、弧形引线、用粗黑体按红墨处理的批注（不用手写字体）、叉、勾、一笔笔写出再圈起来的分数；墨按比尔定律算密度，笔走慢的拐弯处、压在印刷上都会更深；红笔按圆柱打光、投影从笔尖散开，上漆木章落下、压一下、再抬起 |
 | **皮影戏** | `lib/shadowpuppet.py` · `ShadowPuppet` | 观众这边看到的一场皮影，幕布上的一切都是透过来的灯光。幕布由一盏油灯从背后照亮：灯后面淡金，往外深琥珀，带纱线粗节和一两道折痕。人偶是刮薄的驴皮，按覆盖率加每个通道的光密度来算，所以朱红、青绿、赭黄、绿色透亮，黑色几乎不透，两块皮相叠处更深，和先后顺序无关；每块皮可以剪、分区染色、沿剪边描黑，打出皮影的各种镂空纹样（圆点、圆环、梅花、铜钱、鱼鳞、如意云头、方格、冰裂、条孔），皮厚不匀让染色不会死平。关节人偶是一棵带线结、每个关节一个角度的皮件树（阳刻空脸或阴刻脸的侧面像，一只长眼一道长眉；带黑横斑的雉翎盔或绒球三叉冠；云肩、护心镜、鱼鳞甲、袖口、厚底靴），操纵杆绑在领口和手上。离开幕布的人偶会变大、变虚，又因为灯有两个灯芯分成两个影，就是没贴紧时那种软的双边；操纵杆绑的地方清楚，往下越来越虚。同一套皮还做道具：牌楼式球门（窗棂网和风流眼）、缝线的鞠、回纹底带、挂在线上的小牌。幕前是雕花戏台（回纹横楣、红漆凸起金字牌匾、透空挂落和花牙子，幕布的光从镂空处透出来），只被幕布溢出的光照亮边缘；还有内有烛光的红纸灯笼，带穗子和一圈暖光 |
+| **钢笔淡彩** | `lib/penwash.py` · `PenWash` | 照速写人的顺序画在冷压水彩小卡上：先针管笔线稿，再松散淡彩，最后把卡片放在桌上拍下来。每张卡是独立的一张纸（窗光照出的纸纹、略不直的切边），不转着画，放下时才带一个小角度。墨线几乎等宽但是手画的：低频手抖加颤动、线宽漂几个百分点、落笔一个小墨点、有的收尾一甩；闭合形状由一到三笔组成，接口停早留缺口或冲过头沿切线出头，方框的角相互出头，偶尔一段描两遍；部件分前后，被前面部件盖住的轮廓线自动断开。淡彩先算「本来要涂的区域」，再像手快那样涂：整块错位 2–5 px（一边出线、另一边在线里留白缝），边缘用游走的阈值重新取、顺着纸纹，干边更深，颗粒沉在纸纹的谷里，淡淡的平刷条纹，浓淡斑驳，腮红和面包烤色湿中湿滴进去，打湿处纸面起皱；小形状错位缩小，鼻子不会变成白圈。不铺满卡片的背景色块绕开人物、留一圈白边；白色水粉高光最后上。墨和颜料都按光密度叠加，相叠变深、混色。带画呆萌小人的部件：大圆眼镜、点点眼、翘头发、简单的手、四肢、手绘边框、地线。照片：带「山纹」年轮和拼接缝的橡木桌、卡片的软阴影和受光的切边、按圆柱打光的针管笔和水笔（透明水杆折射下面的东西）、窗光衰减、暗角和颗粒 |
 
 对 Claude 说「claude绘图」「你自己画」「用代码画」，也可以指定画风。它会：
 1. **先定构图**：层次、焦点、留白，而且画面要图解内容本身；
@@ -481,6 +486,7 @@ python3 examples/overlay_city_map.py    out.jpg --stages stages/   # 描图纸�
 python3 examples/pastelui_packing.py    out.jpg --stages stages/   # 粉彩界面：出发前，再查一遍行李
 python3 examples/grading_math_quiz.py   out.jpg --stages stages/   # 阅卷批改：数学单元测验
 python3 examples/shadowpuppet_cuju.py  out.jpg --stages stages/   # 皮影戏：蹴鞠
+python3 examples/penwash_neighbours.py  out.jpg --stages stages/   # 钢笔淡彩：街角速写
 ```
 
 ### 作画要点（Claude 交图前逐条自查）
@@ -546,6 +552,7 @@ python3 examples/shadowpuppet_cuju.py  out.jpg --stages stages/   # 皮影戏：
 - **粉彩界面**：一屏只讲一件事——一个大标题、一个主窗口、一个侧面板、一个状态，字少而大。底色平、卡片实心白，颜色只放在强调处（步骤条、标签、徽章、色条）；绿色只留给「通过」，所以有 ✓ / ✗ 的画面用蓝底。小图标放在它探头的那张卡片下一层，让卡片自己挡住其余部分。放大镜要有地方放：对准一样东西，标签放在镜框外（镜片压在窄窄一列上会把日期和温度切成两半）。同一样东西的不同状态各画一层再切换；做动图时，会动的东西给几个中间姿态，不要叠化。
 - **阅卷批改**：一张卷子讲一件批改的事——几道作答、一处错，所有红笔都指向它：下面波浪线、外面一个圈、一道引线拉到阅卷栏，批注和叉跟出错那行同高（把批注行排在阅卷栏第一行，引线才短）。字少而大，纹理交给表格本身（涂卡圆泡、定位黑块、斜纹）。圈要有地方：两边各要约 8 px 空白，所以让考生在写错的那个数前多空一格。印章要不匀但认得出（轻的那头压力约 0.64）。红墨按比尔定律算密度，0.8 以上只是略微变深，浓淡要靠密度范围（约 0.4–1.2）拉开，而不是换颜色。做动图时，笔和章给真正的中间帧（`~` 运动阶段），不要叠化。
 - **皮影戏**：幕布边缘要暗，只在灯后面那一块发淡金，染色的皮才会「透亮」，而不是像印上去的。大面积留实色，镂空纹样只放在一段里：画布上一个纹样单元小于约 12 px，袍子就成了渔网。侧身时肩就在头的正下方，近侧手臂抬过约 140° 会从脸前过：要高举就举远侧那只往后上方，近侧手臂斜向前上（130–147°）；亮相就是一手高（远侧向后上）、一手低（近侧向前下），再提膝。给翎子留地方；护肩花只放在近侧手臂上。离幕一点（d ≈ 0.05）的人应该是一个清楚的影加一条软的双边，不是失焦。做动图时，会动的都给真正的中间帧（`~` 运动阶段）：光晕铺开，人从侧幕滑进来由虚变实，起脚，亮相定住。
+- **钢笔淡彩**：先墨后彩，让颜色「涂歪」：每块淡彩错开线条几 px，一边出线、另一边留白缝；但小形状要把错位缩小，否则鼻子、面包屑会变成白圈。纸纹和颗粒要收着，开满了卡片像拉毛墙、淡彩像彩铅。部件要分前后，被挡住的轮廓线才会断开；五官收在头的轮廓里（只有鼻子可以鼓出去）。小心看错：胡子下面的小圆圈会读成字母，红圆顶加白点是毒蘑菇，白色椭圆肚子是雪人，滑板车立杆不能穿过脸。背景色块绕开人物留白边，不要铺到卡边。桌上的笔按真实比例画（针管笔比卡片还长）。做动图时空桌面单独分少量色位，其余只从变化的像素里切，否则橡木会吃掉淡色背景块的色位。
 
 ### 计划
 
