@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude Drawing — procedural illustration with Python, numpy, and Pillow in 74 styles.
+description: Claude 绘图 / Claude Drawing — procedurally paint illustrations with Python, numpy and Pillow (no image model) in 74 styles, from ink wash and watercolor to pixel art, blueprint and UI mockups; also step-by-step drawing animations. 用代码一笔一笔画图，内置 74 种画风。
 ---
 
 # Claude 绘图
@@ -15,9 +15,9 @@ description: Claude Drawing — procedural illustration with Python, numpy, and 
 
 1. 定构图：远景 → 中景 → 主体 → 前景；确定焦点、留白、点睛色和文字位置。
 2. 画面要解释主题本身，而不是只生成一张泛化风景图。
-3. 复制最接近的范例脚本，使用对应风格指南中的 API 和质量检查清单。
+3. 复制最接近的范例脚本，使用对应风格指南中的接口速查；渲染后对照该指南的「毛病清单」逐条自查。
 4. 运行脚本并查看输出；通常迭代 2–4 轮，每轮只修最显眼的问题。
-5. 固定 seed 保证可复现；需要动画时使用 `stage('name')` 和 `--stages DIR`。
+5. 固定 seed 保证可复现；需要动画时使用 `stage('name')` 和 `--stages DIR`，动图规格与调色板经验见 [references/animation.md](references/animation.md)（只在要出动图时读取）。
 6. 默认优先输出 PNG；需要交付 JPG 时使用高质量设置。
 
 ## 全局约束
@@ -25,7 +25,11 @@ description: Claude Drawing — procedural illustration with Python, numpy, and 
 - 使用 `lib/core.py` 的公共工具时，通过脚本所在位置加入 `lib` 到 `sys.path`。
 - 先画背景和远景，再画主体和前景；尊重每种风格的遮挡、材质和光照模型。
 - 文本应服务于构图；中英文混排时使用库提供的字体回退机制。
+- **顺序**：都是先远后近、先大后小，文字最后叠加。水墨的雾要画在它该吞没的东西之后；水彩的叶梗要先画，并且只画在叶子外面。
 - 不要凭空发明风格 API；选择风格后先读对应指南，必要时再查看 `lib/<module>.py` 和范例。
+- 公共工具：`lib/core.py` 里的底层工具：噪声、模糊、样条曲线、多边形遮罩、有机轮廓 `blob_pts`、毛笔 `bristle_stroke`、中文字体查找；新四种还用到补零平移 `shift`、文字遮罩 `text_mask`、西文字体查找 `latin_font`/`load_font`，以及高度图打光 `height_normals`、`height_shadow`（沿光线步进的投影）、`ambient_occlusion`。
+- 中文字体：自动找 Kaiti/Songti（macOS）、Noto CJK（Linux）、KaiTi/SimSun（Windows），或设 INKPAINT_FONT
+- 西文字体（后来新增的画风用）：core.latin_font(style) 按 sans / sans_bold / rounded / script / hand / typewriter 等找系统字体，可用 INKPAINT_FONT_<STYLE> 指定；字体文件不要放进仓库
 
 ## 画风索引
 
@@ -110,4 +114,6 @@ description: Claude Drawing — procedural illustration with Python, numpy, and 
 
 ## 选定画风后
 
-读取对应的 `styles/<slug>.md`。该文件包含该风格的 API 速查、实现约束、范例入口和质量检查清单；如需更多细节，再查看对应的 Python 模块。
+读取对应的 `styles/<slug>.md`。每份指南包含：实现与范例入口、何时选用（以及相近画风的取舍）、接口速查、毛病清单。如需更多细节，再查看对应的 Python 模块。
+
+新增画风时：写 `lib/<slug>.py`、`examples/`、`styles/<slug>.md`，并在上表加一行；运行 `python3 tools/validate_style_docs.py` 检查一致性。

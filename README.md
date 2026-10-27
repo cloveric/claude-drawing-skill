@@ -403,6 +403,17 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
   - a lit rim drawn round a whole silhouette shows through whatever sits on top of it.
   Keep the child small against the creature with a simple face (a dot eye, a cheek, a nose bump), and the creature's eye gentle — a soft lid, not a brow.
 
+### Repository layout
+
+The skill loads progressively, so the model only pays for the style it uses:
+
+- `SKILL.md` — compact router: general workflow, global rules and the style index (a few KB).
+- `styles/<slug>.md` — one guide per style: when to pick it, API quick reference, known pitfalls. Read only after a style is chosen.
+- `references/animation.md` — shared GIF/animation specs, read only when exporting animations.
+- `lib/`, `examples/` — the drawing library and one reference script per style.
+
+To add a style: write `lib/<slug>.py` and an example, create `styles/<slug>.md` with the three sections (`## 何时选用`, `## 接口速查`, `## 毛病清单`), add a row to the index in `SKILL.md`, and run `python3 tools/validate_style_docs.py`.
+
 ### Roadmap
 
 - Per-stroke layer export, for stroke-by-stroke animation in Motion Canvas or Remotion.
@@ -719,6 +730,17 @@ python3 examples/pencilbook_tortoise_crossing.py out.jpg --stages stages/   # �
   - 细杆上交叉排线是拐杖糖——笔触顺着杆走；
   - 围着整个轮廓画的边光，会从盖在上面的东西里透出来。
   小孩要比那只生物小得多、脸要简单（点点眼、腮红、一个小鼻头），生物的眼睛要温和——一道软软的眼皮，不要眉毛。
+
+### 仓库结构
+
+技能按需分层加载，只为用到的画风付出 token：
+
+- `SKILL.md`：精简的路由文件（通用流程、全局约束、画风索引）。
+- `styles/<slug>.md`：每种画风一份指南（何时选用、接口速查、毛病清单），选定画风后才读取。
+- `references/animation.md`：各画风共用的动图规格，需要输出动图时才读取。
+- `lib/`、`examples/`：绘图库和每种画风的范例脚本。
+
+新增画风：写 `lib/<slug>.py` 和范例，新建包含三个小节（`## 何时选用`、`## 接口速查`、`## 毛病清单`）的 `styles/<slug>.md`，在 `SKILL.md` 索引里加一行，然后运行 `python3 tools/validate_style_docs.py`。
 
 ### 计划
 
