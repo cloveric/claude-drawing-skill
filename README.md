@@ -439,6 +439,17 @@ Every style has a complete example: `python3 examples/<name>.py out.png --stages
   - cupped mittens read as a crab, and mittens that hide the jar hide the point — hold the jar low from the sides, with the thumbs in front;
   - flat-shaded leaves all seen face-on are clip art — broaden the lobes, foreshorten each leaf and let it cast a soft shadow.
 
+### Repository layout
+
+The skill loads progressively, so the model only pays for the style it uses:
+
+- `SKILL.md` — compact router: general workflow, global rules and the style index (a few KB).
+- `styles/<slug>.md` — one guide per style: when to pick it, API quick reference, known pitfalls. Read only after a style is chosen.
+- `references/animation.md` — shared GIF/animation specs, read only when exporting animations.
+- `lib/`, `examples/` — the drawing library and one reference script per style.
+
+To add a style: write `lib/<slug>.py` and an example, create `styles/<slug>.md` with the three sections (`## 何时选用`, `## 接口速查`, `## 毛病清单`), add a row to the index in `SKILL.md`, and run `python3 tools/validate_style_docs.py`.
+
 ### Roadmap
 
 - Per-stroke layer export, for stroke-by-stroke animation in Motion Canvas or Remotion.
@@ -786,6 +797,17 @@ python3 examples/poetichalloween_ghost_jar.py out.jpg --stages stages/   # 诗�
   - 一圈都描了暗边的那片头发像耳机，纯黑的刘海像护目镜——整块头发按同一个受光，暗边只留在挨着脸的内侧，刘海单独一条光泽；
   - 捧在一起的手套像螃蟹，挡住罐子的手套挡住了重点——从两边扶着罐子下半截，拇指搭在前面；
   - 正对着看、平涂的叶子是剪贴画——裂片加宽，每片压扁一点，再往后面投一块软影子。
+
+### 仓库结构
+
+技能按需分层加载，只为用到的画风付出 token：
+
+- `SKILL.md`：精简的路由文件（通用流程、全局约束、画风索引）。
+- `styles/<slug>.md`：每种画风一份指南（何时选用、接口速查、毛病清单），选定画风后才读取。
+- `references/animation.md`：各画风共用的动图规格，需要输出动图时才读取。
+- `lib/`、`examples/`：绘图库和每种画风的范例脚本。
+
+新增画风：写 `lib/<slug>.py` 和范例，新建包含三个小节（`## 何时选用`、`## 接口速查`、`## 毛病清单`）的 `styles/<slug>.md`，在 `SKILL.md` 索引里加一行，然后运行 `python3 tools/validate_style_docs.py`。
 
 ### 计划
 
