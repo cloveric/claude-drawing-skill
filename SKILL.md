@@ -1,6 +1,6 @@
 ---
 name: claude绘图
-description: Claude 绘图 / Claude Drawing — procedurally paint illustrations with Python, numpy and Pillow (no image model) in 74 styles, from ink wash and watercolor to pixel art, blueprint and UI mockups; also step-by-step drawing animations. 用代码一笔一笔画图，内置 74 种画风。
+description: Claude 绘图 / Claude Drawing — procedurally paint illustrations with Python, numpy and Pillow (no image model) in 77 styles, from ink wash and watercolor to pixel art, blueprint and UI mockups; also step-by-step drawing animations. 用代码一笔一笔画图，内置 77 种画风。
 ---
 
 # Claude 绘图
@@ -111,6 +111,9 @@ description: Claude 绘图 / Claude Drawing — procedurally paint illustrations
 | 白板卡片 | [canvasboard](styles/canvasboard.md) | `lib/canvasboard.py` · `CanvasBoard` | `examples/canvasboard_moving_plan.py` | 计划、卡片、关系图 |
 | Flexoki 纸面 | [flexoki](styles/flexoki.md) | `lib/flexoki.py` · `FlexokiPaper` | `examples/flexoki_pour_over.py` | 文档、教程、图表 |
 | 暖调彩铅绘本 | [pencilbook](styles/pencilbook.md) | `lib/pencilbook.py` · `PencilStorybook` | `examples/pencilbook_tortoise_crossing.py` | 温暖童书、陪伴故事 |
+| 彩色小镇 | [colortown](styles/colortown.md) | `lib/colortown.py` · `ColorTown` | `examples/colortown_festival_steps.py` | 童话街景、城镇、节日 |
+| 色粉小像 | [pastelvignette](styles/pastelvignette.md) | `lib/pastelvignette.py` · `PastelVignette` | `examples/pastelvignette_marmalade_scarf.py` | 角色小像、人设卡、头像 |
+| 诗意万圣夜 | [poetichalloween](styles/poetichalloween.md) | `lib/poetichalloween.py` · `PoeticHalloween` | `examples/poetichalloween_ghost_jar.py` | 秋夜、万圣节、忧郁肖像 |
 
 ## 选定画风后
 
