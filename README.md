@@ -59,7 +59,7 @@
 | **Warm pencil storybook · 暖调彩铅绘本** | **Pastel vignette · 色粉小像** | **Poetic Halloween · 诗意万圣夜** |
 | ![pencilbook](examples/drawing_pencilbook_tortoise_crossing.gif) | ![pastelvignette](examples/drawing_pastelvignette_marmalade_scarf.gif) | ![poetichalloween](examples/drawing_poetichalloween_ghost_jar.gif) |
 | **Oil-pastel portrait · 油画棒肖像** | **Ink wash · 水墨（月印万川）** | **Colour town · 彩色小镇** |
-| ![oilpastel](examples/drawing_oilpastel_warm_cup.gif) | ![moonriver](examples/drawing_moon_river.gif) | ![colortown](examples/drawing_colortown_festival_steps.gif) |
+| ![oilpastel](examples/drawing_oilpastel_warm_cup.gif) | ![moonriver](examples/drawing_moon_river.gif) | ![colortown](examples/drawing_colortown_festival_steps_wide.gif) |
 
 ### Gallery · 画廊
 
