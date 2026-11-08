@@ -2,7 +2,7 @@
 
 [← README](../README.md) · [Styles](STYLES.md) · [画风](STYLES.zh.md) · [Principles](PRINCIPLES.md) · [作画要点](PRINCIPLES.zh.md) · [Usage · 用法](USAGE.md) · [Gallery · 画廊](GALLERY.md) · [GIFs · 动图](GIFS.md)
 
-> 88 GIFs, about 100 MB in total, so this page loads slowly. · 共 88 段动图、约 100 MB，加载较慢。
+> 91 GIFs, about 104 MB in total, so this page loads slowly. · 共 91 段动图、约 104 MB，加载较慢。
 
 <p align="center"><img src="../examples/drawing_bawansiqian.gif" width="100%"><br><sub><b>Ink wash · 水墨</b> — every style below is drawn stage by stage like this (the storybook one is a real character animation) · 下面每种画风都是这样一步步画出来的（绘本角色动画是一段真正的角色动画）</sub></p>
 
@@ -65,3 +65,5 @@
 | ![grainbook](../examples/drawing_grainbook_snow_walk.gif) | ![grainbookpond](../examples/drawing_grainbook_duck_pond.gif) | ![washes](../examples/drawing_watercolor_washes.gif) |
 | **Dreamy hills · 柔光草丘** | **Dreamy hills · 柔光草丘（星夜）** | **Dreamy hills · 柔光草丘（正午）** |
 | ![dreamhills](../examples/drawing_dreamhills_long_walk.gif) | ![dreamhillsnight](../examples/drawing_dreamhills_long_walk_night.gif) | ![dreamhillsnoon](../examples/drawing_dreamhills_long_walk_noon.gif) |
+| **Sunlit greenery · 夏日光绿** | **Sunlit greenery · 夏日光绿（溪边石阶）** | **Sunlit greenery · 夏日光绿（傍晚）** |
+| ![sunlitgreen](../examples/drawing_sunlitgreen_window_seat.gif) | ![sunlitgreenstream](../examples/drawing_sunlitgreen_stream_steps.gif) | ![sunlitgreenlate](../examples/drawing_sunlitgreen_window_seat_late.gif) |

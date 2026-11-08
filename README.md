@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="#styles--画风">82 styles · 画风</a> &nbsp;·&nbsp;
+  <a href="#styles--画风">83 styles · 画风</a> &nbsp;·&nbsp;
   <a href="#install--安装">Install · 安装</a> &nbsp;·&nbsp;
   <a href="#quick-start--快速上手">Quick start · 快速上手</a> &nbsp;·&nbsp;
   <a href="docs/GIFS.md">Draw-on GIFs · 作画动图</a> &nbsp;·&nbsp;
@@ -14,11 +14,11 @@
 </p>
 
 <p align="center">
-  <a href="#styles--画风"><img src="docs/hero.jpg" width="100%" alt="Twelve of the 82 styles: ink wash, oil-pastel portrait, impasto oil, watercolour, dreamy hills, synthwave, retro gouache, flat spot illustration, pastel vignette, shadow puppetry, children's crayon and pixel art"></a>
+  <a href="#styles--画风"><img src="docs/hero.jpg" width="100%" alt="Twelve of the 83 styles: ink wash, oil-pastel portrait, impasto oil, watercolour, dreamy hills, synthwave, retro gouache, flat spot illustration, pastel vignette, shadow puppetry, children's crayon and pixel art"></a>
 </p>
 
-**What it is · 这是什么** — A [Claude Code](https://claude.com/claude-code) skill plus a small painting library: eighty-two styles, from ink wash and impasto oil to stained glass, a ray-traced ball pit and a VHS tape, all plain Python with **numpy + Pillow** on a CPU.<br>
-一个 Claude Code skill，加上一个只用 numpy + Pillow 的绘图库：八十二种画风，从水墨、油画到彩色玻璃花窗、光线追踪的小球海和 VHS 录像带。
+**What it is · 这是什么** — A [Claude Code](https://claude.com/claude-code) skill plus a small painting library: eighty-three styles, from ink wash and impasto oil to stained glass, a ray-traced ball pit and a VHS tape, all plain Python with **numpy + Pillow** on a CPU.<br>
+一个 Claude Code skill，加上一个只用 numpy + Pillow 的绘图库：八十三种画风，从水墨、油画到彩色玻璃花窗、光线追踪的小球海和 VHS 录像带。
 
 **Why code · 为什么用代码** — Composition is directed, not sampled; the same seed gives the same picture; it runs offline with no GPU, key or quota; and every stage can be saved, so you can watch the picture being made.<br>
 构图、留白、点睛色都精确可控；同一个随机种子画出同一幅画；离线只用 CPU；每一步都能存下来，做成「一步步画出来」的动画。
@@ -28,7 +28,7 @@
 
 <p align="center">
   <img src="examples/drawing_moon_river.gif" width="640" alt="An ink-wash painting drawn stage by stage"><br>
-  <sub><b>Ink wash · 水墨</b> — every style is painted stage by stage like this · 每种画风都是这样一步步画出来的 · <a href="docs/GIFS.md">all 88 GIFs · 全部动图</a></sub>
+  <sub><b>Ink wash · 水墨</b> — every style is painted stage by stage like this · 每种画风都是这样一步步画出来的 · <a href="docs/GIFS.md">all 91 GIFs · 全部动图</a></sub>
 </p>
 
 ## Install · 安装
@@ -58,14 +58,15 @@ python3 examples/<name>.py out.png                        # one per style · 每
 
 ## Styles · 画风
 
-Eighty-two styles in eight families — click any picture for the full-size image. Notes on every style: [docs/STYLES.md](docs/STYLES.md)<br>
-八大类、八十二种画风，点图看大图。每种画风的详细说明：[docs/STYLES.zh.md](docs/STYLES.zh.md)
+Eighty-three styles in eight families — click any picture for the full-size image. Notes on every style: [docs/STYLES.md](docs/STYLES.md)<br>
+八大类、八十三种画风，点图看大图。每种画风的详细说明：[docs/STYLES.zh.md](docs/STYLES.zh.md)
 
 ### Ink & paint · 水墨与颜料
 
 <table>
-<tr><td align="center"><a href="examples/bawansiqian.jpg"><img src="docs/thumbs/bawansiqian.jpg" width="172" alt="Ink wash · 水墨"></a><br><sub><b>Ink wash</b><br>水墨</sub></td><td align="center"><a href="examples/watercolor_autumn.jpg"><img src="docs/thumbs/watercolor_autumn.jpg" width="172" alt="Watercolour · 水彩"></a><br><sub><b>Watercolour</b><br>水彩</sub></td><td align="center"><a href="examples/oil_wheatfield.jpg"><img src="docs/thumbs/oil_wheatfield.jpg" width="172" alt="Impasto oil · 油画厚涂"></a><br><sub><b>Impasto oil</b><br>油画厚涂</sub></td><td align="center"><a href="examples/gouache_rainy_day.jpg"><img src="docs/thumbs/gouache_rainy_day.jpg" width="172" alt="Retro gouache · 复古水粉"></a><br><sub><b>Retro gouache</b><br>复古水粉</sub></td></tr>
-<tr><td align="center"><a href="examples/penwash_neighbours.jpg"><img src="docs/thumbs/penwash_neighbours.jpg" width="172" alt="Pen & wash · 钢笔淡彩"></a><br><sub><b>Pen & wash</b><br>钢笔淡彩</sub></td><td align="center"><a href="examples/jiangnan_spring_water.jpg"><img src="docs/thumbs/jiangnan_spring_water.jpg" width="172" alt="Jiangnan garden · 江南园林"></a><br><sub><b>Jiangnan garden</b><br>江南园林</sub></td><td align="center"><a href="examples/drybrush_noodle_counter.jpg"><img src="docs/thumbs/drybrush_noodle_counter.jpg" width="172" alt="Dry-brush blocks · 干刷色块"></a><br><sub><b>Dry-brush blocks</b><br>干刷色块</sub></td><td align="center"><a href="examples/oilpastel_warm_cup.jpg"><img src="docs/thumbs/oilpastel_warm_cup.jpg" width="172" alt="Oil-pastel portrait · 油画棒肖像"></a><br><sub><b>Oil-pastel portrait</b><br>油画棒肖像</sub></td></tr>
+<tr><td align="center" colspan="2"><a href="examples/bawansiqian.jpg"><img src="docs/thumbs/bawansiqian.jpg" width="371" alt="Ink wash · 水墨"></a><br><sub><b>Ink wash</b><br>水墨</sub></td><td align="center" colspan="2"><a href="examples/watercolor_autumn.jpg"><img src="docs/thumbs/watercolor_autumn.jpg" width="371" alt="Watercolour · 水彩"></a><br><sub><b>Watercolour</b><br>水彩</sub></td></tr>
+<tr><td align="center" colspan="2"><a href="examples/oil_wheatfield.jpg"><img src="docs/thumbs/oil_wheatfield.jpg" width="371" alt="Impasto oil · 油画厚涂"></a><br><sub><b>Impasto oil</b><br>油画厚涂</sub></td><td align="center"><a href="examples/gouache_rainy_day.jpg"><img src="docs/thumbs/gouache_rainy_day.jpg" width="172" alt="Retro gouache · 复古水粉"></a><br><sub><b>Retro gouache</b><br>复古水粉</sub></td><td align="center"><a href="examples/penwash_neighbours.jpg"><img src="docs/thumbs/penwash_neighbours.jpg" width="172" alt="Pen & wash · 钢笔淡彩"></a><br><sub><b>Pen & wash</b><br>钢笔淡彩</sub></td></tr>
+<tr><td align="center"><a href="examples/jiangnan_spring_water.jpg"><img src="docs/thumbs/jiangnan_spring_water.jpg" width="172" alt="Jiangnan garden · 江南园林"></a><br><sub><b>Jiangnan garden</b><br>江南园林</sub></td><td align="center"><a href="examples/drybrush_noodle_counter.jpg"><img src="docs/thumbs/drybrush_noodle_counter.jpg" width="172" alt="Dry-brush blocks · 干刷色块"></a><br><sub><b>Dry-brush blocks</b><br>干刷色块</sub></td><td align="center"><a href="examples/oilpastel_warm_cup.jpg"><img src="docs/thumbs/oilpastel_warm_cup.jpg" width="172" alt="Oil-pastel portrait · 油画棒肖像"></a><br><sub><b>Oil-pastel portrait</b><br>油画棒肖像</sub></td><td align="center"><a href="examples/sunlitgreen_window_seat.jpg"><img src="docs/thumbs/sunlitgreen_window_seat.jpg" width="172" alt="Sunlit greenery · 夏日光绿"></a><br><sub><b>Sunlit greenery</b><br>夏日光绿</sub></td></tr>
 </table>
 
 ### Pencil, pen & pastel · 铅笔、钢笔与色粉
@@ -129,8 +130,8 @@ Eighty-two styles in eight families — click any picture for the full-size imag
 | [Styles](docs/STYLES.md) · [画风详解](docs/STYLES.zh.md) | What makes each style read as the real medium, and its module · 每种画风为什么像真的、对应的模块 |
 | [Principles](docs/PRINCIPLES.md) · [作画要点](docs/PRINCIPLES.zh.md) | The checklist Claude goes through before handing over a picture · Claude 交图前逐条自查的清单 |
 | [Usage · 用法](docs/USAGE.md) | Install notes, fonts, Python snippets, every example command · 安装、字体、代码示例、全部范例命令 |
-| [Gallery · 画廊](docs/GALLERY.md) | Every example at full size, with its title (≈ 55 MB) · 全部范例大图与标题 |
-| [Draw-on GIFs · 作画动图](docs/GIFS.md) | 88 GIFs of pictures being painted (≈ 100 MB) · 88 段作画过程动图 |
+| [Gallery · 画廊](docs/GALLERY.md) | Every example at full size, with its title (≈ 57 MB) · 全部范例大图与标题 |
+| [Draw-on GIFs · 作画动图](docs/GIFS.md) | 91 GIFs of pictures being painted (≈ 104 MB) · 91 段作画过程动图 |
 | [SKILL.md](SKILL.md) | The full skill: workflow, API reference, failure-mode lists, animation · 完整 skill：流程、接口速查、毛病清单、做成动画 |
 
 ## Roadmap · 计划

@@ -146,4 +146,6 @@ python3 examples/grainbook_snow_walk.py out.jpg --stages stages/   # 颗粒童�
 python3 examples/grainbook_duck_pond.py out.jpg --stages stages/   # 颗粒童书：喂鸭子（16:9）
 python3 examples/dreamhills_long_walk.py out.jpg --stages stages/   # 柔光草丘：走过草丘（1:2 竖版壁纸，--preset night 星夜、noon 正午）
 python3 examples/dreamhills_long_walk.py out.jpg --layout wide      # 柔光草丘：同一幅画排成 16:9
+python3 examples/sunlitgreen_window_seat.py out.jpg --stages stages/   # 夏日光绿：窗边的座位（9:16 竖版壁纸，--layout wide 出 16:9，--preset late 傍晚金光）
+python3 examples/sunlitgreen_stream_steps.py out.jpg --stages stages/  # 夏日光绿：溪边石阶（9:16，--layout wide 出 16:9）
 ```

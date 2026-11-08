@@ -193,3 +193,12 @@
   - a key from the front makes a night scene look like day — light from the side and a little behind;
   - a cumulus built from a row of balls is cotton wool, and a front puff's own soft edge lets the sky through as a dark crease — puffs on a dome, a solid row underneath, coverage from the union of every puff;
   - thin, see-through foreground blades read as straw — wider, opaque blades that light up only at the tip.
+- **Sunlit greenery**: the leaves carry the picture — build every mass from a few flat greens laid darkest first, each edge stamped with leaves, and keep the crowns airy; paint whites in their sunlit colour and lay cool leaf shadows over them. Watch for accidental reads:
+  - leaves scattered evenly over a whole crown read as confetti, noise or broccoli — paint each tone as one shape with a leafy edge;
+  - a crown with a full, smooth silhouette is a ball — thin its outer zone into separate sprays with sky between;
+  - straight-edged blue chips inside a crown look like missing paint — pale them and lay leaves back over their rims;
+  - a sun patch on a mid-grey wall barely shows — keep the shaded wall a cool, light grey-blue and the sun a warm cream at full strength;
+  - leaf shadows made of round blobs look like spilled paint — fringe every shadow mass with pointed leaf clusters;
+  - a reflection painted as even dashes on teal is texture, not water — mirror the scene, shift each band, flatten it, and cut it into strokes that thin out toward the viewer;
+  - a boulder cut flat on the water floats — tint its submerged part, give it a broken reflection and a ripple line;
+  - tiny isolated tone islands on a stone or a pot read as holes — merge them away.
